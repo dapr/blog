@@ -1,0 +1,55 @@
+# Site Configuration
+baseURL = "https://blog.dapr.io"
+languageCode = "en-us"
+title = "Dapr Blog"
+theme = "docsy"
+
+# Top Nav Bar
+[[menu.main]]
+    name = "Home"
+    weight = 40
+    url = "https://dapr.io"
+[[menu.main]]
+    name = "About"
+    weight = 50
+    url = "https://dapr.io/#about"
+[[menu.main]]
+    name = "Download"
+    weight = 60
+    url = "https://dapr.io/#download"
+[[menu.main]]
+    name = "Docs"
+    weight = 70
+    url = "https://docs.dapr.io"
+[[menu.main]]
+    name = "Blog"
+    weight = 80
+    url = "#"
+[[menu.main]]
+    name = "Community"
+    weight = 90
+    url = "https://dapr.io/#community"
+
+# UI Customization
+[params.ui]
+#sidebar_menu_compact = true
+navbar_logo = true
+
+# Links
+## End user relevant links. These will show up on left side of footer and in the community page if you have one.
+[[params.links.user]]
+	name ="Twitter"
+	url = "https://twitter.com/daprdev"
+	icon = "fab fa-twitter"
+        desc = "Follow us on Twitter to get the latest updates!"
+ [[params.links.user]]
+	name = "YouTube"
+	url = "https://www.youtube.com/channel/UCtpSQ9BLB_3EXdWAUQYwnRA"
+	icon = "fab fa-youtube"
+        desc = "Community call recordings and other cool demos"
+## Developer relevant links. These will show up on right side of footer and in the community page if you have one.
+[[params.links.developer]]
+	name = "GitHub"
+	url = "https://github.com/dapr/"
+	icon = "fab fa-github"
+        desc = "Development takes place here!"

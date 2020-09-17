@@ -23,7 +23,7 @@ The [daprblog](./daprblog) directory contains the hugo project, markdown files, 
 1. Install npm packages: `npm install`
 
 ## Run local server
-1. Make sure you're still in the daprdocs repo
+1. Make sure you're still in the daprblog directory
 1. Run `hugo server --disableFastRender`
 1. Navigate to `http://localhost:1313/docs`
 

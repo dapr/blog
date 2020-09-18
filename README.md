@@ -25,7 +25,7 @@ The [daprblog](./daprblog) directory contains the hugo project, markdown files, 
 ## Run local server
 1. Make sure you're still in the daprblog directory
 1. Run `hugo server --disableFastRender`
-1. Navigate to `http://localhost:1313/docs`
+1. Navigate to `http://localhost:1313/blog`
 
 ## Update blog
 1. Create new branch

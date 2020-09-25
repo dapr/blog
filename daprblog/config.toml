@@ -6,7 +6,17 @@ theme = "docsy"
 
 # Configure how URLs look like per section.
 [permalinks]
-blog = "/:section/:year/:month/:day/:slug/"
+posts = "/:section/:year/:month/:day/:slug/"
+
+# Google Analytics - Dapr Blog Property
+[services.googleAnalytics]
+id = "UA-149338238-2"
+
+# Allow embedded HTML in pages
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 
 # Top Nav Bar
 [[menu.main]]
@@ -24,11 +34,11 @@ blog = "/:section/:year/:month/:day/:slug/"
 [[menu.main]]
     name = "Docs"
     weight = 70
-    url = "https://docs.dapr.io"
+    url = "https://github.com/dapr/docs"
 [[menu.main]]
     name = "Blog"
     weight = 80
-    url = "#"
+    url = "/posts"
 [[menu.main]]
     name = "Community"
     weight = 90

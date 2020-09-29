@@ -6,7 +6,7 @@ author: Dapr project maintainers
 type: blog
 ---
 
-About one year ago, we [released Dapr](https://cloudblogs.microsoft.com/opensource/2019/10/16/announcing-dapr-open-source-project-build-microservice-applications/) as an open source project to enable developers to build event-based, distributed applications using a wide variety of different programming languages and platforms. Since the initial release, we have seen tremendous adoption of the project by developers worldwide. We are particularly excited by the growth in collaboration, with over 200 individual contributors who write code, design and review feature proposals, create issues, and author documentation.
+About one year ago, we [released Dapr](https://cloudblogs.microsoft.com/opensource/2019/10/16/announcing-dapr-open-source-project-build-microservice-applications/) as an open source project to enable developers to build event-based, distributed applications using a wide variety of different programming languages and platforms. Since the initial release, we have seen tremendous adoption of the project by developers worldwide. We are particularly excited by the growth in collaboration, with over 500 individual contributors who write code, design and review feature proposals, create issues, and author documentation.
 
 Our [community calls](https://www.youtube.com/playlist?list=PLcip_LgkYwzuF-OV6zKRADoiBvUvGhkao) and the Dapr [Gitter channels](https://gitter.im/Dapr) are a source of direct feedback to the Dapr project. This direct engagement with the community has already demonstrated the type of complex technical challenges we can solve together. We are extremely grateful for the level of engagement and participation from the Dapr community we have seen over the last year.
 

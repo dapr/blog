@@ -13,4 +13,4 @@ get feedback and guarantee the stability of our APIs, features, and components. 
 
 This is a significant milestone for the Dapr project. Are you interested in helping with the v1.0 release? Tell us about your experience in building and operating Dapr applications. We are interested in any issues, friction, or inconsistencies you may encounter and any ways we can improve on that experience. This is also a great time to provide feedback on our documentation.
 
-We are excited that after only one year we are able to outline this path to v1.0 Dapr release. Release that delivers on the features requested by developers and operators and provides the Dapr community with the necessary confidence for use in production deployments. We appreciate your help and your ongoing contributions on this amazing journey together.
+We are excited that after only one year we are able to outline this path to v1.0 Dapr release. A release that delivers on the features requested by developers and operators and provides the Dapr community with the necessary confidence for use in production deployments. We appreciate your help and your ongoing contributions on this amazing journey together.

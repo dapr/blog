@@ -1,7 +1,7 @@
 ---
 date: "2020-10-20T09:00:00-07:00"
-title: "The path to v.1.0, production ready Dapr"
-linkTitle: "The path to v.1.0, production ready Dapr"
+title: "The path to v1.0, production ready Dapr"
+linkTitle: "The path to v1.0, production ready Dapr"
 author: Dapr Maintainers
 type: blog
 ---

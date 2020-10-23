@@ -34,7 +34,7 @@ id = "UA-149338238-2"
 [[menu.main]]
     name = "Docs"
     weight = 70
-    url = "https://github.com/dapr/docs"
+    url = "https://docs.dapr.io"
 [[menu.main]]
     name = "Blog"
     weight = 80

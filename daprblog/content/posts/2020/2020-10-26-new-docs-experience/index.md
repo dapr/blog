@@ -1,13 +1,13 @@
 ---
 date: "2020-10-26T09:00:00-07:00"
 title: "A new docs experience for Dapr"
-linkTitle: "A new docs experience for Dapr"
-author: Ori Zohar & Aaron Crawfis
+linkTitle: "A new docs experience"
+author: Ori Zohar & [Aaron Crawfis](https://github.com/AaronCrawfis)
 description: "Introducing an easier way to explore the Dapr documentation"
 type: blog
 ---
 
-tl;dr [**docs.dapr.io**](https://docs.dapr.io) is now live!
+#### **tl;dr -** [**docs.dapr.io**](https://docs.dapr.io) is now live!
 
 Since Dapr was launched a year ago, it has grown at a remarkable pace. With new capabilities, features and enhancements growing, so does the documentation that help developers and operators use Dapr to build their next distributed applications. This includes introductory docs about Dapr concepts, "How-To" guides for achieving specific tasks and API reference documentation that are all a critical part of giving developers the tools they need to take advantage of everything Dapr has to offer. 
 
@@ -22,15 +22,15 @@ The Dapr docs website now includes several elements to help with page navigation
 
 * **Contextual navigation bar** - When exploring any of the pages in the documentation, you always have access to the left panel to a navigation bar showing all of the docs sections. The nav bar is contextual so the current location is expanded and other sections remain collapsed.
 * **Breadcrumbs trail** - At the top of the page you can always easily find where in the docs hierarchy you are using a breadcrumbs trail.
-* **Section directories** - Each section includes a list of all docs in that section for easy discovery.
 * **Table of contents** - Each documentation page has a table of contents on the right panel, making it easy to jump to specific sections in the page.
+* **Section directories** - Each section includes a list of all docs in that section for easy discovery.
 
-{{< imgproc navigation Resize "1280x" >}}
+{{< imgproc navigation Resize "2496x" >}}
 Navigation elements in the new Dapr docs
 {{< /imgproc >}}
 
 ### Search
-Powered by [aloglia](https://www.algolia.com/ref/docsearch/), we have also integrated search to easily find content across the different sections. In the example below, a search for the term *state* brings up articles relating to state management including overview, API reference, How-To guides and more.  
+Powered by [aloglia](https://www.algolia.com/ref/docsearch/), we have also integrated search to easily find content across the different sections. In the example below, a search for the term *service invocation* brings up articles relating to service invocation including overview, API reference, How-To guides and more.  
 
 {{< imgproc search Resize "600x" >}}
 Searching the docs
@@ -39,7 +39,7 @@ Searching the docs
 ### Versioning
 We have always made an effort to keep the docs aligned with Dapr runtime release versions using [version tags](https://github.com/dapr/docs/releases). With the docs website, we'll make it possible to review docs by version. If you are looking for documentation aligned to the latest release, the default docs view is where you need to go. To explore previous versions, click the drop down at the top right and choose the version you need. For now, previous versions have not been migrated to the new experience and so these will land you on GitHub. Moving forward, new version will be available on the website and remain there as an available reference.
 
-{{< imgproc versions Resize "600x" >}}
+{{< imgproc versions Resize "400x" >}}
 Version drop down
 {{< /imgproc >}}
 

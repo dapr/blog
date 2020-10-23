@@ -1,5 +1,5 @@
 ---
-date: "2020-10-22T09:00:00-07:00"
+date: "2020-10-26T09:00:00-07:00"
 title: "A new docs experience for Dapr"
 linkTitle: "A new docs experience for Dapr"
 author: Ori Zohar & Aaron Crawfis

@@ -4,3 +4,4 @@
 node_modules/
 daprblog/public
 daprblog/resources/_gen
+**/.DS_Store

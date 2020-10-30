@@ -6,7 +6,7 @@ author: "[Artur Souza](https://github.com/artursouza)"
 type: blog
 ---
 
-One of the key benefits of Dapr is that it is designed to enable the development of cloud native applications deployed to a variety of environments on the cloud and on the edge. It is no surprise that Kubernetes is a common hosting environment in this space and we see developers using Dapr in various stages of the development process on [Minikube](https://docs.dapr.io/operations/hosting/kubernetes/cluster/setup-minikube/), [kind](https://github.com/dapr/dapr/pull/2144), and of course on cloud provider services such as [Azure Kubernetes Service (AKS)](https://docs.dapr.io/operations/hosting/kubernetes/cluster/setup-aks/). 
+One of the key benefits of Dapr is that it is designed to enable the development of cloud native applications deployed to a variety of environments on the cloud and on the edge. It is no surprise that Kubernetes is a common hosting environment in this space and we see developers using Dapr in various stages of the development process on [Minikube](https://docs.dapr.io/operations/hosting/kubernetes/cluster/setup-minikube/), [kind](https://github.com/dapr/dapr/pull/2144) and, of course, on cloud provider services such as [Azure Kubernetes Service (AKS)](https://docs.dapr.io/operations/hosting/kubernetes/cluster/setup-aks/). 
 
 In this blog post, I'll explore how to deploy Dapr on [Rancher's K3s Kubernetes](https://rancher.com/docs/k3s/latest/en/) on a cluster of Rasperry Pis, showcasing an example of deployment for edge computing.
 

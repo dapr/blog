@@ -1,7 +1,7 @@
 ---
 date: "2020-10-30T07:00:00-07:00"
 title: "Dapr on Raspberry Pi with K3s"
-linkTitle: "Dapr on Raspberry Pi with K3s"
+linkTitle: "Dapr on Raspberry Pi with K3s Lightweight Kubernetes"
 author: "[Artur Souza](https://github.com/artursouza)"
 type: blog
 ---

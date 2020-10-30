@@ -1,5 +1,5 @@
 ---
-date: "2020-10-30T22:20:00-07:00"
+date: "2020-10-30T00:00:00-00:00"
 title: "Dapr on Raspberry Pi with K3s"
 linkTitle: "Dapr on Raspberry Pi with K3s"
 author: "[Artur Souza](https://github.com/artursouza)"

@@ -10,9 +10,6 @@ assignees: ''
 ## Suggested title
 <!-- Suggest a title for the proposed blog post -->
 
-## Steps to Reproduce the Problem
-<!-- Provide a an initial title for the blog post* -->
-
 ## Author/s
 <!-- Provide name of author (can be more than one) -->
 

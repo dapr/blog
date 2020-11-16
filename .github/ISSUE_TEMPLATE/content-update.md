@@ -1,7 +1,7 @@
 ---
 name: Content
 about: Content issues such as typos, spelling mistakes, broken links etc.
-title: "[Content issue]"
+title: "[Content update]"
 labels: ''
 assignees: ''
 

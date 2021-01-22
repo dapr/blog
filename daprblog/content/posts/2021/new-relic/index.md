@@ -1,7 +1,7 @@
 ---
 date: "2021-01-22T09:00:00-07:00"
 title: "Observing Dapr applications with New Relic One"
-linkTitle: "Dapr and New Relic"
+linkTitle: "Dapr observability with New Relic"
 author: "[Harry Kimpel](https://github.com/harrykimpel)"
 description: "Why Dapr and New Relic are better together"
 type: blog

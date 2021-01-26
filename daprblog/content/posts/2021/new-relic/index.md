@@ -6,7 +6,7 @@ author: "[Harry Kimpel](https://github.com/harrykimpel)"
 type: blog
 ---
 
-It was back in 2019 at Microsoft Ignite in Orlando when I discovered a new project referred to as Distributed Application Runtime or short Dapr. This immediately caught my attention and Mark Russinovich did an amazing job presenting this to the audience.
+It was back in 2019 at Microsoft Ignite in Orlando when I discovered a new project referred to as Distributed Application Runtime, or Dapr for short. This immediately caught my attention and Mark Russinovich did an amazing job [presenting this to the audience](https://azure.microsoft.com/en-us/resources/videos/ignite-2019-mark-russinovich-presents-the-future-of-cloud-native-applications-with-oam-and-dapr).
 
 Dapr is quite an interesting project for me in many ways. First of all, software architecture is near and dear to my heart and Dapr solves a lot of the challenges developers typically face when designing and implementing applications. Its portable, event-driven runtime makes it easy for developers to build resilient, stateless and stateful microservices applications that run on the cloud or edge and embraces the diversity of languages and developer frameworks.
 

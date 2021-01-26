@@ -1,5 +1,5 @@
 ---
-date: "2021-01-26T07:00:00-07:00"
+date: "2021-01-25T07:00:00-07:00"
 title: "Observing Dapr applications with New Relic One"
 linkTitle: "Dapr observability with New Relic"
 author: "[Harry Kimpel](https://github.com/harrykimpel)"

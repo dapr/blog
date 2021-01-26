@@ -1,9 +1,8 @@
 ---
-date: "2021-01-22T09:00:00-07:00"
+date: "2021-01-26T07:00:00-07:00"
 title: "Observing Dapr applications with New Relic One"
 linkTitle: "Dapr observability with New Relic"
 author: "[Harry Kimpel](https://github.com/harrykimpel)"
-description: "Why Dapr and New Relic are better together"
 type: blog
 ---
 
@@ -21,13 +20,16 @@ Dapr was built with [monitoring and observability](https://docs.dapr.io/concepts
 
 You can use several monitoring tools in the backend, but in this blog I’ll focus on New Relic - The easiest way to get started is by [configuring Dapr](https://docs.dapr.io/operations/monitoring/newrelic/) to send the traces to [New Relic’s trace API](https://docs.newrelic.com/docs/understand-dependencies/distributed-tracing/trace-api/report-zipkin-format-traces-trace-api) using the Zipkin trace format.
 
-{{< imgproc new-relic-ui-1 Resize "2496x" >}}
+{{< imgproc nr-distributed-tracing-1.png Resize "2256x" >}}
+{{< /imgproc >}}
+
+{{< imgproc nr-distributed-tracing-2.png Resize "2256x" >}}
 {{< /imgproc >}}
 
 ## Language agents
 Alternatively, you could leverage a [New Relic language agent](https://docs.newrelic.com/docs/using-new-relic/cross-product-functions/install-configure/install-new-relic). This type of integration also does not require any changes to the application source. In addition to the metrics and traces, you will also be able to gather a whole breadth of events from the application logic. This is important if you want to get down to the nitty-gritty details of the actual usage of the application.
 
-{{< imgproc new-relic-ui-2 Resize "2496x" >}}
+{{< imgproc nr-apm.png Resize "2256x" >}}
 {{< /imgproc >}}
 
 ## The Rise of OpenTelemetry
@@ -52,13 +54,13 @@ The last one hurts me the most. I don’t recall how often I have seen environme
 
 This brings me back to why I think Dapr and New Relic are better together. Software architecture should be simple, flexible and declarative. In short, it should be application-centric.
 
-One of the main benefits of using New Relic as your observability tool is that the platform is provided as a fully managed SaaS service. You do not need to deploy and operate your own infrastructure or components to store and analyze all the different data types such as metrics, events, logs and traces. At the core of the New Relic platform is the Telemetry Data Platform. Telemetry Data Platform provides collectors for any type of data and telemetry.
+New Relic One is an entity- or application-centric environment that lets you see all dependencies and provides you with complete visibility into your stack. One of the main benefits of using New Relic as your observability tool is that the platform is provided as a fully managed SaaS service. You do not need to deploy and operate your own infrastructure or components to store and analyze all the different data types such as metrics, events, logs and traces. At the core of the New Relic platform is the Telemetry Data Platform. Telemetry Data Platform provides collectors for any type of data and telemetry.
 
 The benefits for Daperized applications are clear. Metrics and traces from applications can easily and quickly be sent to  Telemetry Data Platform. With that configured, in a matter of minutes, you can leverage decades of experience of providing end-to-end curated user experiences. These allow you to go from a high-level overview of your applications and services all the way down into code-level details for performance problems or exceptions.
 
 Correlating the information from Dapr applications with other metrics and events from environments such as Kubernetes is another benefit. Imagine if you have pod-level details in context with logs, metrics and traces from within a container. Everything just one click away. This is the true power of an observability platform such as New Relic One.
 
-{{< imgproc new-relic-ui-3 Resize "2496x" >}}
+{{< imgproc nr-k8s-cluster-explorer.png Resize "2256x" >}}
 {{< /imgproc >}}
 
 ## Getting started

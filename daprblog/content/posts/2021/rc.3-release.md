@@ -31,7 +31,9 @@ Dapr enables per-message time-to-live (TTL) for all pub/sub components. Applicat
 * Runs as non-root by defaut on Kubernetes
 * Numerous improvements to the [Dapr Dashboard](https://github.com/dapr/dashboard)
 * Added [dapr-distributed-calendar sample](https://github.com/dapr/samples/tree/master/dapr-distributed-calendar)
-* [Java SDK](https://github.com/dapr/java-sdk) fixed to perform async API calls to Dapr sidecar.
+* [Java SDK](https://github.com/dapr/java-sdk) fixed to perform async API calls to Dapr sidecar
+* [Improvements to actor registration, exception handling](https://github.com/dapr/dotnet-sdk/issues/569) in the .NET SDK 
+* Service invocation in the SDK now uses HTTP as the underlying protocol so deeper integration with [.NET SDK](https://github.com/dapr/dotnet-sdk) API surface for HTTP is possible, which makes service invocation much more flexible. See [Service Invocation section](https://github.com/dapr/dotnet-sdk/issues/569) for more details
 
 ## Release notes
 

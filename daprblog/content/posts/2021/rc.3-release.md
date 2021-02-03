@@ -13,6 +13,12 @@ The improvements in this release came out of issues opened by the community whic
 
 We expect this release candidate to be last one and have an official v1.0 release in the next few weeks.
 
+## Acknowledgements
+
+Thanks to everyone who made this release possible!
+
+@1046102779, @AaronCrawfis, @Betula-L, @DarqueWarrior, @Yggdrasill-7C9, @alpha-baby, @alydersen, @arghya88, @artursouza, @beiwei30, @cmendible, @darren-wang, @davidkarlsen, @dylandee, @eibrunorodrigues, @fjvela, @gaoxinge, @georgestevens99, @halspang, @hepin1989, @IroNEDR, @jigargandhi, @juazasan, @karishma-chawla, @karoldeland, @kevgo, @kzmake, @mchmarny, @mrchypark, @msfussell, @mukundansundar, @newbe36524, @pkedy, @rrylee, @rynowak, @skyao, @soiboxauxi, @tcnghia, @TenSt, @tomkerkhove, @trondhindenes, @vinayada1, @wcs1only, @withinboredom, @wjayesh, @XavierGeerinck, @xiazuojie, @yaron2, @youngbupark, @zzxwill
+
 ## Installing and using v1.0.0-rc.3
 
 As with the previous release candidate, an explicit opt-in to download and install is required. The instructions to upgrade to v1.0.0-rc.3 can be found in the [release notes](https://github.com/dapr/dapr/blob/release-1.0/docs/release_notes/v1.0.0-rc.3.md#upgrading-to-dapr-100-rc3), as well as in the [v1.0.0-rc.3 docs](https://v1-rc3.docs.dapr.io/getting-started).

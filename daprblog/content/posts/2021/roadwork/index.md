@@ -1,12 +1,11 @@
 ---
-date: "2021-02-08T07:00:00-07:00"
+date: "2021-02-09T07:00:00-07:00"
 title: "Running Dapr in production at Roadwork"
 linkTitle: "Running Dapr in production at Roadwork"
 description: "How Roadwork built an auto-scaling, cloud agnostic solution with Dapr and KEDA"
 author: "[Xavier Geerinck](https://github.com/XavierGeerinck), Founder, Roadwork"
 type: blog
 ---
-
 
 At [Roadwork](https://roadwork.io) our mission statement is “To create a platform that allows our customers to gain actionable insights from their data without additional operational effort”. We work towards optimizing processes and gaining value out of your data.
 
@@ -37,12 +36,12 @@ The architectural diagram explain to explain the solution is shown below.
 {{< imgproc scraper-ai-rpa.png Resize "1500x" >}}
 {{< /imgproc >}}
 
-As you can see in the above diagram, queue is utilized (albeit split up to an on-demand queue and scheduled queue) where work items are coming in. Now, here is where Dapr comes in - we utilize its bindings to connect to RabbitMQ and we only need to call a simple REST interface. On top of this we deployed KEDA on the Kubernetes cluster to monitor the queue size. Once the items in this queue exceed a certain threshold, KEDA scales out the deployment automatically to add extra pods to the cluster.
+As you can see in the above diagram, a queue is utilized (albeit split up to an on-demand queue and scheduled queue) where work items are coming in. Now, here is where Dapr comes in - we utilize its bindings to connect to RabbitMQ and we only need to call a simple REST interface. On top of this we deployed KEDA on the Kubernetes cluster to monitor the queue size. Once the items in this queue exceed a certain threshold, KEDA scales out the deployment automatically to add extra pods to the cluster.
 
 While the above solution handles autoscaling the workload, we still have to autoscale the Kubernetes cluster. Since we are using a managed Kubernetes cluster (ASK) we utilize [the autoscaling capabilities built into the service](https://docs.microsoft.com/en-us/azure/aks/cluster-autoscaler) which resolves the infrastructure scaling issue.
 
 ## Conclusion
-The solution above has now been running in a production environment for the last three months. In the span of these three short months we have also made use of the portability of the solution! We moved the entire solution from Digital Ocean (was missing service accounts) to AWS and finally to Azure with migrations taking only a couple of hours, since all we had to do is just configure Kubernetes, Dapr and KEDA again and we were all set-up and running again!
+The solution above has now been running in a production environment for the last three months. In the span of these three short months we have also made use of the portability of the solution! We moved the entire solution from Digital Ocean (was missing service accounts, crucial for security purposes) to AWS and finally to Azure with migrations taking only a couple of hours, since all we had to do is just configure Kubernetes, Dapr and KEDA again and we were all set-up and running again!
 
 We’ve learned a ton in  the past few months about Dapr! So much that we have even opened a few pull requests and are actively contributing in the – amazing – community. 
 

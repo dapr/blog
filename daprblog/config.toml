@@ -35,6 +35,10 @@ id = "UA-149338238-2"
     name = "Discord"
     weight = 70
     url = "https://aka.ms/dapr-discord"
+[[menu.main]]
+    name = "Community"
+    weight = 80
+    url = "https://github.com/dapr/community/blob/master/README.md"
 
 # UI Customization
 [params.ui]

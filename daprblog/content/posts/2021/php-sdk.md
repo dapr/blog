@@ -69,7 +69,8 @@ class MyState {
 $app = \Dapr\App::create();
 $app->post('/my-state/{key}', function (
     string $key, 
-    #[\Dapr\Attributes\FromBody] string $body, 
+    #[\Dapr\Attributes\FromBody]
+    string $body, 
     \Dapr\State\StateManager $stateManager) {
         $stateManager->save_state(store_name: 'store', item: new \Dapr\State\StateItem(key: $key, value: $body));
         $stateManager->save_object(new MyState);

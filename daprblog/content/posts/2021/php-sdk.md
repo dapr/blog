@@ -6,31 +6,30 @@ author: "[Robert Landers](https://github.com/withinboredom)"
 type: blog
 ---
  
-Hello World, I'm Rob Landers, the maintainer of the new Dapr [PHP SDK]( https://github.com/dapr/php-sdk). Since I was a child, I've been writing software, and more importantly, I've been writing PHP since 2013. I work at Automattic on the Decision Science team, working with PHP, Python, JavaScript, and Scala. However, C# is my favorite general-purpose language since I first used it back in its 2.0 days. 
+Hello World, I'm Rob Landers, the maintainer of the new Dapr [PHP SDK]( https://github.com/dapr/php-sdk). I currently work at Automattic on the Decision Science team, working with PHP, Python, JavaScript, and Scala. Since I was young, I've been writing software, and more importantly, I've been writing PHP since 2013. C# is also one of my favorite general-purpose languages, since I first used it back in its 2.0 days! 
 
-For me, language is a way to express a solution to a problem, and I love learning new languages and discovering exciting new solutions. Some languages are better suited than others to represent certain solutions, and I think that was the appeal of Dapr when I first discovered it. You can choose the language that best solves the problem with a homogenous, scalable framework.
+For me, language is a way to express a solution to a problem, and I love learning new languages and discovering exciting new solutions. Some languages are better suited than others to represent certain solutions, and that was the appeal of Dapr when I first discovered it. You can choose the language that best solves the problem with Dapr being a homogenous, scalable framework.
 
 ## The path to a Dapr PHP SDK
 
-The journey to create the PHP SDK technically started in 2006. I was in considerable debt after a motorcycle accident, and I was terrible at managing money.
+The journey to create the Dapr PHP SDK technically started in 2006. I was in considerable debt after a motorcycle accident, and I was terrible at managing money.
+I built some software that scraped my bank account and managed a budget via SMS messages which I originally wrote in C#. Over the years, I've tried turning it into a product, pitching it to investors, open-sourcing it, etc. No one was interested, but it didn't matter - I still needed it. Today, it runs on my laptop as nearly 30 microservices written in PHP and C#. At the beginning of 2020, I started investigating how to put it in the cloud.
  
-Originally written in C#, I built some software that scraped my bank account and managed a budget via SMS messages. Over the years, I've tried turning it into a product, pitching it to investors, open-sourcing it, etc. No one was interested, but it didn't matter - I still needed it. Today, it runs on my laptop as nearly 30 microservices written in PHP and C#. At the beginning of 2020, I started investigating how to put it in the cloud.
- 
-I tried many things out before discovering Dapr and realizing that it could support any language with a bit of work. So, over a long weekend, I started putting it together. Thus, the PHP SDK was born while I migrated everything over to Dapr. The migration unlocked the path to adding some new, exciting features my wife has been asking for a long time - like the ability to ignore a purchase’s impact on the budget, or have some auto-categorization.
+I tried many things out before discovering Dapr and realizing that it could support any language with a bit of work. So, over a long weekend, I started putting Dapr together with PHP to port my financial app. Thus, the PHP SDK was born while I migrated everything over to Dapr. The migration unlocked the path to adding some new, exciting features my wife has been asking for a long time, like the ability to ignore a purchase’s impact on the budget, or have some auto-categorization.
  
 ## Why PHP and Dapr?
 
 PHP runs nearly [80% of the web](https://w3techs.com/technologies/details/pl-php). It's a web-native language best suited for doing "web stuff," whether that's running a blog, an online shop, or your app. There's a pretty good chance there's some PHP somewhere in any given organization.
  
-Furthermore, many legacy applications are written in PHP (I've maintained a couple of them). There's a drive to keep adding more features and deliver more value, but there comes the point where some solutions are better written in another language, other than PHP. Microservices present a unique solution to this problem allowing developers to use the language and storage methodologies that best solve their challenges. However, when you have a large legacy application, microservices seem like a dreamland that you'll never be able to reach without significant management buy-in to rewrite everything from the ground up. This is where Dapr can offer a lot of value - Dapr building blocks let you interface with technologies that may be hard to integrate with PHP. With a Dapr PHP SDK, you can implement best practices and patterns without throwing away all of your legacy code.
+Furthermore, many legacy applications are written in PHP (I've maintained a couple of them). There's a drive to keep adding more features and deliver more value, but there comes the point where some solutions are better written in another language, other than PHP. Microservices present a unique solution to this problem allowing developers to use the language and storage methodologies that best solve their challenges. However, when you have a large legacy application, microservices seem like a dreamland that you'll never be able to reach without significant management buy-in to rewrite everything from the ground up. This is where Dapr can offer a lot of value. Dapr's building blocks let you interface with technologies that may be hard to integrate with PHP, through its bindings, statement management and pub/sub. With a Dapr PHP SDK, you can implement best practices and patterns without throwing away all of your legacy code.
 
-## Examples
+## Let's get into code 
 
-So how do Dapr API calls look like in PHP? Here are a few examples:
+So what do Dapr API calls look like in PHP? Let's dive into a few examples:
 
 ### State management
 
-With the PHP SDK, you can easily define state with just a Plain Ole’ PHP Object: 
+With the PHP SDK, you can easily define manage state with just a plain old PHP Object. In the code below, this saves and load key/value data to a state store.  
  
 ```php 
 <?php
@@ -95,7 +94,7 @@ $app->get('/publish', function(\DI\FactoryInterface $factory) {
 $app->start();
 ``` 
 
-To subscribe and consume messages:
+To subscribe to topics and consume messages:
 
 ```php
 $app = \Dapr\App::create(configure: fn(\DI\ContainerBuilder $builder) => $builder->addDefinitions([
@@ -107,8 +106,8 @@ $app->post('/receive-message', function(#[\Dapr\Attributes\FromBody] \Dapr\PubSu
 $app->start();
 ```
 
-For more code snippets, see the [Dapr PHP SDK repo]( https://github.com/dapr/php-sdk)
+For several more code examples, check out the [Dapr PHP SDK repo]( https://github.com/dapr/php-sdk)
 
 ## Summary
 
-From my perspective, Dapr is uniquely situated to assist with migrating from legacy applications to well-tested microservices. With Dapr, any language can integrate with it using HTTP. With SDKs, we can get rich integrations that improve the testability of the code we write and abstract the tricky bits. I invite you to try the SDK yourself, open issues on the SDK repo and share your experience on the [Dapr Discord server](https://aka.ms/dapr-discord). I'm really excited to see what you'll build with it!
+From my perspective, Dapr is uniquely situated to assist with migrating existing legacy applications to microservices architecture. With Dapr, any language can integrate with it using HTTP which makes is easily to call the APIs. With SDKs, we can get rich integrations that improve the testability of the code we write and abstract any of the tricky bits. I invite you to try the PHP SDK yourself, open issues on the SDK repo and share your experience on the [Dapr Discord server](https://aka.ms/dapr-discord) php-sdk channel. I'm really excited to see what you'll build with it!

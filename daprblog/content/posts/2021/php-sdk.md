@@ -114,4 +114,4 @@ To get started yourself check out the [Dapr PHP SDK getting started guide](https
 
 From my perspective, Dapr is uniquely situated to assist with migrating existing legacy applications to microservices architecture. With Dapr, any language can integrate with it using HTTP which makes is easily to call the APIs. With SDKs, we can get rich integrations that improve the testability of the code we write and abstract any of the tricky bits. 
 
-I invite you to try the PHP SDK yourself, open issues on the SDK repo and share your experience on the [Dapr Discord server](https://aka.ms/dapr-discord) php-sdk channel. I'm really excited to see what you'll build with it!
+I invite you to try the PHP SDK yourself, open issues on the SDK repo and share your experience on the [Dapr Discord server php-sdk channel](https://discord.com/channels/778680217417809931/788876435796394004). I'm really excited to see what you'll build with it!

@@ -21,7 +21,9 @@ I tried many things out before discovering Dapr and realizing that it could supp
 
 PHP runs nearly [80% of the web](https://w3techs.com/technologies/details/pl-php). It's a web-native language best suited for doing "web stuff," whether that's running a blog, an online shop, or your app. There's a pretty good chance there's some PHP somewhere in any given organization.
  
-Furthermore, many legacy applications are written in PHP (I've maintained a couple of them). There's a drive to keep adding more features and deliver more value, but there comes the point where some solutions are better written in another language, other than PHP. Microservices present a unique solution to this problem allowing developers to use the language and storage methodologies that best solve their challenges. However, when you have a large legacy application, microservices seem like a dreamland that you'll never be able to reach without significant management buy-in to rewrite everything from the ground up. This is where Dapr can offer a lot of value. Dapr's building blocks let you interface with technologies that may be hard to integrate with PHP, through its bindings, statement management and pub/sub. With a Dapr PHP SDK, you can implement best practices and patterns without throwing away all of your legacy code.
+Furthermore, many legacy applications are written in PHP (I've maintained a couple of them). There's a drive to keep adding more features and deliver more value, but there comes the point where some solutions are better written in another language, other than PHP. Microservices present a unique solution to this problem allowing developers to use the language and storage methodologies that best solve their challenges. However, when you have a large legacy application, microservices seem like a dreamland that you'll never be able to reach without significant management buy-in to rewrite everything from the ground up. 
+
+This is where Dapr can offer a lot of value. Dapr's building blocks let you interface with technologies that may be hard to integrate with PHP, through its bindings, statement management and pub/sub. With a Dapr PHP SDK, you can implement best practices and patterns without throwing away all of your legacy code.
 
 ## Let's get into code 
 
@@ -29,7 +31,7 @@ So what do Dapr API calls look like in PHP? Let's dive into a few examples:
 
 ### State management
 
-With the PHP SDK, you can easily define manage state with just a plain old PHP Object. In the code below, this saves and load key/value data to a state store.  
+With the PHP SDK, you can easily define manage state with just a "Plain Old PHP Object" (POPO). In the code below, this saves and loads key/value data to a state store.  
  
 ```php 
 <?php
@@ -106,8 +108,10 @@ $app->post('/receive-message', function(#[\Dapr\Attributes\FromBody] \Dapr\PubSu
 $app->start();
 ```
 
-For several more code examples, check out the [Dapr PHP SDK repo]( https://github.com/dapr/php-sdk)
+To get started yourself check out the [Dapr PHP SDK getting started guide](https://github.com/dapr/php-sdk/blob/main/docs/getting-started.md).
 
 ## Summary
 
-From my perspective, Dapr is uniquely situated to assist with migrating existing legacy applications to microservices architecture. With Dapr, any language can integrate with it using HTTP which makes is easily to call the APIs. With SDKs, we can get rich integrations that improve the testability of the code we write and abstract any of the tricky bits. I invite you to try the PHP SDK yourself, open issues on the SDK repo and share your experience on the [Dapr Discord server](https://aka.ms/dapr-discord) php-sdk channel. I'm really excited to see what you'll build with it!
+From my perspective, Dapr is uniquely situated to assist with migrating existing legacy applications to microservices architecture. With Dapr, any language can integrate with it using HTTP which makes is easily to call the APIs. With SDKs, we can get rich integrations that improve the testability of the code we write and abstract any of the tricky bits. 
+
+I invite you to try the PHP SDK yourself, open issues on the SDK repo and share your experience on the [Dapr Discord server](https://aka.ms/dapr-discord) php-sdk channel. I'm really excited to see what you'll build with it!

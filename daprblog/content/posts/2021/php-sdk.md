@@ -23,7 +23,7 @@ PHP runs nearly [80% of the web](https://w3techs.com/technologies/details/pl-php
  
 Furthermore, many legacy applications are written in PHP (I've maintained a couple of them). There's a drive to keep adding more features and deliver more value, but there comes the point where some solutions are better written in another language, other than PHP. Microservices present a unique solution to this problem allowing developers to use the language and storage methodologies that best solve their challenges. However, when you have a large legacy application, microservices seem like a dreamland that you'll never be able to reach without significant management buy-in to rewrite everything from the ground up. 
 
-This is where Dapr can offer a lot of value. Dapr's building blocks let you interface with technologies that may be hard to integrate with PHP, through its bindings, statement management and pub/sub. With a Dapr PHP SDK, you can implement best practices and patterns without throwing away all of your legacy code.
+This is where Dapr can offer a lot of value. Dapr's building blocks let you interface with technologies that may be hard to integrate with PHP, through its bindings, state management, and pub/sub. With a Dapr PHP SDK, you can implement best practices and patterns without throwing away all of your legacy code.
 
 ## Let's get into code 
 

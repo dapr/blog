@@ -67,6 +67,6 @@ Correlating the information from Dapr applications with other metrics and events
 In order to get started, here are a couple of links to documentation and resources that will help you with regards to next steps and further reading:
 
 - Dapr Docs: [How-To: Set-up New Relic for Dapr observability](https://docs.dapr.io/operations/monitoring/newrelic/)
-- Perpetually [free New Relic account](https://newrelic.com/signup), 100 GB/month of free data ingest, 1 free full access user, unlimited free basic users
+- Perpetually [free New Relic account](https://newrelic.com/signup?ref=dapr), 100 GB/month of free data ingest, 1 free full access user, unlimited free basic users
 - New Relic Blog: [OpenTelemetry: Future-Proofing Your Instrumentation](https://blog.newrelic.com/product-news/what-is-opentelemetry/)
 - New Relic Blog: [Troubleshoot your Applications faster with OpenTelemetry and New Relic One](https://blog.newrelic.com/product-news/opentelemetry-user-experience/)

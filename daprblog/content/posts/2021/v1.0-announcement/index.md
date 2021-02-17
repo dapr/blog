@@ -1,5 +1,5 @@
 ---
-date: "2021-02-16T07:00:00-07:00"
+date: "2021-02-17T07:00:00-07:00"
 title: "Announcing Dapr v1.0"
 linkTitle: "Announcing Dapr v1.0"
 description: "The distributed application runtime is now production ready"

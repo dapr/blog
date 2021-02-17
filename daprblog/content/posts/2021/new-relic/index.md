@@ -18,7 +18,7 @@ In this blog post I want to highlight the basic steps on how to get started with
 
 Dapr was built with [monitoring and observability](https://docs.dapr.io/concepts/observability-concept/) in mind. One of the value propositions of Dapr is the fact that you don’t have to instrument your applications in order to capture traces and metrics. This removes the hassle of gathering insights from within your applications.
 
-You can use several monitoring tools in the backend, but in this blog I’ll focus on New Relic - The easiest way to get started is by [configuring Dapr](https://docs.dapr.io/operations/monitoring/newrelic/) to send the traces to [New Relic’s trace API](https://docs.newrelic.com/docs/understand-dependencies/distributed-tracing/trace-api/report-zipkin-format-traces-trace-api) using the Zipkin trace format.
+You can use several monitoring tools in the backend, but in this blog I’ll focus on New Relic - The easiest way to get started is by [configuring Dapr](https://docs.dapr.io/operations/monitoring/tracing/supported-tracing-backends/newrelic/) to send the traces to [New Relic’s trace API](https://docs.newrelic.com/docs/understand-dependencies/distributed-tracing/trace-api/report-zipkin-format-traces-trace-api) using the Zipkin trace format.
 
 {{< imgproc nr-distributed-tracing-1.png Resize "2256x" >}}
 {{< /imgproc >}}
@@ -66,7 +66,7 @@ Correlating the information from Dapr applications with other metrics and events
 ## Getting started
 In order to get started, here are a couple of links to documentation and resources that will help you with regards to next steps and further reading:
 
-- Dapr Docs: [How-To: Set-up New Relic for Dapr observability](https://docs.dapr.io/operations/monitoring/newrelic/)
+- Dapr Docs: [How-To: Set-up New Relic for Dapr observability](https://docs.dapr.io/operations/monitoring/tracing/supported-tracing-backends/newrelic/)
 - Perpetually [free New Relic account](https://newrelic.com/signup?ref=dapr), 100 GB/month of free data ingest, 1 free full access user, unlimited free basic users
 - New Relic Blog: [OpenTelemetry: Future-Proofing Your Instrumentation](https://blog.newrelic.com/product-news/what-is-opentelemetry/)
 - New Relic Blog: [Troubleshoot your Applications faster with OpenTelemetry and New Relic One](https://blog.newrelic.com/product-news/opentelemetry-user-experience/)

@@ -1,5 +1,5 @@
 ---
-date: "2021-03-01T07:00:00-07:00"
+date: "2021-03-02T07:00:00-07:00"
 title: "A visual guide to Dapr"
 linkTitle: "A visual guide to Dapr"
 author: "[Nitya Narasimhan](https://sketchthedocs.dev/visual-azure/)"
@@ -19,7 +19,7 @@ I’ve said this before. Like 65% of users who are visual learners, I find that 
 The overview covers a lot of ground but here are the main points I took away:
 
 ### What is Dapr?
-Dapr stands for **Distributed Application Runtime**. It is a portable, event-driven runtime that makes it easy for app developers to build resilient stateless and stateful apps that can run on cloud and edge environments. More importantly, Dapr supports a diversity of programming languages and developer frameworks, offering us a quick starting point for experimentation and usage. You can ge more details at the [Dapr overview doc](https://docs.dapr.io/concepts/overview/).
+Dapr stands for **Distributed Application Runtime**. It is a portable, event-driven runtime that makes it easy for app developers to build resilient stateless and stateful apps that can run on cloud and edge environments. More importantly, Dapr supports a diversity of programming languages and developer frameworks, offering us a quick starting point for experimentation and usage. You can get more details at the [Dapr overview doc](https://docs.dapr.io/concepts/overview/).
 
 ### Why Use Dapr?
 Many application developers have experience with traditional 3-tier (client-server-database) architecture. However, cloud native systems rely on loosely coupled systems and a microservices architecture designed to embrace large scale, rapid change, and resilient operation. Now, developers face a whole new set of challenges like discovering (and invoking) microservices, managing secrets, and recovering state after failures.

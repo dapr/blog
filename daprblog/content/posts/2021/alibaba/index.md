@@ -1,5 +1,5 @@
 ---
-date: "2021-03-16T07:00:00-07:00"
+date: "2021-03-17T07:00:00-07:00"
 title: "How Alibaba is using Dapr"
 linkTitle: "How Alibaba is using Dapr"
 author: "[Sky Ao](https://github.com/skyao), Alibaba Cloud"
@@ -8,7 +8,7 @@ type: blog
 
 The **D**istributed **Ap**plication **R**untime ([Dapr](https://dapr.io/)) is an open-source, portable, and event-driven runtime. It enables developers to build elastic, stateless/stateful applications running on cloud platforms and edge devices. Dapr can lower the threshold for building modern cloud-native applications based on the microservice architecture.
 
-## Why we use Dapr at Alibaba
+## Why we chose Dapr
 
 At Alibaba, Java is widely used for business applications, various middleware servers, and basic capabilities. Over the past decade, Alibaba has built a solid Java based technology stack in various of battle tested scenarios.
 
@@ -29,7 +29,7 @@ In the middle of 2020, Alibaba conducted an internal small-scale pilot using Dap
 
 In the next section, this article takes the real-world implementation of Dapr in Alibaba as an example to describe how Dapr helps solve the problems described above.
 
-## How we are adopting Dapr at Alibaba
+## Dapr use cases at Alibaba
 
 ### Overview
 

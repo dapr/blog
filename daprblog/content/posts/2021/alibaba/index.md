@@ -1,10 +1,12 @@
 ---
-date: "2021-03-17T07:00:00-07:00"
+date: "2021-03-18T07:00:00-07:00"
 title: "How Alibaba is using Dapr"
 linkTitle: "How Alibaba is using Dapr"
-author: "[Sky Ao](https://github.com/skyao), Alibaba Cloud"
+author: "[Sky Ao](https://github.com/skyao), Staff Engineer, Alibaba Cloud"
 type: blog
 ---
+
+{{< imgproc alibaba-logo.png  Resize "200x" />}}
 
 The **D**istributed **Ap**plication **R**untime ([Dapr](https://dapr.io/)) is an open-source, portable, and event-driven runtime. It enables developers to build elastic, stateless/stateful applications running on cloud platforms and edge devices. Dapr can lower the threshold for building modern cloud-native applications based on the microservice architecture.
 

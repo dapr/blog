@@ -1,5 +1,5 @@
 ---
-date: "2021-03-18T07:00:00-07:00"
+date: "2021-03-19T07:00:00-07:00"
 title: "How Alibaba is using Dapr"
 linkTitle: "How Alibaba is using Dapr"
 author: "[Sky Ao](https://github.com/skyao), Staff Engineer, Alibaba Cloud"
@@ -35,9 +35,7 @@ In the next section, this article takes the real-world implementation of Dapr in
 
 ### Overview
 
-#### Dapr is still in the experimental stage in Alibaba
-
-Currently, our primary goal is to develop Dapr components for internal middleware. With Dapr components, business applications can be decoupled from this middleware and the Java and Java Client SDK that implements them. Additionally, we are working to verify Dapr in various scenarios by implementing Dapr in several business applications. After the verification, business applications will be deployed on a large scale.
+Dapr is still in the experimental stage in Alibaba. Currently, our primary goal is to develop Dapr components for internal middleware. With Dapr components, business applications can be decoupled from this middleware and the Java and Java Client SDK that implements them. Additionally, we are working to verify Dapr in various scenarios by implementing Dapr in several business applications. After the verification, business applications will be deployed on a large scale.
 
 As of March 2021, Dapr has been implemented in two scenarios in Alibaba: multi-language support and cloud-to-cloud migration.
 
@@ -80,7 +78,7 @@ The implementation of multi-language support in the three scenarios above is ill
 {{< imgproc multiple-langurage.jpg Resize "1500x" >}}
 {{< /imgproc >}}
 
-### Cloud-to-cloud Migration
+### Cloud-to-cloud migration
 
 **The challenge:** Cross-platform requirements exist when providing business applications externally.
 
@@ -105,7 +103,7 @@ And so, Dapr helps the business team deploy DingTalk anywhere.
 {{< imgproc cloud-migration.jpg Resize "1500x" >}}
 {{< /imgproc >}}
 
-## Future Plans of Dapr in Alibaba
+## Future plans for Dapr at Alibaba
 
 In the future, we will continue to verify Dapr through pilot applications in the following aspects:
 

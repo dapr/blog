@@ -1,7 +1,7 @@
 ---
 date: "2021-04-16"
 title: "Dapr's response to CodeCov's bash uploader breach"
-linkTitle: "CodeCov response"
+linkTitle: "CodeCov security response"
 author: "[Aaron Crawfis](https://github.com/AaronCrawfis)"
 type: blog
 ---

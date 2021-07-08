@@ -1,40 +1,43 @@
-# How AutoNavi is using Dapr
+---
+date: "2021-06-30T07:00:00-07:00"
+title: "How Dapr helped AutoNavi build a new serverless solution"
+linkTitle: "Autonavi's Dapr case study"
+author: "Xuexiang Deng, Staff Engineer, AutoNavi Information Ltd."
+type: blog
+---
 
-> By Xuexiang Deng, Staff Engineer, AutoNavi Information Ltd. 
+{{< imgproc autonavi-logo.png  Resize "200x" />}}
 
-AutoNavi is a leading provider of digital map in China with over 100 million DAU. AutoNavi stated it's Serverless/Faas project on Apr 2020, After one year, AutoNavi's Faas QPS has been exceed 100 thousands. We use Dapr in AutoNavi Serverless/Faas project, let me explain why and how we use Dapr in our Serverless/Faas project.
+AutoNavi is a leading provider of digital map and navigation services in China with over 100 million daily active users. AutoNavi started its Serverless/FaaS (Function as a service) project on April 2020 and after just one year, AutoNavi's solution already exceeds 100,000 queries per second (QPS). In this blog I will share how we at Autonavi use Dapr to implement our serverless solution.
 
-Some business examples written by Faas:
+Below are a few of the business use cases that our solution addresses:
 
-![image.png](./images/autonavi.png)
+{{< imgproc autonavi.png Resize "1500x" >}}{{< /imgproc >}}
 
-## Why We Use Dapr
+## Why we chose Dapr
 
-During the conducting of AutoNavi Faas project, We got many challenges, two of the challenges has something to do with Dapr, one challenge is how to connect existing backend services in a lightweight mode. Another challenge is the multi-language runtime demand.
+While building the new service, we encountered several challenges. Among them, two that we felt Dapr could help us address: Connecting existing backend services using a lightweight solution and our requirement for a runtime which supports multiple languages.
 
-### How to connect existing backend services in a lightweight mode
+### Connecting existing backend services
 
-To leverage existing backend services, Faas must have the capability to invoke existing services which were built base on Alibaba middleware. of course we can also use middlerware SDKs in our Faas applications, but as we know FaaS and serverless scenarios require a more lightweight solution to meet fast start-up and scaling needs. In the conventional class library mode, a business application becomes bloated because a large number of SDKs must be integrated.
+To leverage existing backend services, our FaaS must have the capability to invoke these services which leverage Alibaba's middleware. A direct approach would be to use the middleware SDKs in our FaaS applications, but a hard requirement for our FaaS and serverless scenarios is keeping it lightweight as to meet our fast start-up and scaling needs. We also wanted to avoid having the application become bloated due to a large number of SDKs that were integrated into the code base. 
+
+This is where Dapr's lightweight footprint was very helpful. In addition, leveraging Dapr's APIs helped us avoid using any SDK libraries in our code. 
 
 ### Multi-language runtime
 
-In AutoNavi, the major language used in the client side are C++ and Node.js. base navigation functions such as mapping display, route display, sign guidance, spoken guidance and etc need to be run both at mobile and vehicle embedded navigation. these functions are written in C++ to leverage it's cross platform feature. Functions such as before the route, recommanded POIs after the route are written in Node.js. The major language used in the server side are Java, Go and C++. 
+At AutoNavi, we mainly use C++ and Node.js on the client side. Base navigation functions such as mapping display, route display, sign guidance, spoken guidance etc. need to run both on mobile and vehicle embedded navigation systems. These functions are written in C++ to leverage its strengths as a cross platform language. Other functions such recommended points of interest after route completion are written in Node.js. In addition, on the server side, Java, Go and C++ are used. All these functions need to communicate with the Alibaba middleware and so we needed a multi-language solution to help us achieve this if we wanted to avoid using class libraries for each of the different languages.
 
-Therefore, in AutoNavi's FaaS and serverless scenarios, it is necessary to provide a more lightweight and multi-language solution different from the conventional class library approach.
+In the past our solution to the above challenges was using a [RSocket](https://rsocket.io/) broker: The FaaS runtime uses a lightweight multi-language RSocket SDK to connect to the RSocket broker, the RSocket broker in turn forwards the request to middleware proxy to invoke the existing service exposed by Alibaba's middleware and forwards the response back to the FaaS runtime. This indeed solved both challenges but introduced a new challenge - the RSocket broker and the middleware proxies are centralized and that breaks the decentralized architecture we aimed to have for our serverless system.
 
-We use RSocket broker solution to solve theses two challenges in the past. Faas runtime use a lightweight multi-language RSocket SDK to connect to RSocket broker, Rsocket broker forward the request to middleware proxy to invoke the existing service exposed by Alibaba middleware and forward the response back to Faas runtime. These approach can solve the two challenges properly, but involves a new challenge at the same time, the RSocket broker and the middleware proxies are centralized architecture which against the serverless architecture.
+As we looked into using Dapr - we found that Dapr offers an optimal alternative solution. We use the Dapr sidecar to support multiple languages and keeping applications lightweight, replacing the need for client SDKs. Meanwhile, the sidecar pattern keeps our architecture decentralized without the need for a centralized broker like RSocket.
 
-Dapr is an optimized sulotion to these chanllenges. We use Dapr sidecar to support multiple languages and make applications more lightweight with the Dapr lightweight SDK replacing the need for client SDKs, and Dapr does not have the centralized architecture problem.
+## How Dapr is used in the FaaS runtime today
 
-## We Use Dapr Sidecar In Faas Runtime
+{{< imgproc faas-runtime.png Resize "500x" >}}{{< /imgproc >}}
 
-How we use Dapr in Faas runtime is illustrated below:
+The multi-language (C++/Node.js/Go/Java) FaaS runtime uses Dapr SDKs to make middleware related requests to the Dapr sidecar via gRPC, the Dapr sidecars leverage Alibaba middleware components to make requests to the middleware services and sends a callback to the FaaS runtime when a response is returned.
 
-![image.png](./images/faas-runtime.png)
+In practice we are still using Dapr in an experimental way. Currently RSocket broker serves as a fallback in case failures with Dapr. Having a fallback is always a best practice when adopting a new technology. 
 
-C++/Node.js/Go/Java Faas runtime use Dapr sdk to make middleware related request to Dapr sidecar by GRPC, these Dapr sidecars has Alibaba middleware components built in it. Dapr sidecar make request to Alibaba middleware services and callback Faas runtime when got response from Alibaba middleware services.
-
-Dapr is still in the experimental stage in AutoNavi's Faas scenarios. In the beginning we fallback to RSocket broker in case of dapr invoking failed. As you know, has a fallback is always the best practice to adopt a new  technology.
-
-Now we are working to verify Dapr in various scenarios by implementing Dapr in several business applications. After the verification, more and more Faas Runtime will be migrate to the Dapr sidecar approach. Finally we will remove the RSocket broker approach and use Dapr only in our Faas runtime.
-
+We are now working to verify Dapr in various scenarios by implementing Dapr in several business applications. After the verification, we see more and more parts of our solution migrating to use Dapr. Finally we plan to remove the RSocket broker and fully rely on Dapr for our needs.

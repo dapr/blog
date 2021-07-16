@@ -12,7 +12,12 @@ AutoNavi is a leading provider of digital map and navigation services in China w
 
 Below are a few of the business use cases that our solution addresses:
 
-{{< imgproc autonavi.png Resize "1500x" >}}{{< /imgproc >}}
+{{< imgproc autonavi-usercase.png Resize "1500x" >}}{{< /imgproc >}}
+
+- Weather in a long route: When the route distance exceed a threshold, for example 100kms, users may want to know what is the weather like during the route.
+- Search along route: Search vehicle infrastructure like gas station, electric vehicle charge-station，petrol station, vehicle maintain station in the route.
+- Route tips: Show tips like width limiting pier, many large vehicle along the route.
+- Scenic spots information: Show ticket price, opening hours, telephone and brief introduction of a scenic spot.
 
 ## Why we chose Dapr
 
@@ -34,10 +39,14 @@ As we looked into using Dapr - we found that Dapr offers an optimal alternative 
 
 ## How Dapr is used in the FaaS runtime today
 
-{{< imgproc faas-runtime.png Resize "500x" >}}{{< /imgproc >}}
+{{< imgproc autonavi-faas-runtime.png Resize "1500x" >}}{{< /imgproc >}}
 
 The multi-language (C++/Node.js/Go/Java) FaaS runtime uses Dapr SDKs to make middleware related requests to the Dapr sidecar via gRPC, the Dapr sidecars leverage Alibaba middleware components to make requests to the middleware services and sends a callback to the FaaS runtime when a response is returned.
 
 In practice we are still using Dapr in an experimental way. Currently RSocket broker serves as a fallback in case failures with Dapr. Having a fallback is always a best practice when adopting a new technology. 
 
 We are now working to verify Dapr in various scenarios by implementing Dapr in several business applications. After the verification, we see more and more parts of our solution migrating to use Dapr. Finally we plan to remove the RSocket broker and fully rely on Dapr for our needs.
+
+## Summary
+
+The solution above has now been running in Autonavi production environment for the last one month without any issue, the experiment goes well. By using Dapr, we solve the problems of invoking existing backend services in a lightweight model and supporting multiple languages in our serverless runtime without breaking the decentralized architecture. Dapr is really a perfect solution for invoking backend services in our multi-language serverless runtime.

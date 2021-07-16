@@ -25,7 +25,7 @@ While building the new service, we encountered several challenges. Among them, t
 
 ### Connecting existing backend services
 
-To leverage existing backend services, our FaaS must have the capability to invoke these services which leverage Alibaba's middleware. A direct approach would be to use the middleware SDKs in our FaaS applications, but a hard requirement for our FaaS and serverless scenarios is keeping it lightweight as to meet our fast start-up and scaling needs. We also wanted to avoid having the application become bloated due to a large number of SDKs that were integrated into the code base. 
+To leverage existing backend services which generally are Micro-service, our FaaS must have the capability to invoke these Micro-services which developed base on our RPC framework. A direct approach would be to use our RPC framework SDKs in our FaaS applications, but a hard requirement for our FaaS and serverless scenarios is keeping it lightweight as to meet our fast start-up and scaling needs. We also wanted to avoid having the application become bloated due to a large number of SDKs that were integrated into the code base. 
 
 This is where Dapr's lightweight footprint was very helpful. In addition, leveraging Dapr's APIs helped us avoid using any SDK libraries in our code. 
 
@@ -35,7 +35,7 @@ At AutoNavi, we mainly use C++ and Node.js on the client side. Base navigation f
 
 We had designed a Faas(function as a service) runtime component in our serverless solution. Developer just need to write function code, the function code will be downloaded, loaded and finally run inside our Faas runtime. We have developed different Faas runtime for each of the language, include C++ Faas runtime, Go Faas runtime, rust Faas runtime and so on. Functions in each language need to connect to backend services or connect to infrastructures such as redis, mysql, MQ and so on, so we needed a multi-language solution to help us achieve this if we wanted to avoid using class libraries for each of the different languages.
 
-In the past our solution to the above challenges was using a [RSocket](https://rsocket.io/) broker: The FaaS runtime uses a lightweight multi-language RSocket SDK to connect to the RSocket broker, the RSocket broker in turn forwards the request to middleware proxy to invoke the existing service exposed by Alibaba's middleware and forwards the response back to the FaaS runtime. This indeed solved both challenges but introduced a new challenge - the RSocket broker and the middleware proxies are centralized and that breaks the decentralized architecture we aimed to have for our serverless system.
+In the past our solution to the above challenges was using a [RSocket](https://rsocket.io/) broker: The FaaS runtime uses a lightweight multi-language RSocket SDK to connect to the RSocket broker, the RSocket broker in turn forwards the request to our RPC framework proxy to invoke the backend Micro-services and forwards the response back to the FaaS runtime. This indeed solved both challenges but introduced a new challenge - the RSocket broker and the RPC framework proxy are centralized and that breaks the decentralized architecture we aimed to have for our serverless system.
 
 As we looked into using Dapr - we found that Dapr offers an optimal alternative solution. We use the Dapr sidecar to support multiple languages and keeping applications lightweight, replacing the need for client SDKs. Meanwhile, the sidecar pattern keeps our architecture decentralized without the need for a centralized broker like RSocket.
 
@@ -43,7 +43,7 @@ As we looked into using Dapr - we found that Dapr offers an optimal alternative 
 
 {{< imgproc autonavi-faas-runtime.png Resize "1500x" >}}{{< /imgproc >}}
 
-The multi-language (C++/Node.js/Go/Java) FaaS runtime uses Dapr SDKs to make middleware related requests to the Dapr sidecar via gRPC, the Dapr sidecars leverage Alibaba middleware components to make requests to the middleware services and sends a callback to the FaaS runtime when a response is returned.
+In our Dapr sidecar, we have developed our custom components to support our RPC framework and other infrastructure such as our own KV-Store, config server. The multi-language (C++/Node.js/Go/Java) FaaS runtime uses Dapr SDKs to make requests to the Dapr sidecar via gRPC, the Dapr sidecars make requests to our backend services or make requests to infrastructures such as redis, mysql, MQ. and sends a callback to the FaaS runtime when a response is returned.
 
 In practice we are still using Dapr in an experimental way. Currently RSocket broker serves as a fallback in case failures with Dapr. Having a fallback is always a best practice when adopting a new technology. 
 

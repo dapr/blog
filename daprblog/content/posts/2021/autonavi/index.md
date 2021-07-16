@@ -41,7 +41,7 @@ As we looked into using Dapr - we found that Dapr offers an optimal alternative 
 
 ## How Dapr is used in the FaaS runtime today
 
-{{< imgproc autonavi-faas-runtime.png Resize "1500x" >}}{{< /imgproc >}}
+{{< imgproc autonavi-faas-runtime-v2.png Resize "1500x" >}}{{< /imgproc >}}
 
 In our Dapr sidecar, we have developed our custom components to support our RPC framework and other infrastructure such as our own KV-Store, config server. The multi-language (C++/Node.js/Go/Java) FaaS runtime uses Dapr SDKs to make requests to the Dapr sidecar via gRPC, the Dapr sidecars make requests to our backend services or make requests to infrastructures such as redis, mysql, MQ. and sends a callback to the FaaS runtime when a response is returned.
 

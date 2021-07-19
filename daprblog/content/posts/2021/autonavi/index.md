@@ -45,6 +45,8 @@ As we looked into using Dapr - we found that Dapr offers an optimal alternative 
 
 In our Dapr sidecar, we have developed our custom components to support our RPC framework and other infrastructure such as our own KV-Store, config server. The multi-language (C++/Node.js/Go/Java) FaaS runtime uses Dapr SDKs to make requests to the Dapr sidecar via gRPC, the Dapr sidecars make requests to our backend services or make requests to infrastructures such as redis, mysql, MQ. and sends a callback to the FaaS runtime when a response is returned.
 
+In this new serverless solution, the Dapr sidecar will be injected automatically by our kubernetes service when a new Faas runtime pod created. We have integrated this in our CI/CD pipelines, the user function code and user configurations is the same on different environments because running in a dev environment and production is consistent thanks to Dapr APIs.
+
 In practice we are still using Dapr in an experimental way. Currently RSocket broker serves as a fallback in case failures with Dapr. Having a fallback is always a best practice when adopting a new technology. 
 
 We are now working to verify Dapr in various scenarios by implementing Dapr in several business applications. After the verification, we see more and more parts of our solution migrating to use Dapr. Finally we plan to remove the RSocket broker and fully rely on Dapr for our needs.

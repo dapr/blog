@@ -14,15 +14,29 @@ As more and more developers started using Dapr, we saw an opportunity to expand 
 
 This feedback helped shape the recent v0.5.0 release of the extension. This release aims to make the Dapr development experience more native to VS Code, meaning that users can develop applications within the scope of VS Code (i.e. there’s no need to switch between the IDE and the terminal). Additionally, users can now visualize Dapr attributes that a developer might need (for example, port numbers, app IDs, etc).
 
-## What’s new in v0.5.0?  
-Below is a summary of the new features and improvements included in v0.5.0 of the extension: 
+## What’s new in v0.5.0?
+To see a detailed description of the changes, fixes, and new features, check out the [extension release notes](TBD). The main new features and improvements included in v0.5.0 of the extension are:
 
-- An updated application view and an added details view that allows users to view the components and metadata associated with their applications. Application metadata includes the app port, HTTP port, process IDs, etc while component metadata includes the name, type, and version of the component. 
-- Support for stopping applications, allowing users to easily kill running applications or sidecars. 
-- Ability to open the Dapr dashboard from within VS Code to see any metadata associated with running applications.
+### UI improvements
+An updated application view and an added details view that allows users to view the components and metadata associated with their applications. Application metadata includes the app port, HTTP port, process IDs, etc while component metadata includes the name, type, and version of the component.
+
+
+{{< imgproc apps.png Resize "500x" >}} Dapr application view {{< /imgproc >}}
+
+{{< imgproc app-detailed.png Resize "500x" >}} Application details {{< /imgproc >}}
+
+{{< imgproc comp-details.png Resize "500x" >}} Components details {{< /imgproc >}}
+
+### Stop a Dapr application
+Support for stopping applications, allowing users to easily kill running applications or sidecars. 
+
+{{< imgproc stop.png Resize "500x" >}} New menu option to stop a Dapr application {{< /imgproc >}}
+### Open the Dapr dashboard
+Ability to open the Dapr dashboard from within VS Code to see any metadata associated with running applications.
+
+{{< imgproc dashboard.png Resize "500x" >}} Open the Dapr dashboard {{< /imgproc >}}
+### Other
 - A [bug fix](https://github.com/microsoft/vscode-dapr/issues/169) for locating Dapr applications on Mac/Unix machines.
-
-To see a detailed description of the changes, fixes, and new features, check out the [extension release notes](TBD).
 
 ## Looking ahead
 As the Dapr extension continues to evolve to improve the developer experience, here are some additional areas we intend to focus on:

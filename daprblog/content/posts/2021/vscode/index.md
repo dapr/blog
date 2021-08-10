@@ -52,7 +52,7 @@ We hope you find the latest release of the extension useful and are excited to s
 ## Resources
 - Visual Studio Marketplace page for the [Dapr VS Code extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-dapr)
 - [Getting started with Dapr](https://docs.dapr.io/getting-started/)
-- Dapr docs section about the [VS Code extension](https://docs.dapr.io/developing-applications/ides/vscode/)
+- Documentation about [Dapr and VS Code](https://docs.dapr.io/developing-applications/ides/vscode/)
 - Presentation of the new features in the Dapr [community call](https://youtu.be/QADHQ5v-gww?t=1602)
 
 

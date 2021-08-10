@@ -15,7 +15,7 @@ As more developers use Dapr, we saw an opportunity to expand the extension with 
 This feedback helped shape the recent v0.5.0 release of the extension. This release makes the Dapr development experience more native to VS Code, meaning that users can develop applications solely within the editor (i.e. there’s no need to switch between VS Code and the terminal). Additionally, users can visualize Dapr attributes they might need (for example, port numbers, application IDs, etc).
 
 ## What’s new in v0.5.0?
-To see a detailed description of the changes, fixes, and new features, check out the [extension release notes](TBD). The main new features and improvements included in v0.5.0 of the extension are:
+To see a detailed description of the changes, fixes, and new features, check out the [extension release notes](https://github.com/microsoft/vscode-dapr/releases/tag/v0.5.0). The main new features and improvements included in v0.5.0 of the extension are:
 
 ### UI improvements
 An updated application view and a details view allow users to view the components and metadata associated with their applications. Application metadata includes the application port, Dapr HTTP port, process IDs, etc., while component metadata includes the name, type, and version of the component.

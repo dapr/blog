@@ -36,13 +36,16 @@ Ability to open the Dapr dashboard from within VS Code to see any metadata assoc
 ### Other
 - A [bug fix](https://github.com/microsoft/vscode-dapr/issues/169) for locating Dapr applications on Mac/Unix machines.
 
+## Try it yourself
+We invite you to [install the Dapr extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-dapr) from the Visual Studio Marketplace and try it out yourself! Let us know what you think! 
+
 ## Looking ahead
 As the Dapr extension continues to evolve to improve the developer experience, here are some additional areas we intend to focus on:
 
 - More component customization support in the form of templates for common component files.
 - Viewing the configuration files found in Dapr instances identified in the application tree view.
 
-## How to Contribute
+## How to contribute
 As a developer, you are best positioned to help us identify the challenges faced in everyday Dapr development and as such, we invite you to share your feature ideas or open issues on the official [GitHub repository for the extension](https://github.com/microsoft/vscode-dapr). We also encourage you to attend our recurring [Dapr community calls](https://github.com/dapr/community#community-meetings) to see demos and discuss new feature proposals with the rest of the Dapr community!
 
 We hope you find the latest release of the extension useful and are excited to see how it can help you build your next Dapr application!

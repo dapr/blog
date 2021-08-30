@@ -14,7 +14,7 @@ Hear from several companies from across the globe who have integrated Dapr into 
 
 DaprCon will be a virtual event allowing everyone to join from the comfort of their home or office. No need to register because it will be wide open for anyone to participate. Spend half a day with others who are excited to learn about the power that Dapr brings to your developers. 
 
-No matter what language you program in or platform you target Dapr adds value and at DaprCon you will get to see it in action. 
+No matter what language you program in, or platform you target, Dapr adds value to your application. At DaprCon you will get to see it in action. 
 
 We'll share more details on this blog about the event's agenda, sessions and speakers in the next few weeks.
 

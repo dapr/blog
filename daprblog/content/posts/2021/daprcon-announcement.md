@@ -7,7 +7,7 @@ description: "The first ever DaprCon will be held on October 19th"
 type: blog
 ---
 
-As the second anniversary of Dapr approaches it is a great time for the community to come together for the inaugural DaprCon on **October 19th**! October is a special month in the history of Dapr, it was on October 2019 that [Dapr was officially announced](https://cloudblogs.microsoft.com/opensource/2019/10/16/announcing-dapr-open-source-project-build-microservice-applications/). 
+As the second anniversary of Dapr approaches, it is a great time for the community to come together for the inaugural DaprCon on **October 19th, 2021**! October is a special month for Dapr, as it was in October 2019 that [Dapr was officially announced](https://cloudblogs.microsoft.com/opensource/2019/10/16/announcing-dapr-open-source-project-build-microservice-applications/). 
 
 DaprCon will offer opportunities to speak to Yaron Schneider, Mark Fussell and other co-founders and maintainers of the Dapr project.
 Hear from several companies from across the globe who have integrated Dapr into their solutions. Use their stories as inspiration and see how Dapr can have a positive impact on your cloud native development.

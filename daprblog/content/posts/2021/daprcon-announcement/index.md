@@ -1,5 +1,5 @@
 ---
-date: "2021-08-30T07:00:00-07:00"
+date: "2021-08-31T07:00:00-07:00"
 title: "Announcing DaprCon 2021"
 linkTitle: "Announcing DaprCon 2021"
 author: Dapr project maintainers

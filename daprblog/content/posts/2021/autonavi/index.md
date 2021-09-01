@@ -48,7 +48,7 @@ In this new serverless solution, the Dapr sidecar is injected automatically by o
 
 In practice we are still using Dapr in an experimental way. Currently RSocket broker serves as a fallback in case failures with Dapr. We feel that having a fallback is always a best practice when adopting a new technology. 
 
-We are now working to verify Dapr in various scenarios by implementing Dapr in several business applications. After the verification, we see more and more parts of our solution migrating to use Dapr. Finally we plan to remove the RSocket broker and fully rely on Dapr for our needs.
+We are now working to verify Dapr in various scenarios by implementing Dapr in several business applications. After the verification, we see more and more parts of our solution migrating to use Dapr. Finally, we plan to remove the RSocket broker and fully rely on Dapr for our needs.
 
 ## Summary
 

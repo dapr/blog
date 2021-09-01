@@ -8,13 +8,18 @@ type: blog
 
 {{< imgproc autonavi-logo.png  Resize "200x" />}}
 
-AutoNavi is a leading provider of digital map and navigation services in China with over 100 million daily active users. AutoNavi started its Serverless/FaaS (Function as a service) project on April 2020 and after just one year, our solution already exceeds 100,000 queries per second (QPS). In this blog I will share how we at Autonavi use Dapr to implement our serverless solution.
+AutoNavi is a leading provider of digital map and navigation services in China with over 100 million daily active users. AutoNavi started it's Serverless/FaaS (Function as a service) project on April 2020 and after just one year, our solution already exceeds 100,000 queries per second (QPS). In this blog I will share how we at Autonavi use Dapr to implement our serverless solution.
 
 Below are a few of the business use cases that our solution addresses:
-- **Weather in a long route -** When the route distance exceed a threshold, for example 100kms, weather information is provided along the route.
+- **Weather in a long route -** When the route distance exceeds a threshold, for example 100kms, weather information is provided along the route.
 - **Search along route -** Search for vehicle services such as gas station, electric vehicle charge-station etc. along the route.
+<<<<<<< HEAD
 - **Route tips -** Show driver relevant route information such as warnings on large vehicle ahead, narrow roads etc.
 - **Scenic spots information -** Show ticket prices, opening hours, telephone and brief introduction of a scenic spots and points of interest.
+=======
+- **Route tips -** Show driver relevant information such as width limiting pier, notice on multiple large vehicle ahead etc.
+- **Scenic spots information -** Show ticket prices, opening hours, telephone and brief introductions to scenic spots and points of interest.
+>>>>>>> 189446e2547b77c02de1cde7d33d16fe621c36dc
 
 {{< imgproc autonavi-usercase.png Resize "1500x" >}}{{< /imgproc >}}
 
@@ -48,7 +53,7 @@ In this new serverless solution, the Dapr sidecar is injected automatically by o
 
 In practice we are still using Dapr in an experimental way. Currently RSocket broker serves as a fallback in case failures with Dapr. We feel that having a fallback is always a best practice when adopting a new technology. 
 
-We are now working to verify Dapr in various scenarios by implementing Dapr in several business applications. After the verification, we see more and more parts of our solution migrating to use Dapr. Finally we plan to remove the RSocket broker and fully rely on Dapr for our needs.
+We are now working to verify Dapr in various scenarios by implementing Dapr in several business applications. After the verification, we see more and more parts of our solution migrating to use Dapr. Finally, we plan to remove the RSocket broker and fully rely on Dapr for our needs.
 
 ## Summary
 

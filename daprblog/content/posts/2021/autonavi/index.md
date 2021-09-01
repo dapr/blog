@@ -13,13 +13,8 @@ AutoNavi is a leading provider of digital map and navigation services in China w
 Below are a few of the business use cases that our solution addresses:
 - **Weather in a long route -** When the route distance exceeds a threshold, for example 100kms, weather information is provided along the route.
 - **Search along route -** Search for vehicle services such as gas station, electric vehicle charge-station etc. along the route.
-<<<<<<< HEAD
 - **Route tips -** Show driver relevant route information such as warnings on large vehicle ahead, narrow roads etc.
 - **Scenic spots information -** Show ticket prices, opening hours, telephone and brief introduction of a scenic spots and points of interest.
-=======
-- **Route tips -** Show driver relevant information such as width limiting pier, notice on multiple large vehicle ahead etc.
-- **Scenic spots information -** Show ticket prices, opening hours, telephone and brief introductions to scenic spots and points of interest.
->>>>>>> 189446e2547b77c02de1cde7d33d16fe621c36dc
 
 {{< imgproc autonavi-usercase.png Resize "1500x" >}}{{< /imgproc >}}
 
@@ -51,10 +46,10 @@ In our Dapr sidecar, we have developed our custom components to support our RPC 
 
 In this new serverless solution, the Dapr sidecar is injected automatically by our Kubernetes service when a new FaaS runtime pod created. We have integrated this in our CI/CD pipelines, the user function code and user configurations is the same on different environments because running in a dev environment and production is consistent thanks to Dapr APIs.
 
-In practice we are still using Dapr in an experimental way. Currently RSocket broker serves as a fallback in case failures with Dapr. We feel that having a fallback is always a best practice when adopting a new technology. 
+In practice we are still using Dapr in an experimental way. Currently RSocket broker serves as a fallback in case of failures with Dapr. We feel that having a fallback is always a best practice when adopting a new technology. 
 
 We are now working to verify Dapr in various scenarios by implementing Dapr in several business applications. After the verification, we see more and more parts of our solution migrating to use Dapr. Finally, we plan to remove the RSocket broker and fully rely on Dapr for our needs.
 
 ## Summary
 
-The solution above has now been running in Autonavi production environment for the last month without any issues, the experiment is going well. By using Dapr, we solve the problems of invoking existing backend services in a lightweight model and supporting multiple languages in our serverless runtime without breaking the decentralized architecture. Dapr is really a perfect solution for invoking backend services in our multi-language serverless runtime.
+The solution above has now been running in Autonavi's production environment for over a month without any issues - the experiment is going well. By using Dapr, we solve the problems of invoking existing backend services in a lightweight model and supporting multiple languages in our serverless runtime without breaking the decentralized architecture. Dapr is really a perfect solution for invoking backend services in our multi-language serverless runtime.

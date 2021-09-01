@@ -13,8 +13,8 @@ AutoNavi is a leading provider of digital map and navigation services in China w
 Below are a few of the business use cases that our solution addresses:
 - **Weather in a long route -** When the route distance exceeds a threshold, for example 100kms, weather information is provided along the route.
 - **Search along route -** Search for vehicle services such as gas station, electric vehicle charge-station etc. along the route.
-- **Route tips -** Show driver relevant route information such as warnings on large vehicle ahead, narrow roads etc.
-- **Scenic spots information -** Show ticket prices, opening hours, telephone and brief introduction of a scenic spots and points of interest.
+- **Route tips -** Show driver relevant route information such as warnings that large vehicles are ahead, narrow roads etc.
+- **Scenic spots information -** Show ticket prices, opening hours, contact information and brief descriptions for scenic spots and points of interest.
 
 {{< imgproc autonavi-usercase.png Resize "1500x" >}}{{< /imgproc >}}
 
@@ -44,7 +44,7 @@ As we looked into using Dapr, we found that Dapr offers an optimal alternative s
 
 In our Dapr sidecar, we have developed our custom components to support our RPC framework and other infrastructure such as our own KV-Store, config server. The multi-language (C++/Node.js/Go/Java) FaaS runtime uses Dapr SDKs to make requests to the Dapr sidecar via gRPC and the Dapr sidecars make requests to our backend services or to infrastructures such as Redis, MySQL, MQ. and sends a callback to the FaaS runtime when a response is returned.
 
-In this new serverless solution, the Dapr sidecar is injected automatically by our Kubernetes service when a new FaaS runtime pod created. We have integrated this in our CI/CD pipelines, the user function code and user configurations is the same on different environments because running in a dev environment and production is consistent thanks to Dapr APIs.
+In this new serverless solution, the Dapr sidecar is injected automatically by our Kubernetes service when a new FaaS runtime pod created. We have integrated this in our CI/CD pipelines, the user function code and user configurations are the same on different environments because running in a dev environment and production is consistent thanks to Dapr APIs.
 
 In practice we are still using Dapr in an experimental way. Currently RSocket broker serves as a fallback in case of failures with Dapr. We feel that having a fallback is always a best practice when adopting a new technology. 
 

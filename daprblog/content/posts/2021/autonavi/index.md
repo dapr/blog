@@ -14,7 +14,7 @@ Below are a few of the business use cases that our solution addresses:
 - **Weather in a long route -** When the route distance exceeds a threshold, for example 100kms, weather information is provided along the route.
 - **Search along route -** Search for vehicle services such as gas station, electric vehicle charge-station etc. along the route.
 - **Route tips -** Show driver relevant information such as width limiting pier, notice on multiple large vehicle ahead etc.
-- **Scenic spots information -** Show ticket prices, opening hours, telephone and brief introduction of a scenic spots and points of interest.
+- **Scenic spots information -** Show ticket prices, opening hours, telephone and brief introductions to scenic spots and points of interest.
 
 {{< imgproc autonavi-usercase.png Resize "1500x" >}}{{< /imgproc >}}
 

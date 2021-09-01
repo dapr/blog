@@ -8,7 +8,7 @@ type: blog
 
 {{< imgproc autonavi-logo.png  Resize "200x" />}}
 
-AutoNavi is a leading provider of digital map and navigation services in China with over 100 million daily active users. AutoNavi started its Serverless/FaaS (Function as a service) project on April 2020 and after just one year, our solution already exceeds 100,000 queries per second (QPS). In this blog I will share how we at Autonavi use Dapr to implement our serverless solution.
+AutoNavi is a leading provider of digital map and navigation services in China with over 100 million daily active users. AutoNavi started it's Serverless/FaaS (Function as a service) project on April 2020 and after just one year, our solution already exceeds 100,000 queries per second (QPS). In this blog I will share how we at Autonavi use Dapr to implement our serverless solution.
 
 Below are a few of the business use cases that our solution addresses:
 - **Weather in a long route -** When the route distance exceed a threshold, for example 100kms, weather information is provided along the route.

@@ -1,5 +1,5 @@
 ---
-date: "2021-08-27T07:00:00-07:00"
+date: "2021-09-01T07:00:00-07:00"
 title: "How Dapr helped AutoNavi build a new serverless solution"
 linkTitle: "Dapr case study: Autonavi"
 author: "Xuexiang Deng, Staff Engineer, AutoNavi Information Ltd."

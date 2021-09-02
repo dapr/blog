@@ -1,7 +1,7 @@
 ---
 date: "2021-03-19T07:00:00-07:00"
 title: "How Alibaba is using Dapr"
-linkTitle: "How Alibaba is using Dapr"
+linkTitle: "Dapr case study: Alibaba"
 author: "[Sky Ao](https://github.com/skyao), Staff Engineer, Alibaba Cloud"
 type: blog
 ---

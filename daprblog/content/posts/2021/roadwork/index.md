@@ -1,7 +1,7 @@
 ---
 date: "2021-02-09T07:00:00-07:00"
 title: "Running Dapr in production at Roadwork"
-linkTitle: "Running Dapr in production at Roadwork"
+linkTitle: "Dapr case study: Roadwork"
 description: "How Roadwork built an auto-scaling, cloud agnostic, web automation solution with Dapr and KEDA"
 author: "[Xavier Geerinck](https://github.com/XavierGeerinck), Founder, Roadwork"
 type: blog

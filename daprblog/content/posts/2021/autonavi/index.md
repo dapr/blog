@@ -1,14 +1,14 @@
 ---
 date: "2021-09-02T07:00:00-07:00"
 title: "How Dapr helped AutoNavi build a new serverless solution"
-linkTitle: "Dapr case study: Autonavi"
+linkTitle: "Dapr case study: AutoNavi"
 author: "Xuexiang Deng, Staff Engineer, AutoNavi Information Ltd."
 type: blog
 ---
 
 {{< imgproc autonavi-logo.png  Resize "200x" />}}
 
-AutoNavi is a leading provider of digital map and navigation services in China with over 100 million daily active users. AutoNavi started it's Serverless/FaaS (Function as a service) project on April 2020 and after just one year, our solution already exceeds 100,000 queries per second (QPS). In this blog I will share how we at Autonavi use Dapr to implement our serverless solution.
+AutoNavi is a leading provider of digital map and navigation services in China with over 100 million daily active users. AutoNavi started it's Serverless/FaaS (Function as a service) project on April 2020 and after just one year, our solution already exceeds 100,000 queries per second (QPS). In this blog I will share how we at AutoNavi use Dapr to implement our serverless solution.
 
 Below are a few of the business use cases that our solution addresses:
 - **Weather in a long route -** When the route distance exceeds a threshold, for example 100kms, weather information is provided along the route.
@@ -52,4 +52,4 @@ We are now working to verify Dapr in various scenarios by implementing Dapr in s
 
 ## Summary
 
-The solution above has now been running in Autonavi's production environment for over a month without any issues - the experiment is going well. By using Dapr, we solve the problems of invoking existing backend services in a lightweight model and supporting multiple languages in our serverless runtime without breaking the decentralized architecture. Dapr is really a perfect solution for invoking backend services in our multi-language serverless runtime.
+The solution above has now been running in AutoNavi's production environment for over a month without any issues - the experiment is going well. By using Dapr, we solve the problems of invoking existing backend services in a lightweight model and supporting multiple languages in our serverless runtime without breaking the decentralized architecture. Dapr is really a perfect solution for invoking backend services in our multi-language serverless runtime.

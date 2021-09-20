@@ -23,4 +23,4 @@ The STC both steers the overall direction and vision of the project as well prov
 
 The STC will begin holding meetings in the next month which will be open to the public.
 
-We are excited to see the project operating under diverse leadership, and the door is open to anyone who would like to contribute to and influence the Dapr.
+We are excited to see the project operating under diverse leadership, and the door is open to anyone who would like to contribute to and influence the Dapr project.

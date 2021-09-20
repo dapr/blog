@@ -6,7 +6,7 @@ author: Dapr project steering and technical committee
 type: blog
 ---
 
-Today we are happy to announce the formation of the Dapr project's [Steering and Technical Committee](https://github.com/dapr/community/blob/master/steering-and-technical-committee-charter.md).
+Today we are happy to announce the formation of the Dapr project's [Steering and Technical Committee](https://github.com/dapr/community/blob/master/steering-and-technical-committee-charter.md).<br><br>
 Dapr [first transitioned into an open governance model](https://blog.dapr.io/posts/2020/09/30/transitioning-the-dapr-project-to-open-governance/) in September 2020, and since then has been operating with an interim Steering Committee focused on working with the broader Dapr community to formulate the charter, responsibilities and vision of the Steering and Technical Committee (STC) and bootstrap it with members of different companies to ensure vendor neutrality.
 
 The STC seats the following members:

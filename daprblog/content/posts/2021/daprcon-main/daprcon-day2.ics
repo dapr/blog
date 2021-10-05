@@ -20,33 +20,29 @@ END:DAYLIGHT
 END:VTIMEZONE
 BEGIN:VEVENT
 CLASS:PUBLIC
-CREATED:20211005T010602Z
-DESCRIPTION:Join the DaprCon live event: https://aka.ms/daprcon/day1 \n \nD
-	ay 1 agenda:\n \nTime\nSession\n8:00am-8:30am\nKeynote\n8:30am-9:00am\nZer
-	o to hero with Dapr\n9:00am-9:45am\nMaintainer panel\n9:45am-10:15am\nAdop
-	ter case study\n10:15am-10:45am\nRunning Dapr in production\n10:45am-11:30
-	am\nAdopters panel\n11:30am-12:00pm\nAdopter case study\n \nFollow @daprde
-	v <https://twitter.com/daprdev>  on Twitter and check the Dapr blog <https
-	://blog.dapr.io/posts>  for additional updates on agenda\, speakers and mo
-	re closer to the event!\n \n \n
-DTEND;TZID="Pacific Standard Time":20211019T120000
-DTSTAMP:20211005T010602Z
-DTSTART;TZID="Pacific Standard Time":20211019T080000
-LAST-MODIFIED:20211005T010602Z
+CREATED:20211005T011132Z
+DESCRIPTION:Join the DaprCon live event: https://aka.ms/daprcon/day2 \n \nD
+	ay 2 of DaprCon will include a hands-on workshop!\nMake sure to review the
+	 workshop prerequisites before the event: https://aka.ms/daprcon/workshop 
+	\n
+DTEND;TZID="Pacific Standard Time":20211020T120000
+DTSTAMP:20211005T011132Z
+DTSTART;TZID="Pacific Standard Time":20211020T080000
+LAST-MODIFIED:20211005T011132Z
 LOCATION:YouTube Live Event
 PRIORITY:5
 SEQUENCE:0
-SUMMARY;LANGUAGE=en-us:DaprCon Live Event (Day 1)
+SUMMARY;LANGUAGE=en-us:DaprCon Live Event (Day 2)
 TRANSP:OPAQUE
-UID:040000008200E00074C5B7101A82E00800000000F4BC0C5183B9D701000000000000000
-	0100000009043ADECD7B2354790CB04D926EEE4EC
+UID:040000008200E00074C5B7101A82E0080000000060FD96004BB9D701000000000000000
+	010000000A7798A9307F76540BC6D8C2B871D2A87
 X-ALT-DESC;FMTTYPE=text/html:<html xmlns:v="urn:schemas-microsoft-com:vml" 
 	xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-mic
 	rosoft-com:office:word" xmlns:m="http://schemas.microsoft.com/office/2004/
 	12/omml" xmlns="http://www.w3.org/TR/REC-html40"><head><meta name=ProgId c
 	ontent=Word.Document><meta name=Generator content="Microsoft Word 15"><met
 	a name=Originator content="Microsoft Word 15"><link rel=File-List href="ci
-	d:filelist.xml@01D7B94A.70AE0450"><!--[if gte mso 9]><xml>\n<o:OfficeDocum
+	d:filelist.xml@01D7B94B.38CE5110"><!--[if gte mso 9]><xml>\n<o:OfficeDocum
 	entSettings>\n<o:AllowPNG/>\n</o:OfficeDocumentSettings>\n</xml><![endif]-
 	-><!--[if gte mso 9]><xml>\n<w:WordDocument>\n<w:Zoom>110</w:Zoom>\n<w:Spe
 	llingState>Clean</w:SpellingState>\n<w:TrackMoves/>\n<w:TrackFormatting/>\
@@ -512,134 +508,53 @@ X-ALT-DESC;FMTTYPE=text/html:<html xmlns:v="urn:schemas-microsoft-com:vml"
 	511 0\;}\n/* Style Definitions */\np.MsoNormal\, li.MsoNormal\, div.MsoNor
 	mal\n	{mso-style-unhide:no\;\n	mso-style-qformat:yes\;\n	mso-style-parent:
 	""\;\n	margin:0in\;\n	mso-pagination:widow-orphan\;\n	font-size:11.0pt\;\n
-		font-family:"Calibri"\,sans-serif\;\n	mso-ascii-font-family:Calibri\;\n	m
-	so-fareast-font-family:Calibri\;\n	mso-hansi-font-family:Calibri\;\n	mso-b
-	idi-font-family:Arial\;}\na:link\, span.MsoHyperlink\n	{mso-style-priority
-	:99\;\n	color:#0563C1\;\n	text-decoration:underline\;\n	text-underline:sin
-	gle\;}\na:visited\, span.MsoHyperlinkFollowed\n	{mso-style-noshow:yes\;\n	
-	mso-style-priority:99\;\n	color:#954F72\;\n	text-decoration:underline\;\n	
-	text-underline:single\;}\nspan.EmailStyle17\n	{mso-style-type:personal-com
-	pose\;\n	mso-style-noshow:yes\;\n	mso-style-unhide:no\;\n	mso-ansi-font-si
-	ze:11.0pt\;\n	mso-bidi-font-size:11.0pt\;\n	font-family:"Calibri"\,sans-se
-	rif\;\n	mso-ascii-font-family:Calibri\;\n	mso-fareast-font-family:Calibri\
-	;\n	mso-hansi-font-family:Calibri\;\n	mso-bidi-font-family:Arial\;\n	color
-	:windowtext\;}\nspan.SpellE\n	{mso-style-name:""\;\n	mso-spl-e:yes\;}\n.Ms
-	oChpDefault\n	{mso-style-type:export-only\;\n	mso-default-props:yes\;\n	fo
-	nt-family:"Calibri"\,sans-serif\;\n	mso-ascii-font-family:Calibri\;\n	mso-
-	fareast-font-family:Calibri\;\n	mso-hansi-font-family:Calibri\;\n	mso-bidi
-	-font-family:Arial\;}\n@page WordSection1\n	{size:8.5in 11.0in\;\n	margin:
-	1.0in 1.0in 1.0in 1.0in\;\n	mso-header-margin:.5in\;\n	mso-footer-margin:.
-	5in\;\n	mso-paper-source:0\;}\ndiv.WordSection1\n	{page:WordSection1\;}\n-
-	-></style><!--[if gte mso 10]><style>/* Style Definitions */\ntable.MsoNor
-	malTable\n	{mso-style-name:"Table Normal"\;\n	mso-tstyle-rowband-size:0\;\
-	n	mso-tstyle-colband-size:0\;\n	mso-style-noshow:yes\;\n	mso-style-priorit
-	y:99\;\n	mso-style-parent:""\;\n	mso-padding-alt:0in 5.4pt 0in 5.4pt\;\n	m
-	so-para-margin:0in\;\n	mso-pagination:widow-orphan\;\n	font-size:11.0pt\;\
-	n	font-family:"Calibri"\,sans-serif\;\n	mso-ascii-font-family:Calibri\;\n	
-	mso-hansi-font-family:Calibri\;\n	mso-bidi-font-family:Arial\;}\ntable.Mso
-	TableGrid\n	{mso-style-name:"Table Grid"\;\n	mso-tstyle-rowband-size:0\;\n
-		mso-tstyle-colband-size:0\;\n	mso-style-priority:39\;\n	mso-style-unhide:
-	no\;\n	border:solid windowtext 1.0pt\;\n	mso-border-alt:solid windowtext .
-	5pt\;\n	mso-padding-alt:0in 5.4pt 0in 5.4pt\;\n	mso-border-insideh:.5pt so
-	lid windowtext\;\n	mso-border-insidev:.5pt solid windowtext\;\n	mso-para-m
-	argin:0in\;\n	mso-pagination:widow-orphan\;\n	font-size:11.0pt\;\n	font-fa
-	mily:"Calibri"\,sans-serif\;\n	mso-ascii-font-family:Calibri\;\n	mso-hansi
-	-font-family:Calibri\;\n	mso-bidi-font-family:Arial\;}\n</style><![endif]-
-	-><!--[if gte mso 9]><xml>\n<o:shapedefaults v:ext="edit" spidmax="1026" /
-	>\n</xml><![endif]--><!--[if gte mso 9]><xml>\n<o:shapelayout v:ext="edit"
-	>\n<o:idmap v:ext="edit" data="1" />\n</o:shapelayout></xml><![endif]--></
-	head><body lang=EN-US link="#0563C1" vlink="#954F72" style='tab-interval:.
-	5in\;word-wrap:break-word'><div class=WordSection1><p class=MsoNormal>Join
-	 the <span class=SpellE>DaprCon</span> live event: <a href="https://aka.ms
-	/daprcon/day1">https://aka.ms/daprcon/day1</a> <o:p></o:p></p><p class=Mso
-	Normal><o:p>&nbsp\;</o:p></p><p class=MsoNormal>Day 1 agenda:<o:p></o:p></
-	p><p class=MsoNormal><o:p>&nbsp\;</o:p></p><table class=MsoTableGrid borde
-	r=1 cellspacing=0 cellpadding=0 width=419 style='width:314.6pt\;border-col
-	lapse:collapse\;border:none\;mso-border-alt:solid windowtext .5pt\;mso-yft
-	i-tbllook:1184\;mso-padding-alt:0in 5.4pt 0in 5.4pt'><tr style='mso-yfti-i
-	row:0\;mso-yfti-firstrow:yes\;height:29.2pt'><td width=137 valign=top styl
-	e='width:103.1pt\;border:solid windowtext 1.0pt\;mso-border-alt:solid wind
-	owtext .5pt\;padding:0in 5.4pt 0in 5.4pt\;height:29.2pt'><p class=MsoNorma
-	l><b>Time</b><o:p></o:p></p></td><td width=282 valign=top style='width:211
-	.5pt\;border:solid windowtext 1.0pt\;border-left:none\;mso-border-left-alt
-	:solid windowtext .5pt\;mso-border-alt:solid windowtext .5pt\;padding:0in 
-	5.4pt 0in 5.4pt\;height:29.2pt'><p class=MsoNormal><b>Session</b><o:p></o:
-	p></p></td></tr><tr style='mso-yfti-irow:1\;height:29.2pt'><td width=137 v
-	align=top style='width:103.1pt\;border:solid windowtext 1.0pt\;border-top:
-	none\;mso-border-top-alt:solid windowtext .5pt\;mso-border-alt:solid windo
-	wtext .5pt\;padding:0in 5.4pt 0in 5.4pt\;height:29.2pt'><p class=MsoNormal
-	>8:00am-8:30am<o:p></o:p></p></td><td width=282 valign=top style='width:21
-	1.5pt\;border-top:none\;border-left:none\;border-bottom:solid windowtext 1
-	.0pt\;border-right:solid windowtext 1.0pt\;mso-border-top-alt:solid window
-	text .5pt\;mso-border-left-alt:solid windowtext .5pt\;mso-border-alt:solid
-	 windowtext .5pt\;padding:0in 5.4pt 0in 5.4pt\;height:29.2pt'><p class=Mso
-	Normal>Keynote<o:p></o:p></p></td></tr><tr style='mso-yfti-irow:2\;height:
-	29.2pt'><td width=137 valign=top style='width:103.1pt\;border:solid window
-	text 1.0pt\;border-top:none\;mso-border-top-alt:solid windowtext .5pt\;mso
-	-border-alt:solid windowtext .5pt\;padding:0in 5.4pt 0in 5.4pt\;height:29.
-	2pt'><p class=MsoNormal>8:30am-9:00am<o:p></o:p></p></td><td width=282 val
-	ign=top style='width:211.5pt\;border-top:none\;border-left:none\;border-bo
-	ttom:solid windowtext 1.0pt\;border-right:solid windowtext 1.0pt\;mso-bord
-	er-top-alt:solid windowtext .5pt\;mso-border-left-alt:solid windowtext .5p
-	t\;mso-border-alt:solid windowtext .5pt\;padding:0in 5.4pt 0in 5.4pt\;heig
-	ht:29.2pt'><p class=MsoNormal>Zero to hero with Dapr<o:p></o:p></p></td></
-	tr><tr style='mso-yfti-irow:3\;height:29.2pt'><td width=137 valign=top sty
-	le='width:103.1pt\;border:solid windowtext 1.0pt\;border-top:none\;mso-bor
-	der-top-alt:solid windowtext .5pt\;mso-border-alt:solid windowtext .5pt\;p
-	adding:0in 5.4pt 0in 5.4pt\;height:29.2pt'><p class=MsoNormal>9:00am-9:45a
-	m<o:p></o:p></p></td><td width=282 valign=top style='width:211.5pt\;border
-	-top:none\;border-left:none\;border-bottom:solid windowtext 1.0pt\;border-
-	right:solid windowtext 1.0pt\;mso-border-top-alt:solid windowtext .5pt\;ms
-	o-border-left-alt:solid windowtext .5pt\;mso-border-alt:solid windowtext .
-	5pt\;padding:0in 5.4pt 0in 5.4pt\;height:29.2pt'><p class=MsoNormal>Mainta
-	iner panel<o:p></o:p></p></td></tr><tr style='mso-yfti-irow:4\;height:29.2
-	pt'><td width=137 valign=top style='width:103.1pt\;border:solid windowtext
-	 1.0pt\;border-top:none\;mso-border-top-alt:solid windowtext .5pt\;mso-bor
-	der-alt:solid windowtext .5pt\;padding:0in 5.4pt 0in 5.4pt\;height:29.2pt'
-	><p class=MsoNormal>9:45am-10:15am<o:p></o:p></p></td><td width=282 valign
-	=top style='width:211.5pt\;border-top:none\;border-left:none\;border-botto
-	m:solid windowtext 1.0pt\;border-right:solid windowtext 1.0pt\;mso-border-
-	top-alt:solid windowtext .5pt\;mso-border-left-alt:solid windowtext .5pt\;
-	mso-border-alt:solid windowtext .5pt\;padding:0in 5.4pt 0in 5.4pt\;height:
-	29.2pt'><p class=MsoNormal>Adopter case study<o:p></o:p></p></td></tr><tr 
-	style='mso-yfti-irow:5\;height:29.2pt'><td width=137 valign=top style='wid
-	th:103.1pt\;border:solid windowtext 1.0pt\;border-top:none\;mso-border-top
-	-alt:solid windowtext .5pt\;mso-border-alt:solid windowtext .5pt\;padding:
-	0in 5.4pt 0in 5.4pt\;height:29.2pt'><p class=MsoNormal>10:15am-10:45am<o:p
-	></o:p></p></td><td width=282 valign=top style='width:211.5pt\;border-top:
-	none\;border-left:none\;border-bottom:solid windowtext 1.0pt\;border-right
-	:solid windowtext 1.0pt\;mso-border-top-alt:solid windowtext .5pt\;mso-bor
-	der-left-alt:solid windowtext .5pt\;mso-border-alt:solid windowtext .5pt\;
-	padding:0in 5.4pt 0in 5.4pt\;height:29.2pt'><p class=MsoNormal>Running Dap
-	r in production<o:p></o:p></p></td></tr><tr style='mso-yfti-irow:6\;height
-	:29.2pt'><td width=137 valign=top style='width:103.1pt\;border:solid windo
-	wtext 1.0pt\;border-top:none\;mso-border-top-alt:solid windowtext .5pt\;ms
-	o-border-alt:solid windowtext .5pt\;padding:0in 5.4pt 0in 5.4pt\;height:29
-	.2pt'><p class=MsoNormal>10:45am-11:30am<o:p></o:p></p></td><td width=282 
-	valign=top style='width:211.5pt\;border-top:none\;border-left:none\;border
-	-bottom:solid windowtext 1.0pt\;border-right:solid windowtext 1.0pt\;mso-b
-	order-top-alt:solid windowtext .5pt\;mso-border-left-alt:solid windowtext 
-	.5pt\;mso-border-alt:solid windowtext .5pt\;padding:0in 5.4pt 0in 5.4pt\;h
-	eight:29.2pt'><p class=MsoNormal>Adopters panel<o:p></o:p></p></td></tr><t
-	r style='mso-yfti-irow:7\;mso-yfti-lastrow:yes\;height:29.2pt'><td width=1
-	37 valign=top style='width:103.1pt\;border:solid windowtext 1.0pt\;border-
-	top:none\;mso-border-top-alt:solid windowtext .5pt\;mso-border-alt:solid w
-	indowtext .5pt\;padding:0in 5.4pt 0in 5.4pt\;height:29.2pt'><p class=MsoNo
-	rmal>11:30am-12:00pm<o:p></o:p></p></td><td width=282 valign=top style='wi
-	dth:211.5pt\;border-top:none\;border-left:none\;border-bottom:solid window
-	text 1.0pt\;border-right:solid windowtext 1.0pt\;mso-border-top-alt:solid 
-	windowtext .5pt\;mso-border-left-alt:solid windowtext .5pt\;mso-border-alt
-	:solid windowtext .5pt\;padding:0in 5.4pt 0in 5.4pt\;height:29.2pt'><p cla
-	ss=MsoNormal>Adopter case study<o:p></o:p></p></td></tr></table><p class=M
-	soNormal><o:p>&nbsp\;</o:p></p><p class=MsoNormal>Follow <a href="https://
-	twitter.com/daprdev">@daprdev</a> on Twitter and check the <a href="https:
-	//blog.dapr.io/posts">Dapr blog</a> for additional updates on agenda\, spe
-	akers and more closer to the event!<o:p></o:p></p><p class=MsoNormal><o:p>
-	&nbsp\;</o:p></p><p class=MsoNormal><o:p>&nbsp\;</o:p></p></div></body></h
-	tml>
+		font-family:"Calibri"\,sans-serif\;\n	mso-fareast-font-family:Calibri\;\n
+		mso-bidi-font-family:Arial\;}\na:link\, span.MsoHyperlink\n	{mso-style-pr
+	iority:99\;\n	color:#0563C1\;\n	text-decoration:underline\;\n	text-underli
+	ne:single\;}\na:visited\, span.MsoHyperlinkFollowed\n	{mso-style-noshow:ye
+	s\;\n	mso-style-priority:99\;\n	color:#954F72\;\n	text-decoration:underlin
+	e\;\n	text-underline:single\;}\nspan.EmailStyle17\n	{mso-style-type:person
+	al-compose\;\n	mso-style-noshow:yes\;\n	mso-style-unhide:no\;\n	mso-ansi-f
+	ont-size:11.0pt\;\n	mso-bidi-font-size:11.0pt\;\n	font-family:"Calibri"\,s
+	ans-serif\;\n	mso-ascii-font-family:Calibri\;\n	mso-fareast-font-family:Ca
+	libri\;\n	mso-hansi-font-family:Calibri\;\n	mso-bidi-font-family:Arial\;\n
+		color:windowtext\;}\nspan.SpellE\n	{mso-style-name:""\;\n	mso-spl-e:yes\;
+	}\n.MsoChpDefault\n	{mso-style-type:export-only\;\n	mso-default-props:yes\
+	;\n	font-family:"Calibri"\,sans-serif\;\n	mso-ascii-font-family:Calibri\;\
+	n	mso-fareast-font-family:Calibri\;\n	mso-hansi-font-family:Calibri\;\n	ms
+	o-bidi-font-family:Arial\;}\n@page WordSection1\n	{size:8.5in 11.0in\;\n	m
+	argin:1.0in 1.0in 1.0in 1.0in\;\n	mso-header-margin:.5in\;\n	mso-footer-ma
+	rgin:.5in\;\n	mso-paper-source:0\;}\ndiv.WordSection1\n	{page:WordSection1
+	\;}\n--></style><!--[if gte mso 10]><style>/* Style Definitions */\ntable.
+	MsoNormalTable\n	{mso-style-name:"Table Normal"\;\n	mso-tstyle-rowband-siz
+	e:0\;\n	mso-tstyle-colband-size:0\;\n	mso-style-noshow:yes\;\n	mso-style-p
+	riority:99\;\n	mso-style-parent:""\;\n	mso-padding-alt:0in 5.4pt 0in 5.4pt
+	\;\n	mso-para-margin:0in\;\n	mso-pagination:widow-orphan\;\n	font-size:11.
+	0pt\;\n	font-family:"Calibri"\,sans-serif\;\n	mso-ascii-font-family:Calibr
+	i\;\n	mso-hansi-font-family:Calibri\;\n	mso-bidi-font-family:Arial\;}\n</s
+	tyle><![endif]--><!--[if gte mso 9]><xml>\n<o:shapedefaults v:ext="edit" s
+	pidmax="1026" />\n</xml><![endif]--><!--[if gte mso 9]><xml>\n<o:shapelayo
+	ut v:ext="edit">\n<o:idmap v:ext="edit" data="1" />\n</o:shapelayout></xml
+	><![endif]--></head><body lang=EN-US link="#0563C1" vlink="#954F72" style=
+	'tab-interval:.5in\;word-wrap:break-word'><div class=WordSection1><p class
+	=MsoNormal>Join the <span class=SpellE>DaprCon</span> live event: <a href=
+	"https://aka.ms/daprcon/day2">https://aka.ms/daprcon/day2</a> <o:p></o:p><
+	/p><p class=MsoNormal><span style='mso-ascii-font-family:Calibri\;mso-fare
+	ast-font-family:Calibri\;mso-hansi-font-family:Calibri\;mso-bidi-font-fami
+	ly:Arial'><o:p>&nbsp\;</o:p></span></p><p class=MsoNormal><span style='mso
+	-ascii-font-family:Calibri\;mso-fareast-font-family:Calibri\;mso-hansi-fon
+	t-family:Calibri\;mso-bidi-font-family:Arial'>Day 2 of <span class=SpellE>
+	DaprCon</span> will include a hands-on workshop!<o:p></o:p></span></p><p c
+	lass=MsoNormal><span style='mso-ascii-font-family:Calibri\;mso-fareast-fon
+	t-family:Calibri\;mso-hansi-font-family:Calibri\;mso-bidi-font-family:Aria
+	l'>Make sure to review the workshop prerequisites before the event: <a hre
+	f="https://aka.ms/daprcon/workshop">https://aka.ms/daprcon/workshop</a> <o
+	:p></o:p></span></p></div></body></html>
 X-MICROSOFT-CDO-BUSYSTATUS:BUSY
 X-MICROSOFT-CDO-IMPORTANCE:1
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
 X-MS-OLK-AUTOFILLLOCATION:FALSE
+X-MS-OLK-CONFTYPE:0
 BEGIN:VALARM
 TRIGGER:-PT30M
 ACTION:DISPLAY

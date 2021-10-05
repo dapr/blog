@@ -1,9 +1,8 @@
 ---
-date: "2021-10-04T07:00:00-07:00"
+date: "2021-10-05T07:00:00-07:00"
 title: "Join us for DaprCon October 19th-20th 2021"
 linkTitle: "Join us for DaprCon"
 author: Dapr project maintainers
-description: "The first ever "
 type: blog
 ---
 

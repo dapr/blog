@@ -109,4 +109,4 @@ If you plan to do the Python version of the workshop you'll need:
 - Python Extension for Visual Studio Code ([download](https://marketplace.visualstudio.com/items?itemName=ms-python.python))
 
 ## Join us for DaprCon!
-Whether you are new to Dapr or an active and engaged community member, we are sure you’ll find these sessions interesting and full of new insights and information. If you haven’t already, follow [@daprdev](https://twitter.com/daprdev) on Twitter and join the Dapr [Discord channel](https://aka.ms/dapr-discord) for additional updates!
+Whether you are new to Dapr or an active and engaged community member, we are sure you’ll find these sessions interesting and full of new insights and information. If you haven’t already, follow [@daprdev](https://twitter.com/daprdev) on Twitter and help spread the word about **#DaprCon**! We also invite you to join the Dapr [Discord channel](https://aka.ms/dapr-discord) to engage with the rest of the Dapr community!

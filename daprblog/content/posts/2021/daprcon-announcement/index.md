@@ -20,3 +20,5 @@ No matter what language you program in, or platform you target, Dapr adds value 
 We'll share more details on this blog about the event's agenda, sessions and speakers in the next few weeks.
 
 Stay tuned!
+
+>Update: You can now find more information about DaprCon's agenda and speakers in [this blog post]({{<ref daprcon-main>}})

@@ -41,7 +41,7 @@ During both days we’ll devote dedicated channels on the [Dapr Discord server](
 
 | Time (PST)     | Session                |
 |----------------|------------------------|
-| 8:00am-8:30am  | Dapr workshops         |
+| 8:00am-12:00pm  | Dapr workshops         |
 
 ## Day 1 sessions
 

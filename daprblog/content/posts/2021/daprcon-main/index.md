@@ -75,7 +75,7 @@ In this session, *Jessica Deen* will cover and demo best practices for running D
 
 ## Day 2 workshops
 
-On the second day of DaprCon, October 20th 2021, you’ll have the opportunity to get some hands-on experience with Dapr as *Sander Molenkamp* and *Edwin van Wijk* walk you through a series of steps to build an application using Dapr. The workshop will be available in the following programming languages: .NET, Java and Python.
+On the second day of DaprCon, October 20th 2021, you’ll have the opportunity to get some hands-on experience with Dapr as *Sander Molenkamp*, *Edwin van Wijk*, *Maarten Mulders* and *Willems Meints* walk you through a series of steps to build an application using Dapr. The workshop will be available in the following programming languages: .NET, Java and Python.
 
 ### Workshop prerequisites
 To make sure you are ready for the workshop be sure to have these prerequisites installed:

@@ -10,15 +10,15 @@ As we [previously announced]({{<ref daprcon-announcement>}}), the first DaprCon 
 
 ## Streaming DaprCon
 
-DaprCon is a fully virtual event that will be streamed on YouTube and attendance is free! To watch the live events just follow these two links:
+DaprCon is a fully virtual event that will be streamed on [YouTube](https://www.youtube.com/channel/UCtpSQ9BLB_3EXdWAUQYwnRA/videos?view=2&sort=dd&live_view=502&shelf_id=0) and attendance is free! To watch the live events just follow these two links:
 
-<a href="https://aka.ms/daprcon/day1" class="btn btn-primary" role="button">DaprCon Day 1</a> Download <a href="daprcon-day1.ics" >calendar reminder</a>
+<a href="https://aka.ms/daprcon/day1" class="btn btn-primary" role="button">DaprCon Day 1</a> or Download <a href="daprcon-day1.ics" >calendar reminder</a>
 
-<a href="https://aka.ms/daprcon/day2" class="btn btn-primary" role="button">DaprCon Day 2</a> Download <a href="daprcon-day2.ics" >calendar reminder</a>
+<a href="https://aka.ms/daprcon/day2" class="btn btn-primary" role="button">DaprCon Day 2</a> or Download <a href="daprcon-day2.ics" >calendar reminder</a>
 
 Make sure to set a reminder on these YouTube live events to be notified when the event starts!
 
-In addition to YouTube, Day 1 will also be streamed on [LearnTV](https://docs.microsoft.com/en-us/learn/tv/).
+In addition to [YouTube](https://www.youtube.com/channel/UCtpSQ9BLB_3EXdWAUQYwnRA/videos?view=2&sort=dd&live_view=502&shelf_id=0), Day 1 will also be streamed on [LearnTV](https://docs.microsoft.com/en-us/learn/tv/).
 
 During both days we’ll devote dedicated channels on the [Dapr Discord server](https://aka.ms/dapr-discord) to discuss the various sessions and topics so make sure to join the server.
 

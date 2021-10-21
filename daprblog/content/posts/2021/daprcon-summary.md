@@ -1,5 +1,5 @@
 ---
-date: "2021-10-20T07:00:00-07:00"
+date: "2021-10-21T07:00:00-07:00"
 title: "Thanks for a great first DaprCon!"
 linkTitle: "DaprCon summary"
 author: Dapr project maintainers

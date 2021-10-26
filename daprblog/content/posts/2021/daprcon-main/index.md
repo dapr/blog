@@ -6,6 +6,8 @@ author: Dapr project maintainers
 type: blog
 ---
 
+>DaprCon is now over! You can find the event recap and links to all of the content, available to view on-demand in [this blog post]({{<ref daprcon-summary>}})
+
 As we [previously announced]({{<ref daprcon-announcement>}}), the first DaprCon will take place on October 19th-20th! In this post, we’ll share some more details on the content and speakers. DaprCon will include a variety of content including a keynote, technical sessions, panel discussions and real-world experiences of adopters building with Dapr.
 
 ## Streaming DaprCon
@@ -24,20 +26,19 @@ During both days we’ll devote dedicated channels on the [Dapr Discord server](
 
 ## Agenda
 
-### Day 1: October 19th 2021
-
+### Day 1: October 19th 2021 | [Full day recording](http://aka.ms/daprcon/day1)
 
 | Time (PST)      | Session                     | 
 |-----------------|-----------------------------|
-| 8:00am-8:30am   | Keynote                     | 
-| 8:30am-9:00am	  | Zero to hero with Dapr      | 
-| 9:00am-9:45am	  | Maintainer panel            | 
-| 9:45am-10:15am  | Dapr case study: Man Group  |  
-| 10:15am-10:45am |	Running Dapr in production  |
-| 10:45am-11:30am | Adopters panel              |
-| 11:30am-12:00pm | Dapr case study: Legentic   | 
+| 8:00am-8:30am   | [Keynote](https://youtu.be/BYRSVXhJr34)                     | 
+| 8:30am-9:00am	  | [Zero to hero with Dapr](https://youtu.be/fxZhU8b_cjk)      | 
+| 9:00am-9:45am	  | [Maintainer panel](https://youtu.be/SdUm12DZTbA)            | 
+| 9:45am-10:15am  | [Dapr case study: Man Group](https://youtu.be/hEKlsyRFtzI)  |  
+| 10:15am-10:45am |	[Running Dapr in production](https://youtu.be/_U9wJqq-H1g)  |
+| 10:45am-11:30am | [Adopters panel](https://youtu.be/Jyug0wnfsug)              |
+| 11:30am-12:00pm | [Dapr case study: Legentic](https://youtu.be/Mn0vjMMktGA)   | 
 
-### Day 2: October 20th 2021
+### Day 2: October 20th 2021 | [Full day recording](http://aka.ms/daprcon/day2)
 
 | Time (PST)     | Session                |
 |----------------|------------------------|
@@ -45,35 +46,37 @@ During both days we’ll devote dedicated channels on the [Dapr Discord server](
 
 ## Day 1 sessions
 
-**Keynote** (8:00am-8:30am PST)
+**Keynote** (8:00am-8:30am PST) | [Recording](https://youtu.be/BYRSVXhJr34) 
 
 *Yaron Schneider* and *Mark Fussell* will kick off DaprCon with some history on how Dapr got started, insights on Dapr features and the growing community and the vision for Dapr moving forward. We’ll also hear from *Mark Russinovich (Microsoft)*, *Mark Skrapness (Intel)* and *Ian Luo (Alibaba Cloud)*.
 
-**Zero to hero with Dapr** (8:30am-9:00am PST)
+**Zero to hero with Dapr** (8:30am-9:00am PST) | [Recording](https://youtu.be/fxZhU8b_cjk) 
 
 In this session *Cecil Philip* will show key Dapr features and capabilities as he builds an application using Dapr. This session will show you how easy it is to use Dapr APIs and integrate Dapr in your application.
 
-**Maintainer panel** (9:00am-9:45am PST)
+**Maintainer panel** (9:00am-9:45am PST) | [Recording](https://youtu.be/SdUm12DZTbA)
 
 Join Dapr maintainers in a live panel moderated by *Ori Zohar* to discuss the Dapr community, contributing to Dapr and some behind the scenes information on the Dapr release process, roadmap and how the Dapr repositories are managed. This is a great opportunity to meet some of the Dapr maintainers and learn how you can contribute.
 
-**Dapr case study: Man Group** (9:45am-10:15am PST)
+**Dapr case study: Man Group** (9:45am-10:15am PST) | [Recording](https://youtu.be/hEKlsyRFtzI) 
 
 *Ori Zohar* and *Simon Jones* will discuss the ways Man Group has integrated Dapr to their existing solution running on-prem on virtual machines.
 
-**Running Dapr in production** (10:15am-10:45am PST)
+**Running Dapr in production** (10:15am-10:45am PST) | [Recording](https://youtu.be/_U9wJqq-H1g)
 
 In this session, *Jessica Deen* will cover and demo best practices for running Dapr in production. Everything you need to know about security practices, rolling upgrades to a new Dapr version and more!
 
-**Adopters panel** (10:45am-11:30am PST)
+**Adopters panel** (10:45am-11:30am PST) | [Recording](https://youtu.be/Jyug0wnfsug)
 
 *Donovan Brown* will talk to a panel of Dapr adopters who are using Dapr in real world solutions and discuss their journey and experience of building mission critical systems with Dapr.
 
-**Dapr case study: Legentic** (11:30am-12:00pm PST)
+**Dapr case study: Legentic** (11:30am-12:00pm PST) | [Recording](https://youtu.be/Mn0vjMMktGA)
 
 *Donovan Brown* and *Ciprian Mocanu* will discuss how Legentic is using Dapr on AWS with Python and FastAPI.
 
-## Day 2 workshops
+## Day 2 workshops | 
+
+[Full workshop recording](https://aka.ms/daprcon/day2)
 
 On the second day of DaprCon, October 20th 2021, you’ll have the opportunity to get some hands-on experience with Dapr as *Sander Molenkamp*, *Edwin van Wijk*, *Maarten Mulders* and *Willems Meints* walk you through a series of steps to build an application using Dapr. The workshop will be available in the following programming languages: .NET, Java and Python.
 

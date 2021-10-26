@@ -7,6 +7,8 @@ description: "The first ever DaprCon will be held on October 19th"
 type: blog
 ---
 
+>DaprCon is now over! You can find the event recap and links to all of the content, available to view on-demand in [this blog post]({{<ref daprcon-summary>}})
+
 <a href="DaprCon2021.ics" class="btn btn-primary" role="button">Download Calendar Placeholder</a>
 
 As the second anniversary of Dapr approaches, it is a great time for the community to come together for the inaugural DaprCon on **October 19th, 2021**! October is a special month for Dapr, as it was in October 2019 that [Dapr was officially announced](https://cloudblogs.microsoft.com/opensource/2019/10/16/announcing-dapr-open-source-project-build-microservice-applications/). 
@@ -20,5 +22,3 @@ No matter what language you program in, or platform you target, Dapr adds value 
 We'll share more details on this blog about the event's agenda, sessions and speakers in the next few weeks.
 
 Stay tuned!
-
->Update: You can now find more information about DaprCon's agenda and speakers in [this blog post]({{<ref daprcon-main>}})

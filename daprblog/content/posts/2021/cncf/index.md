@@ -1,7 +1,7 @@
 ---
 date: "2021-11-06T07:00:00-07:00"
 title: "Dapr joins CNCF as Incubating project"
-linkTitle: "Dapr joins CNCF as Incubating project"
+linkTitle: "Dapr joins CNCF"
 author: Dapr project maintainers
 type: blog
 ---

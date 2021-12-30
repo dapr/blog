@@ -30,13 +30,24 @@ Apache APISIX Ingress Controller uses APISIX as its data plane, which has been p
 
 ### Overview
 
+[weyhd](https://www.weyhd.com/) is a solution provider focused on cloud-native application development and services. We believe that in today's world, any company will eventually become a software company. Software makes our lives easier. Today, the process of building software has become complex and unwieldy, and the day-to-day work of most software development teams is inefficient. We at wehyd provide .NET and cloud-native technologies to help build modern software with high productivity.
+
+In the project using Apache APISIX and Dapr, we migrate the Container Terminal Operating System(CTOS) of [China Merchants International Technology Co., Ltd.(CMIT)](https://www.cmit1872.com/en-us/about-us/company-profile-2) to the cloud.
+
+CMIT was established in 2001 and is a high-tech enterprise specializing in digital construction of maritime logistics.The company is headquartered in Shenzhen, with subsidiaries in Dalian and Yingkou, and is the construction and operation enterprise of the "Traffic Electronic Port" sub-center of the Ministry of Communications and Dalian Port Public Information Platform. After more than 20 years of development and accumulation, the company's business has now spread to Hong Kong, Shenzhen, Ningbo, Qingdao, Dalian, Yingkou, Zhangzhou, Zhanjiang-Shantou and other coastal hub ports and regional ports and terminals in the Pearl River Delta, Bohai Bay and Yangtze River coast, and has successfully laid out the Belt and Road ports and South Asia, Africa, Europe Mediterranean and South America.
+
+We integrate Apache APISIX Ingress Controller and Dapr in our production environment. It enables Dapr applications in the Kubernetes cluster. 
+Thanks to the cloud architecture, we are able to decouple the whole CTOS  into different functional modules. By doing so, we increase the efficiency of the system and decrease the difficulty of maintaining the system.
+
+Dapr is a core part of our microservice-based CTOS Platform, hosted on Rancher Kubernetes Service with a RabbitMQ Cluster for Pub/Sub. An aggregator acts as an intermediary/orchestrator between the microservices. All services sit behind an APISIX API Gateway which itself is a part of the Daprd service enabling us to use TLS or mTLS to the edge and mTLS throughout the Kubernetes cluster.
+
 We have integrated Apache APISIX Ingress Controller and Dapr in our production environment. It enables the use of Dapr applications in the Kubernetes cluster. The following diagram shows the architectural flow of the actual project:
 
 {{< imgproc apache_apisix_gateway_controller.png  Resize "1200x" />}}
 
 You may notice the architecture is a bit complex because we are connecting with various external services to achieve different goals, such as authentication, observability, logging, and dashboard for monitoring. Let's take a request for example: 
 
-When a request comes in, it first goes through the loadbalancer. It then enters Apache APISIX Ingress Controller, which decides how to send the request to a service efficiently. Apache APISIX Ingress Controller uses the same standard Dapr annotations to inject DAPRD sidecar for each service in the cluster. Once the decision is made, the request is sent to a service, and the sidecar deployed by Dapr handles the communication with external services. By exposing the sidecars, external services such as Minio, Kibana, and elasticsearch, are able to communicate with services inside the cluster. Thanks to the sidecar, we can have resource isolation and increased security level inside services and clusters. 
+When a request comes in, it first goes through the load balancer. It then enters Apache APISIX Ingress Controller, which decides how to send the request to a service efficiently. Apache APISIX Ingress Controller uses the same standard Dapr annotations to inject DAPRD sidecar for each service in the cluster. Once the decision is made, the request is sent to a service, and the sidecar deployed by Dapr handles the communication with external services. By exposing the sidecars, external services such as Minio, Kibana, and elasticsearch, are able to communicate with services inside the cluster. Thanks to the sidecar, we can have resource isolation and increased security level inside services and clusters. 
 
 Let's move to the next steps and get hands-on experience of building this integration!
 
@@ -114,7 +125,7 @@ helm install apisix apisix/apisix -f dapr-annotations.yaml -n ingress-apisix
 
 First, configure Apache APISIX upstream-apisix-dapr.
 
-{{< imgproc create_dapr_sidecar_resource.png  Resize "900x" />}}
+{{< imgproc create_dapr_sidecar_resource.png  Resize "1600x" />}}
 
 
 Fill in the hostname `apisix-gateway-dapr` and the port number `3500`.
@@ -143,7 +154,7 @@ Fill in the hostname `apisix-gateway-dapr` and the port number `3500`.
 
 Then configure the Apache APISIX service `apisix-gateway-dapr` and select `apisix-dapr` for the upstream service.
 
-{{< imgproc configure_apache_apisix.png  Resize "900x" />}}
+{{< imgproc configure_apache_apisix.png  Resize "1600x" />}}
 
 ```json
 {
@@ -162,18 +173,20 @@ kubectl apply -f 02.deployment.yaml
 kubectl apply -f 03.svc.yaml
 ```
 
-{{< imgproc deploy_sample.png  Resize "900x" />}}
+{{< imgproc deploy_sample.png  Resize "810x" />}}
 
 The image above shows a hypothetical microservice running with the Dapr app-id `kennethreitz-httpbin`.
 
 #### Path Matching Rewrites
 We will add some settings related to path matching. For example, if the request gateway is `/httpbin/`, the backend receive path should be `/`, with `httpbin` acting as a service name identifier.
 
-{{< imgproc configuration_required_fields.png  Resize "900x" />}}
+{{< imgproc configuration_required_fields.png  Resize "810x" />}}
 
 On hosted platforms that support namespaces, the Dapr application ID is in a valid FQDN format, which includes the target namespace. For example, the following string contains the application ID (`svc-kennethreitz-httpbin`) and the namespace the application is running in (`kind-test`).
 
 Finally, you can see if the proxy was successful by visiting: [http://20.195.90.43/httpbin/get](http://20.195.90.43/httpbin/get).
+
+{{< imgproc successful_proxy.png  Resize "1280x" />}}
 
 #### Additional Notes
 

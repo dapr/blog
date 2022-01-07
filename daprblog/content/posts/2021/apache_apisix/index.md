@@ -6,72 +6,75 @@ author: "Shanyou Zhang, Yilin Zeng"
 type: blog
 ---
 
-## About Apache APISIX Ingress Controller
+## Using Apache APISIX Ingress Controller with Dapr
 
-Ingress is a resource that represents the entry point for traffic in a Kubernetes environment. In order to make Ingress effective, we need to configure an Ingress Controller to listen to the Ingress resources in Kubernetes, parse the rules for those resources, and carry the traffic. Although Kubernetes Ingress Nginx is most commonly used, there are other options to consider for implementing ingress, such as APISIX Ingress.
+In this article, we will discuss the benefits of using Apache APISIX Ingress Controller with Dapr and how you can apply this to your applications running in a Kubernetes cluster. 
 
-APISIX Ingress is an implementation of the Ingress Controller and the main difference from Kubernetes Ingress Nginx is that APISIX Ingress uses Apache APISIX as the data plane for carrying business traffic. As shown in the figure below, when a user requests a specific service, API or web page, the entire business traffic/user request is transferred to the Kubernetes cluster through an external proxy and then is processed by APISIX Ingress.
+Ingress is a resource that represents the entry point for traffic in a Kubernetes environment. In order to make ingress effective, you configure an ingress controller to listen to the ingress resources in Kubernetes, parse the rules for those resources, and carry the traffic to the application. Nginx is the most commonly used ingress controller, however there are other options to consider for ingress implementation, such as APISIX Ingress. It is worth noting at this point, that Dapr is not designed to be a publicly facing ingress and should always be used behind an ingress controller or API gateway.
+
+The APISIX Kubernetes Ingress is an implementation of an ingress controller. The main difference from Nginx Kubernetes Ingress is that APISIX ingress uses Apache APISIX as the data plane for carrying business traffic. As shown in the diagram below, when a user requests a specific service, API or web page, the business traffic/user request is transferred to the Kubernetes cluster through an external proxy and then is processed by APISIX Ingress.
 
 {{< imgproc apache_apisix_explanation.png  Resize "1200x" />}}
 
-APISIX Ingress is divided into two parts. The first is the APISIX Ingress Controller, which serves as the control plane for configuration management and distribution. The second is the APISIX Proxy Pod, which is responsible for carrying business traffic and is implemented through CRDs (Custom Resource Definitions). Apache APISIX Ingress supports not only custom resources but also native Kubernetes Ingress resources.
+The APISIX Kubernetes Ingress is divided into two parts. The first is the APISIX Ingress Controller, which serves as the control plane for configuration management and distribution. The second is the APISIX Proxy Pod, which is responsible for carrying business traffic and is implemented as a Kubernetes CRD (Custom Resource Definitions). Apache APISIX Ingress supports not only custom resources but also native Kubernetes Ingress resources.
 
-## Why integrate Dapr and Apache APISIX Ingress Controller
+### Why integrate Dapr and Apache APISIX Ingress Controller
 
-Today, we are experiencing a wave of cloud applications and microservices. Although developers are familiar with 'web + database' application architectures (e.g., classic 3-tier designs), some developers are not familiar with a microservice application architecture. This could be a headache when integrating multiple microservices when building a cloud application. Developers' goal is to focus on business logic, while the platform is responsible for adding scalability, elasticity, maintainability, resiliency, and other attributes of cloud-native architectures to the application. This is where Dapr and Apache APISIX Ingress Controller provide value.
+Today, we are experiencing a wave of development of cloud applications and microservices. Although developers are familiar with 'web + database' application architectures (i.e. classic 3-tier designs), some developers are not familiar with microservice application architectures. This is a pain point when integrating multiple microservices to build a cloud application. The developers' goal is to focus on business logic, while the platform is responsible for adding scalability, elasticity, maintainability, resiliency, and other attributes of cloud-native architectures to the application.This is where Dapr and Apache APISIX Ingress Controller provide value. 
 
-Dapr supports multiple programming languages and platforms. It codifies best practices for building microservice applications into open, independent building blocks, which allows users to build portable, resilient and secure applications using the language and framework of their choice. Since each building block is completely independent, developers can decide to use one building block or multiple building blocks in an application. Imagine that building a cloud-native application is similar to building Legos - you decide how and what you are going build, and each block fits perfectly and hassle-free. In addition, Dapr supports multiple cloud providers and is not tied to any specific vendor. This means users can run applications in any Kubernetes cluster and other hosting environments that are integrated with Dapr.
+Dapr supports multiple programming languages and platforms. It codifies best practices for building microservice applications into open, independent building blocks, which allows users to build portable, resilient and secure applications using the language and framework of their choice. Since each building block is completely independent, developers can decide to use one or multiple building blocks in an application. Imagine that building a cloud-native application is similar to building Lego, you decide how and what you are going to build and each block fits perfectly and hassle-free. In addition, Dapr supports multiple cloud providers and it is not tied to any specific vendor. This means users can run applications in any Kubernetes cluster and other hosting environments that are integrated with Dapr.
 
-In order to maximize the advantages of Dapr, the best choice is to integrate it with something that is also highly customizable, high-performance, and hassle-free. After some research, we find Apache APISIX Ingress Controller. 
+In order to maximize the advantages of Dapr, the best choice is to integrate it with an ingress that is highly customizable, high-performance, and hassle-free. After some research at Weyhd, we landed on the Apache APISIX Ingress Controller.
 
-Apache APISIX Ingress Controller uses APISIX as its data plane, which has been proven to have better performance than Kong and Nginx. Additionally, APISIX also has an active community for problem-solving, bi-weekly webinar, and new version releases each month with enhancements and bug-fixes. Apache APISIX Ingress Controller also supports multiple programming languages in the data plane and is not vendor specific. In addition, Apache APISIX Ingress supports not only custom resources but also native Kubernetes Ingress resources. In this article, we will discuss the benefits of using Apache APISIX Ingress Controller with Dapr and how you can apply this to your applications today. 
+The Apache APISIX Ingress Controller uses APISIX as its data plane, and has been proven to have better performance than both Kong and Nginx. APISIX has an active community for problem-solving, bi-weekly webinars, and new version releases each month with enhancements and bug-fixes. The Apache APISIX Ingress Controller also supports multiple programming languages in the data plane, and it is not vendor-specific. Lastly the Apache APISIX Ingress supports not only custom resources but also native Kubernetes Ingress resources.
 
-## How to integrate Dapr with Apache APISIX Ingress Controller
+## Project using Apache APISIX Ingress Controller with Dapr
 
-### Overview
+### Project Overview
 
-[weyhd](https://www.weyhd.com/) is a solution provider focused on cloud-native application development and services. We believe that in today's world, any company will eventually become a software company. Software makes our lives easier. Today, the process of building software has become complex and unwieldy, and the day-to-day work of most software development teams is inefficient. We at wehyd provide .NET and cloud-native technologies to help build modern software with high productivity.
+[Weyhd](https://www.weyhd.com/) is a solution provider focused on cloud-native application development and services. Weyhd provides .NET and cloud-native technologies to build modern software with high productivity. We believe that in today's world, all companies will eventually be a software company as software makes our lives easier.
 
-In the project using Apache APISIX and Dapr, we migrate the Container Terminal Operating System(CTOS) of [China Merchants International Technology Co., Ltd.(CMIT)](https://www.cmit1872.com/en-us/about-us/company-profile-2) to the cloud.
+Weyhd worked on a project with China Merchants International Technology Co., Ltd. (CMIT) to migrate their Container Terminal Operating System (CTOS) to the cloud using Apache APISIX Ingress Controller combined with Dapr.
 
-CMIT was established in 2001 and is a high-tech enterprise specializing in digital construction of maritime logistics.The company is headquartered in Shenzhen, with subsidiaries in Dalian and Yingkou, and is the construction and operation enterprise of the "Traffic Electronic Port" sub-center of the Ministry of Communications and Dalian Port Public Information Platform. After more than 20 years of development and accumulation, the company's business has now spread to Hong Kong, Shenzhen, Ningbo, Qingdao, Dalian, Yingkou, Zhangzhou, Zhanjiang-Shantou and other coastal hub ports and regional ports and terminals in the Pearl River Delta, Bohai Bay and Yangtze River coast, and has successfully laid out the Belt and Road ports and South Asia, Africa, Europe Mediterranean and South America.
+CMIT was established in 2001 and is a high-tech enterprise specializing in digital construction for maritime logistics.The company is headquartered in Shenzhen, with subsidiaries in Dalian and Yingkou, and is the construction and operation enterprise of the "Traffic Electronic Port" sub-center of the Ministry of Communications and Dalian Port Public Information Platform. After more than 20 years of development and accumulation, the company's business has now spread to Hong Kong, Shenzhen, Ningbo, Qingdao, Dalian, Yingkou, Zhangzhou, Zhanjiang-Shantou and other coastal hub ports and regional ports and terminals in the Pearl River Delta, Bohai Bay and Yangtze River coast. 
 
-We integrate Apache APISIX Ingress Controller and Dapr in our production environment. It enables Dapr applications in the Kubernetes cluster. 
-Thanks to the cloud architecture, we are able to decouple the whole CTOS  into different functional modules. By doing so, we increase the efficiency of the system and decrease the difficulty of maintaining the system.
+We decided to integrate Apache APISIX Ingress Controller and Dapr in the CMIT production environment running on a Kubernetes cluster. Due to the cloud architecture, we are able to decouple the CTOS application into different functional modules. By doing so, we increased the efficiency of the system and decreased the difficulty of maintaining the system.
 
-Dapr is a core part of our microservice-based CTOS Platform, hosted on Rancher Kubernetes Service with a RabbitMQ Cluster for Pub/Sub. An aggregator acts as an intermediary/orchestrator between the microservices. All services sit behind an APISIX API Gateway which itself is a part of the Daprd service enabling us to use TLS or mTLS to the edge and mTLS throughout the Kubernetes cluster.
+Dapr is a core part of the microservice-based CTOS Platform, hosted on Rancher Kubernetes Service with a RabbitMQ Cluster for Pub/Sub. An aggregator acts as an intermediary/orchestrator between the microservices. All services sit behind an APISIX API Gateway which itself is a part of the Daprd service enabling us to use TLS or mTLS to the edge and mTLS throughout the Kubernetes cluster.
 
-We have integrated Apache APISIX Ingress Controller and Dapr in our production environment. It enables the use of Dapr applications in the Kubernetes cluster. The following diagram shows the architectural flow of the actual project:
+The following diagram shows the architectural flow of the actual project:
 
 {{< imgproc apache_apisix_gateway_controller.png  Resize "1200x" />}}
 
-You may notice the architecture is a bit complex because we are connecting with various external services to achieve different goals, such as authentication, observability, logging, and dashboard for monitoring. Let's take a request for example: 
+You may notice the architecture is a bit complex, because we are connecting with various external services to achieve different goals such as authentication, observability, logging, and dashboard for monitoring. Let's take a request example: 
 
-When a request comes in, it first goes through the load balancer. It then enters Apache APISIX Ingress Controller, which decides how to send the request to a service efficiently. Apache APISIX Ingress Controller uses the same standard Dapr annotations to inject DAPRD sidecar for each service in the cluster. Once the decision is made, the request is sent to a service, and the sidecar deployed by Dapr handles the communication with external services. By exposing the sidecars, external services such as Minio, Kibana, and elasticsearch, are able to communicate with services inside the cluster. Thanks to the sidecar, we can have resource isolation and increased security level inside services and clusters. 
+When a request comes in, it first goes through the load balancer. It then enters the Apache APISIX Ingress Controller, which decides how to send the request to a service efficiently. Apache APISIX Ingress Controller configures the same standard Dapr annotations to inject DAPRD sidecar for each service in the cluster. Once the decision is made, the request is sent to a service, and the sidecar deployed by Dapr handles communication with external services. By exposing the sidecars, external services such as Minio, Kibana, and elasticsearch, are able to communicate with services inside the cluster. Thanks to the sidecar, we can have resource isolation and increased security level inside services and clusters. 
 
-Let's move to the next steps and get hands-on experience of building this integration!
+Let's move to the next steps to get some hands-on experience of building this integration!
 
-### Environment preparation
+## How to integrate Dapr with Apache APISIX Ingress Controller
+Now let’s look at how to use Apache APISIX and Dapr together.
 
-Kubernetes 1.19+ cluster with Dapr already configured 
-Helm CLI 3x installed
-Kubectl CLI installed and configured to access the cluster
-Optional: OpenSSL for creating self-signed certificates
-The Helm Chart version for Apache APISIX is 0.7.2+. Refer to: https://github.com/apache/apisix-helm-chart/issues/167 for the specific reason
+### Environment prerequisite
 
+- Kubernetes 1.19+ cluster with Dapr already configured on the cluster
+- Helm CLI 3x installed
+- Kubect CLI installed and configured to access the cluster
+- Optional: OpenSSL for creating self-signed certificates
+- The Helm Chart version for Apache APISIX is 0.7.2+. Refer to: https://github.com/apache/apisix-helm-chart/issues/167 for the specific reason
 
 #### Step 1: Apache APISIX Helm Configuration
 
-Add the latest helm chart repo for the Apache APISIX Ingress Controller by running the following command:
+Add the latest helm chart repo for the Apache APISIX Ingress Controller by running the following command.
 
 ```bash
 $ helm repo add apisix https://charts.apiseven.com
 $ helm repo update
 ```
 
-#### Step 2: Create the Apache APISIX Ingerss namespace
+#### Step 2: Create the Apache APISIX Ingress namespace
 
-Ensure that the current kubectl context points to the correct Kubernetes cluster, and then run the following command to create the ingres-apisix namespace:
+Ensure that the current kubectl context points to the correct Kubernetes cluster, and then run the following command.
 
 ```bash
 kubectl create namespace ingress-apisix
@@ -79,7 +82,7 @@ kubectl create namespace ingress-apisix
 
 #### Step 3: Install the APISIX Controller with Dapr Support
 
-Use the following YAML to create a file called dapr-annotations.yaml, which will apply the annotations on the Apache APISIX Proxy Pod.
+Use the following to create a file called dapr-annotations.yaml to set up annotations on the Apache APISIX Proxy Pod.
 
 ```yaml
 apisix:
@@ -93,9 +96,9 @@ dapr.io/sidecar-listen-addresses: 0.0.0.0
 dapr.io/config: ingress-apisix-config
 ```
 
-> Note: The app-port above is telling the daprd sidecar proxy which port it is listening on. For a full list of supported annotations, see the [Dapr Kubernetes pod annotation](https://docs.dapr.io/reference/arguments-annotations-overview/) specification.
+> Note: The app-port above is telling the daprd sidecar Proxy which port it is listening on. For a full list of supported annotations, see the [Dapr Kubernetes pod annotation](https://docs.dapr.io/reference/arguments-annotations-overview/) specification.
 
-Below is a sample dapr-annotations.yaml from an example installation on AKS.
+Here is a sample dapr-annotations.yaml from an example installation on AKS.
 
 ```yaml
 apisix:
@@ -165,7 +168,7 @@ Then configure the Apache APISIX service `apisix-gateway-dapr` and select `apisi
 
 #### Step 5: Deploy the test sample project
 
-HTTPBin is a tool written in Python + Flask that covers various HTTP scenarios and returns to each interface. Next, we'll use kennethreitz/httpbin as a sample project for demonstration purposes.
+[HTTPBin](https://httpbin.org/)  is a tool written in Python+Flask that covers various HTTP scenarios and returns to each interface. Next, we'll use kennethreitz/httpbin as a sample project for demonstration purposes.
 
 ```bash
 kubectl apply -f 01.namespace.yaml
@@ -178,7 +181,7 @@ kubectl apply -f 03.svc.yaml
 The image above shows a hypothetical microservice running with the Dapr app-id `kennethreitz-httpbin`.
 
 #### Path Matching Rewrites
-We will add some settings related to path matching. For example, if the request gateway is `/httpbin/`, the backend receive path should be `/`, with `httpbin` acting as a service name identifier.
+Here we add some settings related to path matching. For example, if the request gateway is `/httpbin/`, the backend receive path should be `/`, with `httpbin` acting as a service name identifier.
 
 {{< imgproc configuration_required_fields.png  Resize "810x" />}}
 
@@ -196,7 +199,7 @@ Finally, Dapr is injected into the Apache APISIX Proxy Pod via Sidecar annotatio
 
 #### Deleting Apache APISIX Ingress Controller
 
-If you want to delete the Apache APISIX Ingress Controller at the end of the project, you can follow the command below (remember to delete the namespace `ingress-apisix` created before).
+If you want to delete the Apache APISIX Ingress Controller at the end of the project, you can follow the command below (remember to delete the ingress-apisix namespace as well).
 
 ```bash
 helm delete apisix -n ingress-apisix
@@ -204,9 +207,9 @@ helm delete apisix -n ingress-apisix
 
 ### Summary
 
-Infrastructure is an important part of cloud services. When building a cloud application, the most crucial factor is flexibility for application migration from one cloud vendor to another.
+Infrastructure is an important part of cloud services. When building a cloud application, the most crucial factor is the flexibilities of application migration from one cloud vendor to another.
 
-Since Dapr and Apache APISIX Ingress Controller are designed to support multiple cloud infrastructures and neither are vendor-locked, they are a natural fit for integration. In addition, the active communities of both Dapr and Apache APISIX Ingress Controller give us confidence to use it in our production environment. We are delighted to find such matching products in the open-source market, and we will not only use them, but also consider contributing to both projects in the future. Open source makes the world better!
+Since Dapr and Apache APISIX Ingress Controller are designed to support multiple cloud infrastructures, and they are both not vendor-specific, they are suitable for an integration naturally. In addition, the active communities of both Dapr and Apache APISIX Ingress Controller also give us confidence to use them production. While other sorts of integration is a '1+1=2' type of thing, the integration of Dapr and Apache APISIX Ingress Controller is definitely a '1+1 >> 2' type of thing. We are delighted to find such matching products in the open-source market, and we will not only use them, but also consider contributing to both projects in the future. Open source makes the world better!
 
 ### Reference
 - https://apisix.apache.org/blog/2021/11/17/dapr-with-apisix/, published on 11/17/2021

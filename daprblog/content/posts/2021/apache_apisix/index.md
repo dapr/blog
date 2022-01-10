@@ -193,7 +193,7 @@ Finally, you can see if the proxy was successful by visiting: [http://20.195.90.
 
 #### Additional Notes
 
-Of course, you can also deploy Apache APISIX and APISIX Ingress Controller directly in Kubernetes using the official Apache APISIX Helm repository, which allows you to directly use Apache APISIX as a gateway to the APISIX Ingress Controller data plane to carry business traffic. This allows you to directly use Apache APISIX as a gateway to carry business traffic on the data plane of the APISIX Ingress Controller.
+Of course, you can also deploy Apache APISIX and APISIX Ingress Controller directly in Kubernetes using the official Apache APISIX Helm repository, which allows you to directly use Apache APISIX as a gateway to the APISIX Ingress Controller data plane to carry business traffic.
 
 Finally, Dapr is injected into the Apache APISIX Proxy Pod via Sidecar annotations, and the microservices in the cluster are invoked through the service invocation module to achieve complete process deployment.
 
@@ -209,8 +209,8 @@ helm delete apisix -n ingress-apisix
 
 Infrastructure is an important part of cloud services. When building a cloud application, the most crucial factor is the flexibilities of application migration from one cloud vendor to another.
 
-Since Dapr and Apache APISIX Ingress Controller are designed to support multiple cloud infrastructures, and they are both not vendor-specific, they are suitable for an integration naturally. In addition, the active communities of both Dapr and Apache APISIX Ingress Controller also give us confidence to use them production. While other sorts of integration is a '1+1=2' type of thing, the integration of Dapr and Apache APISIX Ingress Controller is definitely a '1+1 >> 2' type of thing. We are delighted to find such matching products in the open-source market, and we will not only use them, but also consider contributing to both projects in the future. Open source makes the world better!
+Since Dapr and Apache APISIX Ingress Controller are designed to support multiple cloud infrastructures, and they are both not vendor-specific, they are suitable for an integration naturally. In addition, the active communities of both Dapr and Apache APISIX Ingress Controller also give us confidence to use them in production. While other sorts of integration is a '1+1=2' type of thing, the integration of Dapr and Apache APISIX Ingress Controller is definitely a '1+1 >> 2' type of thing. We are delighted to find such matching products in the open-source market, and we will not only use them, but also consider contributing to both projects in the future. Open source makes the world better!
 
 ### Reference
-- https://apisix.apache.org/blog/2021/11/17/dapr-with-apisix/, published on 11/17/2021
-- https://mp.weixin.qq.com/s/c3SokOw-n4l-Q_kOiYykSw, published on 11/16/2021
+- https://apisix.apache.org/blog/2021/11/17/dapr-with-apisix/ published on 11/17/2021
+- https://mp.weixin.qq.com/s/c3SokOw-n4l-Q_kOiYykSw published on 11/16/2021

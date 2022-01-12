@@ -8,7 +8,7 @@ type: blog
 
 ## Using Apache APISIX Ingress Controller with Dapr
 
-In this article, we will discuss the benefits of using [Apache APISIX Ingress Controller](https://github.com/apache/apisix-ingress-controller) with Dapr and how you can apply this to your applications running in a Kubernetes cluster. 
+In this post we discuss the benefits of using [Apache APISIX Ingress Controller](https://github.com/apache/apisix-ingress-controller) with Dapr and describe a project between Weyhd and China Merchants International Technology that utilizes it. This post all dives into how you can apply the Apache APISIX Ingress Controller with Dapr to your applications running in a Kubernetes cluster. 
 
 Ingress is a resource that represents the entry point for traffic in a Kubernetes environment. In order to make ingress effective, you configure an ingress controller to listen to the ingress resources in Kubernetes, parse the rules for those resources, and carry the traffic to the application. Nginx is the most commonly used ingress controller, however there are other options to consider for ingress implementation, such as APISIX Ingress. It is worth noting at this point, that Dapr is not designed to be a publicly facing ingress and should always be used behind an ingress controller or API gateway.
 

@@ -1,5 +1,5 @@
 ---
-date: "2022-01-12T07:00:00-07:00"
+date: "2022-01-13T07:00:00-07:00"
 title: "Enable Dapr with Apache APISIX Ingress Controller"
 linkTitle: "Dapr case study: Apache APISIX"
 author: "Shanyou Zhang, Yilin Zeng"

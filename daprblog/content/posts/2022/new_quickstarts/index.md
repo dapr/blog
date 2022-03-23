@@ -64,11 +64,11 @@ To make the new Quickstarts more accessible to all users, we’ve added comprehe
 
 ## What do we need from you? 
 
-Try it out and give us feedback 
+### Try it out and give us feedback 
 
 We’re continuously improving our Quickstarts and value your feedback! We’ve designated a [Discord channel](https://discord.gg/22ZtJrNe) for your opinions, suggestions, and questions about the Quickstarts. 
 
-## Contribute 
+### Contribute 
 
 We always want to get the community involved, and greatly appreciate help in building the remaining Quickstarts. If you’re interested in contributing, please reach out on the [Discord Quickstart channel](https://discord.gg/22ZtJrNe). 
 

@@ -1,20 +1,20 @@
 ---
 date: "2022-03-22T07:00:00-07:00"
-title: "Get started faster with the new 5-minute quickstarts"
-linkTitle: "Get started faster with the new 5-minute quickstarts"
+title: "Get started faster with the new 5-minute Quickstarts"
+linkTitle: "Get started faster with the new 5-minute Quickstarts"
 author:  "Hannah Hunter"
 type: blog
 ---
 
-Dapr already had well-rounded quickstart examples, so why reinvent the wheel?  
+Dapr already had well-rounded uickstart examples, so why reinvent the wheel?  
 
-Our existing examples, now referred to as tutorials, go deeper into a topic or scenario, often using building block APIs together to solve problems, like building a calculator application comprised of multiple services written in many different languages, or deploying a “daprized” application to Kubernetes. We’ve kept these valuable tutorial experiences and moved them to their own tutorials folder in our GitHub quickstarts repo. 
+Our existing examples, now referred to as tutorials, go deeper into a topic or scenario, often using building block APIs together to solve problems, like building a calculator application comprised of multiple services written in many different languages, or deploying a “daprized” application to Kubernetes. We’ve kept these valuable tutorial experiences and moved them to their own tutorials folder in our GitHub Quickstarts repo. 
 
-We created our new quickstart examples to answer the most frequent user question: “How do I use this API in my favorite language?” Fueled by this user feedback, we simplified the getting started experience by focusing on an individual building block API (for example, [service invocation](https://github.com/dapr/quickstarts/tree/master/service_invocation) or [pub/sub](https://github.com/dapr/quickstarts/tree/master/service_invocation)). The new quickstarts sit front-and-center at the root quickstarts repo. Currently, we offer three new quickstarts and are actively working on adding quickstarts for the rest of our building blocks. 
+We created our new quickstart examples to answer the most frequent user question: “How do I use this API in my favorite language?” Fueled by this user feedback, we simplified the getting started experience by focusing on an individual building block API (for example, [service invocation](https://github.com/dapr/quickstarts/tree/master/service_invocation) or [pub/sub](https://github.com/dapr/quickstarts/tree/master/service_invocation)). The new Quickstarts sit front-and-center at the root Quickstarts repo. Currently, we offer three new Quickstarts and are actively working on adding Quickstarts for the rest of our building blocks. 
 
 {{< imgproc quickstarts_root.png  Resize "1600x" />}}
 
-Our quickstart examples come in multiple languages. Simply pick the language you’re most familiar with and run through a building block in under five minutes. For example, select the [pub/sub example](https://github.com/dapr/quickstarts/tree/master/pub_sub) and choose a quickstart experience from five different languages. 
+OurQuickstart examples come in multiple languages. Simply pick the language you’re most familiar with and run through a building block in under five minutes. For example, select the [pub/sub example](https://github.com/dapr/quickstarts/tree/master/pub_sub) and choose a Quickstart experience from five different languages. 
 
 {{< imgproc quickstarts_languages.png  Resize "1600x" />}}
 
@@ -57,7 +57,7 @@ Console.WriteLine("Published data: " + order);
 )
 logging.info('Published data: ' + json.dumps(order))
 ```
-To make our new quickstarts more accessible to all users, we’ve added comprehensive walkthroughs of each example to the Dapr Docs Getting Started [quickstarts](quickstarts) area. 
+To make our new Quickstarts more accessible to all users, we’ve added comprehensive walkthroughs of each example to the Dapr Docs Getting Started [quickstarts](Quickstarts) area. 
 
 {{< imgproc quickstarts_docs.png  Resize "1143x" />}}
 
@@ -65,9 +65,9 @@ To make our new quickstarts more accessible to all users, we’ve added comprehe
 
 Try it and give feedback 
 
-We’re continuously improving our quickstarts and value your feedback! We’ve designated a [Discord channel](https://discord.gg/22ZtJrNe) for your opinions, suggestions, and questions about the quickstarts. 
+We’re continuously improving our Quickstarts and value your feedback! We’ve designated a [Discord channel](https://discord.gg/22ZtJrNe) for your opinions, suggestions, and questions about the Quickstarts. 
 
 ## Contribute 
 
-We appreciate help in building the next quickstart. If you’re interested in contributing, please reach out in the [Discord](https://discord.gg/22ZtJrNe). 
+We appreciate help in building the next Quickstart. If you’re interested in contributing, please reach out in the [Discord](https://discord.gg/22ZtJrNe). 
 

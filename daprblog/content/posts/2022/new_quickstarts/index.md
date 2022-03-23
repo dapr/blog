@@ -6,19 +6,19 @@ author:  "Hannah Hunter"
 type: blog
 ---
 
-Dapr already had well-rounded Quickstart examples, so why reinvent the wheel?  
+The existing examples, now referred to as tutorials, go deeper into a topic or scenario, often using building block APIs together to solve problems, like building a calculator application comprised of multiple services written in many different languages, or deploying a “daprized” application to Kubernetes. We’ve kept these valuable tutorial experiences and moved them to their own tutorials folder in the GitHub Quickstarts repo. 
 
-Our existing examples, now referred to as tutorials, go deeper into a topic or scenario, often using building block APIs together to solve problems, like building a calculator application comprised of multiple services written in many different languages, or deploying a “daprized” application to Kubernetes. We’ve kept these valuable tutorial experiences and moved them to their own tutorials folder in our GitHub Quickstarts repo. 
+Dapr already has well-rounded Quickstart examples, so why reinvent the wheel?  
 
-We created our new quickstart examples to answer the most frequent user question: “How do I use this API in my favorite language?” Fueled by this user feedback, we simplified the getting started experience by focusing on an individual building block API (for example, [service invocation](https://github.com/dapr/quickstarts/tree/master/service_invocation) or [pub/sub](https://github.com/dapr/quickstarts/tree/master/service_invocation)). The new Quickstarts sit front-and-center at the root Quickstarts repo. Currently, we offer three new Quickstarts and are actively working on adding Quickstarts for the rest of our building blocks. 
+Two frequent asks we heard when using the Quickstarts were “How do I use this Dapr API?" and "Can you show me this in my favorite language?”. Fueled by this feedback, we simplified the getting started experience by focusing on the individual building block APIs for example, [service invocation](https://github.com/dapr/quickstarts/tree/master/service_invocation) or [pub/sub](https://github.com/dapr/quickstarts/tree/master/service_invocation)) to create a new set of Quickstarts. The new Quickstarts are at the root Quickstarts repo and currently show three of the APIs in five different languages, with the rest of the building block APIs being actively worked on over the coming weeks. 
 
 {{< imgproc quickstarts_root.png  Resize "1600x" />}}
 
-Our Quickstart examples come in multiple languages. Simply pick the language you’re most familiar with and run through a building block in under five minutes. For example, select the [pub/sub example](https://github.com/dapr/quickstarts/tree/master/pub_sub) and choose a Quickstart experience from five different languages. 
+The Quickstart examples come in multiple languages. Simply pick the language you’re most familiar with and run through a building block in under five minutes. For example, select the [pub/sub example](https://github.com/dapr/quickstarts/tree/master/pub_sub) and choose a Quickstart experience from five different languages. 
 
 {{< imgproc quickstarts_languages.png  Resize "1600x" />}}
 
-Each example includes both Dapr SDK and native HTTP client code samples. For example, select the C# language folder to view both SDK and HTTP paths. 
+Each API includes both Dapr SDK and native HTTP client code samples. For example, select the C# language folder to view both SDK and HTTP paths. 
 
 {{< imgproc quickstarts_protocol_sdk.png  Resize "1600x" />}}
 
@@ -57,17 +57,18 @@ Console.WriteLine("Published data: " + order);
 )
 logging.info('Published data: ' + json.dumps(order))
 ```
-To make our new Quickstarts more accessible to all users, we’ve added comprehensive walkthroughs of each example to the Dapr Docs Getting Started [Quickstarts](Quickstarts) area. 
+
+To make the new Quickstarts more accessible to all users, we’ve added comprehensive walkthroughs of each example to the Dapr docs Getting Started [Quickstarts](Quickstarts) topic. 
 
 {{< imgproc quickstarts_docs.png  Resize "1143x" />}}
 
 ## What do we need from you? 
 
-Try it and give feedback 
+Try it out and give us feedback 
 
 We’re continuously improving our Quickstarts and value your feedback! We’ve designated a [Discord channel](https://discord.gg/22ZtJrNe) for your opinions, suggestions, and questions about the Quickstarts. 
 
 ## Contribute 
 
-We appreciate help in building the next Quickstart. If you’re interested in contributing, please reach out in the [Discord](https://discord.gg/22ZtJrNe). 
+We always want to get the community involved, and greatly appreciate help in building the remaining Quickstarts. If you’re interested in contributing, please reach out on the [Discord Quickstart channel](https://discord.gg/22ZtJrNe). 
 

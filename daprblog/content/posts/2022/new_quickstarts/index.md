@@ -6,7 +6,7 @@ author:  "Hannah Hunter"
 type: blog
 ---
 
-Dapr already had well-rounded uickstart examples, so why reinvent the wheel?  
+Dapr already had well-rounded Quickstart examples, so why reinvent the wheel?  
 
 Our existing examples, now referred to as tutorials, go deeper into a topic or scenario, often using building block APIs together to solve problems, like building a calculator application comprised of multiple services written in many different languages, or deploying a “daprized” application to Kubernetes. We’ve kept these valuable tutorial experiences and moved them to their own tutorials folder in our GitHub Quickstarts repo. 
 
@@ -14,7 +14,7 @@ We created our new quickstart examples to answer the most frequent user question
 
 {{< imgproc quickstarts_root.png  Resize "1600x" />}}
 
-OurQuickstart examples come in multiple languages. Simply pick the language you’re most familiar with and run through a building block in under five minutes. For example, select the [pub/sub example](https://github.com/dapr/quickstarts/tree/master/pub_sub) and choose a Quickstart experience from five different languages. 
+Our Quickstart examples come in multiple languages. Simply pick the language you’re most familiar with and run through a building block in under five minutes. For example, select the [pub/sub example](https://github.com/dapr/quickstarts/tree/master/pub_sub) and choose a Quickstart experience from five different languages. 
 
 {{< imgproc quickstarts_languages.png  Resize "1600x" />}}
 
@@ -57,7 +57,7 @@ Console.WriteLine("Published data: " + order);
 )
 logging.info('Published data: ' + json.dumps(order))
 ```
-To make our new Quickstarts more accessible to all users, we’ve added comprehensive walkthroughs of each example to the Dapr Docs Getting Started [quickstarts](Quickstarts) area. 
+To make our new Quickstarts more accessible to all users, we’ve added comprehensive walkthroughs of each example to the Dapr Docs Getting Started [Quickstarts](Quickstarts) area. 
 
 {{< imgproc quickstarts_docs.png  Resize "1143x" />}}
 

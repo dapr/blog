@@ -6,9 +6,6 @@ author:  "Hannah Hunter"
 type: blog
 ---
 
-## Using Apache APISIX Ingress Controller with Dapr
-Get started faster with our new quickstarts 
-
 Dapr already had well-rounded quickstart examples, so why reinvent the wheel?  
 
 Our existing examples, now referred to as tutorials, go deeper into a topic or scenario, often using building block APIs together to solve problems, like building a calculator application comprised of multiple services written in many different languages, or deploying a “daprized” application to Kubernetes. We’ve kept these valuable tutorial experiences and moved them to their own tutorials folder in our GitHub quickstarts repo. 

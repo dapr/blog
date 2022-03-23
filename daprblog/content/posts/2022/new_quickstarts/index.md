@@ -1,0 +1,76 @@
+---
+date: "2022-03-22T07:00:00-07:00"
+title: "Get started faster with the new 5-minute quickstarts"
+linkTitle: "Get started faster with the new 5-minute quickstarts"
+author:  "Hannah Hunter"
+type: blog
+---
+
+## Using Apache APISIX Ingress Controller with Dapr
+Get started faster with our new quickstarts 
+
+Dapr already had well-rounded quickstart examples, so why reinvent the wheel?  
+
+Our existing examples, now referred to as tutorials, go deeper into a topic or scenario, often using building block APIs together to solve problems, like building a calculator application comprised of multiple services written in many different languages, or deploying a “daprized” application to Kubernetes. We’ve kept these valuable tutorial experiences and moved them to their own tutorials folder in our GitHub quickstarts repo. 
+
+We created our new quickstart examples to answer the most frequent user question: “How do I use this API in my favorite language?” Fueled by this user feedback, we simplified the getting started experience by focusing on an individual building block API (for example, [service invocation](https://github.com/dapr/quickstarts/tree/master/service_invocation) or [pub/sub](https://github.com/dapr/quickstarts/tree/master/service_invocation)). The new quickstarts sit front-and-center at the root quickstarts repo. Currently, we offer three new quickstarts and are actively working on adding quickstarts for the rest of our building blocks. 
+
+{{< imgproc quickstarts_root.png  Resize "1600x" />}}
+
+Our quickstart examples come in multiple languages. Simply pick the language you’re most familiar with and run through a building block in under five minutes. For example, select the [pub/sub example](https://github.com/dapr/quickstarts/tree/master/pub_sub) and choose a quickstart experience from five different languages. 
+
+{{< imgproc quickstarts_languages.png  Resize "1600x" />}}
+
+Each example includes both Dapr SDK and native HTTP client code samples. For example, select the C# language folder to view both SDK and HTTP paths. 
+
+{{< imgproc quickstarts_protocol_sdk.png  Resize "1600x" />}}
+
+> C# Dapr SDK code sample (RECOMMENDED) – using cloud native .NET 6 “minimal API” design:  
+```csharp
+// Publish an event/message using Dapr PubSub
+await client.PublishEventAsync("order_pub_sub", "orders", order);
+Console.WriteLine("Published data: " + order);
+```
+
+> Python SDK client code sample (RECOMMENDED):
+```python
+with DaprClient() as client:
+    # Publish an event/message using Dapr PubSub
+    result = client.publish_event(
+        pubsub_name='order_pub_sub',
+        topic_name='orders',
+        data=json.dumps(order),
+        data_content_type='application/json',
+    )
+```
+
+> C# HTTP client code sample – using cloud native .NET 6 “minimal API” design:
+```csharp
+ // Publish an event/message using Dapr PubSub via HTTP Post
+var response = httpClient.PostAsync($"{baseURL}/v1.0/publish/{PUBSUBNAME}/{TOPIC}", content);
+Console.WriteLine("Published data: " + order);
+```
+
+> Python HTTP client code sample:
+```python
+ ## Publish an event/message using Dapr PubSub via HTTP Post
+ result = requests.post(
+        url='%s/v1.0/publish/%s/%s' % (base_url, PUBSUB_NAME, TOPIC),
+        json=order
+)
+logging.info('Published data: ' + json.dumps(order))
+```
+To make our new quickstarts more accessible to all users, we’ve added comprehensive walkthroughs of each example to the Dapr Docs Getting Started [quickstarts](quickstarts) area. 
+
+{{< imgproc quickstarts_docs.png  Resize "1143x" />}}
+
+## What do we need from you? 
+
+Try it and give feedback 
+
+We’re continuously improving our quickstarts and value your feedback! We’ve designated a [Discord channel](https://discord.gg/22ZtJrNe) for your opinions, suggestions, and questions about the quickstarts. 
+
+## Contribute 
+
+We appreciate help in building the next quickstart. If you’re interested in contributing, please reach out in the [Discord](https://discord.gg/22ZtJrNe). 
+

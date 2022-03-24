@@ -1,5 +1,5 @@
 ---
-date: "2022-03-23T07:00:00-07:00"
+date: "2022-03-24T08:00:00-07:00"
 title: "Get started faster with the new 5-minute Quickstarts"
 linkTitle: "Get started faster with the new 5-minute Quickstarts"
 author:  "Hannah Hunter"

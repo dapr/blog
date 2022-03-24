@@ -1,16 +1,16 @@
 ---
-date: "2022-03-22T07:00:00-07:00"
+date: "2022-03-24T07:00:00-07:00"
 title: "Get started faster with the new 5-minute Quickstarts"
 linkTitle: "Get started faster with the new 5-minute Quickstarts"
 author:  "Hannah Hunter"
 type: blog
 ---
 
-The existing examples, now referred to as tutorials, go deeper into a topic or scenario, often using building block APIs together to solve problems, like building a calculator application comprised of multiple services written in many different languages, or deploying a “daprized” application to Kubernetes. We’ve kept these valuable tutorial experiences and moved them to their own tutorials folder in the GitHub Quickstarts repo. 
+Dapr already has well-rounded Quickstart examples, so why reinvent the wheel?
 
-Dapr already has well-rounded Quickstart examples, so why reinvent the wheel?  
+The existing examples, now referred to as tutorials, go deep into a topic or scenario, often using building block APIs together to solve problems, like building a calculator application comprised of multiple services written in many different languages, or deploying a Hello World application to Kubernetes. We’ve kept these valuable tutorial experiences and moved them to their own tutorials folder in the GitHub Quickstarts repo.
 
-Two frequent asks we heard when using the Quickstarts were “How do I use this Dapr API?" and "Can you show me this in my favorite language?”. Fueled by this feedback, we simplified the getting started experience by focusing on the individual building block APIs for example, [service invocation](https://github.com/dapr/quickstarts/tree/master/service_invocation) or [pub/sub](https://github.com/dapr/quickstarts/tree/master/service_invocation)) to create a new set of Quickstarts. The new Quickstarts are at the root Quickstarts repo and currently show three of the APIs in five different languages, with the rest of the building block APIs being actively worked on over the coming weeks. 
+Two frequent asks we heard when using the Quickstarts were “How do I use this Dapr API?" and “Can you show me this in my favorite language?”. Fueled by this feedback, we simplified the getting started experience by focusing on the individual building block APIs for example, service invocation or pub/sub) to create a new set of Quickstarts. The new Quickstarts are at the root Quickstarts repo and currently show three of the APIs in five different languages, with the rest of the building block APIs being actively worked on over the coming weeks. 
 
 {{< imgproc quickstarts_root.png  Resize "1600x" />}}
 

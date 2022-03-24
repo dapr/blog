@@ -7,9 +7,9 @@ type: blog
 ---
 Dapr already has well-rounded Quickstart examples, so why reinvent the wheel?
 
-The existing examples, now referred to as tutorials, go deep into a topic or scenario, often using building block APIs together to solve problems, like building a calculator application comprised of multiple services written in many different languages, or deploying a Hello World application to Kubernetes. We’ve kept these valuable tutorial experiences and moved them to their own tutorials folder in the GitHub Quickstarts repo.
+Two frequent asks we heard when using the Quickstarts were “How do I use this Dapr API?" and “Can you show me this in my favorite language?”. Fueled by this feedback, we simplified the getting started experience by focusing on the individual building block APIs (for example, [service invocation](https://github.com/dapr/quickstarts/tree/master/service_invocation) or [pub/sub](https://github.com/dapr/quickstarts/tree/master/pub_sub)). The new Quickstarts are at the root of the Quickstarts repo and currently show three of the APIs in five different languages, with the rest of the building block APIs being actively worked on over the coming weeks. 
 
-Two frequent asks we heard when using the Quickstarts were “How do I use this Dapr API?" and “Can you show me this in my favorite language?”. Fueled by this feedback, we simplified the getting started experience by focusing on the individual building block APIs (for example, service invocation or pub/sub). The new Quickstarts are at the root of the Quickstarts repo and currently show three of the APIs in five different languages, with the rest of the building block APIs being actively worked on over the coming weeks. 
+The existing examples, now referred to as tutorials, go deep into a topic or scenario, often using building block APIs together to solve problems, like building a calculator application comprised of multiple services written in many different languages, or deploying a Hello World application to Kubernetes. We’ve kept these valuable tutorial experiences and moved them to their own tutorials folder in the GitHub Quickstarts repo.
 
 {{< imgproc quickstarts_root.png  Resize "1600x" />}}
 

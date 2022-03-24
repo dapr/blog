@@ -67,9 +67,9 @@ To make the new Quickstarts more accessible to all users, we’ve added comprehe
 
 ### Try it out and give us feedback 
 
-We’re continuously improving our Quickstarts and value your feedback! We’ve designated a [Discord channel](https://discord.gg/22ZtJrNe) for your opinions, suggestions, and questions about the Quickstarts. 
+We’re continuously improving our Quickstarts and value your feedback! We’ve designated a [Discord channel](https://discord.gg/sexsjFsSKW) for your opinions, suggestions, and questions about the Quickstarts. 
 
 ### Contribute 
 
-We always want to get the community involved, and greatly appreciate help in building the remaining Quickstarts. If you’re interested in contributing, please reach out on the [Discord Quickstart channel](https://discord.gg/22ZtJrNe). 
+We always want to get the community involved, and greatly appreciate help in building the remaining Quickstarts. If you’re interested in contributing, please reach out on the [Discord Quickstart channel](https://discord.gg/sexsjFsSKW). 
 

@@ -42,6 +42,7 @@ with DaprClient() as client:
 ```
 
 > C# HTTP client code sample – using cloud native .NET 6 “minimal API” design:
+
 ```csharp
  // Publish an event/message using Dapr PubSub via HTTP Post
 var response = httpClient.PostAsync($"{baseURL}/v1.0/publish/{PUBSUBNAME}/{TOPIC}", content);
@@ -49,6 +50,7 @@ Console.WriteLine("Published data: " + order);
 ```
 
 > Python HTTP client code sample:
+
 ```python
  ## Publish an event/message using Dapr PubSub via HTTP Post
  result = requests.post(

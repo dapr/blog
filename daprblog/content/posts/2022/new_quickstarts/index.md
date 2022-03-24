@@ -5,7 +5,6 @@ linkTitle: "Get started faster with the new 5-minute Quickstarts"
 author:  "Hannah Hunter"
 type: blog
 ---
-
 Dapr already has well-rounded Quickstart examples, so why reinvent the wheel?
 
 The existing examples, now referred to as tutorials, go deep into a topic or scenario, often using building block APIs together to solve problems, like building a calculator application comprised of multiple services written in many different languages, or deploying a Hello World application to Kubernetes. We’ve kept these valuable tutorial experiences and moved them to their own tutorials folder in the GitHub Quickstarts repo.

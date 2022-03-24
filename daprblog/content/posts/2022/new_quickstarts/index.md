@@ -9,7 +9,7 @@ Dapr already has well-rounded Quickstart examples, so why reinvent the wheel?
 
 The existing examples, now referred to as tutorials, go deep into a topic or scenario, often using building block APIs together to solve problems, like building a calculator application comprised of multiple services written in many different languages, or deploying a Hello World application to Kubernetes. We’ve kept these valuable tutorial experiences and moved them to their own tutorials folder in the GitHub Quickstarts repo.
 
-Two frequent asks we heard when using the Quickstarts were “How do I use this Dapr API?" and “Can you show me this in my favorite language?”. Fueled by this feedback, we simplified the getting started experience by focusing on the individual building block APIs for example, service invocation or pub/sub) to create a new set of Quickstarts. The new Quickstarts are at the root Quickstarts repo and currently show three of the APIs in five different languages, with the rest of the building block APIs being actively worked on over the coming weeks. 
+Two frequent asks we heard when using the Quickstarts were “How do I use this Dapr API?" and “Can you show me this in my favorite language?”. Fueled by this feedback, we simplified the getting started experience by focusing on the individual building block APIs (for example, service invocation or pub/sub). The new Quickstarts are at the root of the Quickstarts repo and currently show three of the APIs in five different languages, with the rest of the building block APIs being actively worked on over the coming weeks. 
 
 {{< imgproc quickstarts_root.png  Resize "1600x" />}}
 
@@ -59,7 +59,7 @@ Console.WriteLine("Published data: " + order);
 logging.info('Published data: ' + json.dumps(order))
 ```
 
-To make the new Quickstarts more accessible to all users, we’ve added comprehensive walkthroughs of each example to the Dapr docs Getting Started [Quickstarts](Quickstarts) topic. 
+To make the new Quickstarts more accessible to all users, we’ve added comprehensive walkthroughs of each example to the Dapr docs Getting Started [Quickstarts](https://docs.dapr.io/getting-started/quickstarts/) topic. 
 
 {{< imgproc quickstarts_docs.png  Resize "1143x" />}}
 

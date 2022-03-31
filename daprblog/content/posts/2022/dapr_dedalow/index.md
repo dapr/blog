@@ -31,7 +31,7 @@ Previously, one handicap in implementing these functionalities was the time avai
   - The cloud provider, or
   - The type of cluster (Development / Production) where the application was deployed.
 
-We then began evaluating Distributed Application Runtime (Dapr). Dapr is an open-source runtime hosted in the Cloud Native Computing Foundation (CNCF), with open governance by Microsoft, Alibaba, Intel, and Diagrid. Dapr offers different APIs to solve the complexity of developing distributed applications:
+We then began evaluating Distributed Application Runtime (Dapr). Dapr is an open-source runtime hosted in the Cloud Native Computing Foundation (CNCF), with open governance by Alibaba, Diagrid, Intel, and Microsoft. Dapr offers different APIs to solve the complexity of developing distributed applications:
 
 - Service invocation
 - Publish & subscribe

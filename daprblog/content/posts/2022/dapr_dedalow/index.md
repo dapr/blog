@@ -2,7 +2,7 @@
 date: "2022-03-31T08:00:00-07:00"
 title: "How Dapr helped Dedalow accelerate development on AWS and Azure"
 linkTitle: "How Dapr helped Dedalow accelerate development on AWS & Azure"
-author:  "Javier Vela"
+author:  "Javier Vela & Adolfo Gonzalez"
 type: blog
 ---
 

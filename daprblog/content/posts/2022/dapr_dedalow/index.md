@@ -16,7 +16,7 @@ Dedalow is in constant evolution, and needed to integrate three new features:
 - **Storage** to persist test execution results.
 - **Email notifications** from a Shell Script.
 
-In all three cases, we wanted to take advantage of the services offered by the public cloud providers Azure and AWS:
+In all three cases, we wanted to take advantage of the services offered by the public cloud providers AWS and Azure:
 
 | Feature | Azure | AWS |
 | ------- | ----- | --- |

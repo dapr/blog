@@ -8,7 +8,7 @@ type: blog
 
 [Dedalow](https://dedalow.com/) is a low-code / no-code solution developed by [NTT DATA](https://www.nttdata.com/), offering an end-to-end service for you to model, generate, and deploy your applications in different technologies based on your needs. Dedalow brings functionalities to the table, including testing, task automation, and code discovery services for existing applications. [View Dedalow in action](https://www.dedalow.com/wp-content/uploads/2021/03/Dedalow_Screen.mov).
 
-Dedalow is a containerized application composed of more than 30 services, developed in different technologies, including: .NET, Python, Node.js or Java. Due to containerization and Helm charts, you can deploy Dedalow on a Kubernetes clusters and today, the service is available on Azure Kubernetes Service (AKS) or Amazon Elastic Kubernetes Service (EKS).
+Dedalow is a containerized application composed of more than 30 services, developed in different technologies, including: .NET, Python, Node.js or Java. Due to containerization and Helm charts, you can deploy Dedalow on a Kubernetes clusters and today, the service is available on Amazon Elastic Kubernetes Service (EKS) and Azure Kubernetes Service (AKS).
 
 Dedalow is in constant evolution, and needed to integrate three new features:  
 

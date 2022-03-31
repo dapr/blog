@@ -53,4 +53,4 @@ The diagram below shows the Dedalow integration with Dapr:
 
 {{< imgproc dedalow_integration_dapr.png  Resize "1600x" />}}
 
-Dapr is being used in production environments: AKS in Azure, EKS in AWS. Currently, not all of Dapr's components being used are in a stable status. However, the benefits of using them greatly outweighs the potential drawbacks, and so far we have not seen any issues. Dedalow intends to increase our usage of Dapr in the future.  
+Dapr is being used in Dedalow production environments, AKS in Azure and EKS in AWS. Currently, not all of Dapr's components being used are in a stable status. However, the benefits of using them greatly outweighs the potential drawbacks, and so far we have not seen any issues. The Dedalow platform team intends to increase our usage of Dapr in the future as it has proven to be both productive when implementing new features as well as portable across clouds, both of which are essential for the growth of Dedalow.  

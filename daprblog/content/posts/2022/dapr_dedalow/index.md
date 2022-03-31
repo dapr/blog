@@ -8,7 +8,7 @@ type: blog
 
 [Dedalow](https://dedalow.com/) is a low-code / no-code solution developed by [NTT DATA](https://www.nttdata.com/), offering an end-to-end service for you to model, generate, and deploy your applications in different technologies based on your needs. Dedalow brings functionalities to the table, including testing, task automation, and code discovery services for existing applications. [View Dedalow in action](https://www.dedalow.com/wp-content/uploads/2021/03/Dedalow_Screen.mov).
 
-Dedalow is a containerized application composed of more than 30 services, developed in different technologies, including: .NET, Python, Node.js or Java. Due to containerization and Helm charts, you can deploy Dedalow on a Kubernetes clusters and today, the service is available on Azure Kubernetes Service (AKS) or Amazon Elastic Kubernetes Service (EKS).
+Dedalow is a containerized application composed of more than 30 services, developed in different technologies, including: .NET, Python, Node.js or Java. Due to containerization and Helm charts, you can deploy Dedalow on a Kubernetes clusters and today, the service is available on Amazon Elastic Kubernetes Service (EKS) and Azure Kubernetes Service (AKS).
 
 Dedalow is in constant evolution, and needed to integrate three new features:  
 
@@ -16,7 +16,7 @@ Dedalow is in constant evolution, and needed to integrate three new features:
 - **Storage** to persist test execution results.
 - **Email notifications** from a Shell Script.
 
-In all three cases, we wanted to take advantage of the services offered by the public cloud providers Azure and AWS:
+In all three cases, we wanted to take advantage of the services offered by the public cloud providers AWS and Azure:
 
 | Feature | Azure | AWS |
 | ------- | ----- | --- |
@@ -31,7 +31,7 @@ Previously, one handicap in implementing these functionalities was the time avai
   - The cloud provider, or
   - The type of cluster (Development / Production) where the application was deployed.
 
-We then began evaluating Distributed Application Runtime (Dapr). Dapr is an open-source runtime hosted in the Cloud Native Computing Foundation (CNCF), with open governance by Microsoft, Alibaba, Intel, and Diagrid. Dapr offers different APIs to solve the complexity of developing distributed applications:
+We then began evaluating Distributed Application Runtime (Dapr). Dapr is an open-source runtime hosted in the Cloud Native Computing Foundation (CNCF), with open governance by Alibaba, Diagrid, Intel, and Microsoft. Dapr offers different APIs to solve the complexity of developing distributed applications:
 
 - Service invocation
 - Publish & subscribe
@@ -53,4 +53,4 @@ The diagram below shows the Dedalow integration with Dapr:
 
 {{< imgproc dedalow_integration_dapr.png  Resize "1600x" />}}
 
-Dapr is being used in production environments: AKS in Azure, EKS in AWS. Currently, not all of Dapr's components being used are in a stable status. However, the benefits of using them greatly outweighs the potential drawbacks, and so far we have not seen any issues. Dedalow intends to increase our usage of Dapr in the future.  
+Dapr is being used in Dedalow production environments, EKS in AWS and AKS in Azure. Currently, not all of Dapr's components being used are in a stable status. However, the benefits of using them greatly outweighs the potential drawbacks, and so far we have not seen any issues. The Dedalow platform team intends to increase our usage of Dapr in the future as it has proven to be both productive when implementing new features as well as portable across clouds, both of which are essential for the growth of Dedalow.  

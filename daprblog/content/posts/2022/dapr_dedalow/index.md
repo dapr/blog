@@ -1,12 +1,12 @@
 ---
-date: "2022-03-31T08:00:00-07:00"
+date: "2022-04-04T08:00:00-07:00"
 title: "How Dapr helped Dedalow accelerate development on AWS and Azure"
 linkTitle: "How Dapr helped Dedalow accelerate development on AWS & Azure"
 author:  "Javier Vela & Adolfo Gonzalez"
 type: blog
 ---
 
-[Dedalow](https://dedalow.com/) is a low-code / no-code solution developed by [NTT DATA](https://www.nttdata.com/), offering an end-to-end service for you to model, generate, and deploy your applications in different technologies based on your needs. Dedalow brings functionalities to the table, including testing, task automation, and code discovery services for existing applications. [View Dedalow in action](https://www.dedalow.com/wp-content/uploads/2021/03/Dedalow_Screen.mov).
+[Dedalow](https://dedalow.com/) is a low-code / no-code solution developed by [NTT DATA](https://www.nttdata.com/), offering an end-to-end service for you to model, generate, and deploy your applications in different technologies based on your needs. Dedalow brings functionalities to the table, including testing, task automation, and code discovery services for existing applications. [View Dedalow in action]( https://dedalow.com/the-platform/).
 
 Dedalow is a containerized application composed of more than 30 services, developed in different technologies, including: .NET, Python, Node.js or Java. Due to containerization and Helm charts, you can deploy Dedalow on a Kubernetes clusters and today, the service is available on Amazon Elastic Kubernetes Service (EKS) and Azure Kubernetes Service (AKS).
 
@@ -20,18 +20,18 @@ In all three cases, we wanted to take advantage of the services offered by the p
 
 | Feature | Azure | AWS |
 | ------- | ----- | --- |
-| Asynchronous messaging | Service bus | SNS/SQS1 |
+| Asynchronous messaging | Service bus | SNS/SQS |
 | Storage | Azure storage | S3 |
-| Email notifications | SendGrid2 | SES3 |
+| Email notifications | SendGrid | SES |
 
 Previously, one handicap in implementing these functionalities was the time available to develop the features. Initially, we thought of integrating the different SDKs provided by the cloud providers, but this solution did not quite fit, due to:
 
 - The integration time.
 - The complexity of selecting and integrating libraries to be used, depending on:
-  - The cloud provider, or
+  - The cloud provider.
   - The type of cluster (Development / Production) where the application was deployed.
 
-We then began evaluating Distributed Application Runtime (Dapr). Dapr is an open-source runtime hosted in the Cloud Native Computing Foundation (CNCF), with open governance by Alibaba, Diagrid, Intel, and Microsoft. Dapr offers different APIs to solve the complexity of developing distributed applications:
+Then we began evaluating Distributed Application Runtime (Dapr). Dapr is an open-source runtime hosted in the Cloud Native Computing Foundation (CNCF), with open governance by Alibaba, Diagrid, Intel, and Microsoft. Dapr offers different APIs to solve the complexity of developing distributed applications:
 
 - Service invocation
 - Publish & subscribe

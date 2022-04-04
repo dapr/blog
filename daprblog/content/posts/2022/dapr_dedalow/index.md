@@ -1,5 +1,5 @@
 ---
-date: "2022-04-04T08:00:00-07:00"
+date: "2022-04-05T07:00:00-07:00"
 title: "How Dapr helped Dedalow accelerate development on AWS and Azure"
 linkTitle: "How Dapr helped Dedalow accelerate development on AWS & Azure"
 author:  "Javier Vela & Adolfo Gonzalez"

@@ -9,7 +9,7 @@ type: blog
 
 [OpenFunction](https://github.com/OpenFunction/OpenFunction) is an open-source, cloud-agnostic FaaS platform, accepted as a CNCF sandbox project on April 26, 2022. With OpenFunction, you can focus on your business logic without maintaining the underlying runtime environment. The OpenFunction community believes that functions should be able to run on any infrastructures or clouds.
 
-<div align=center><img src=openfunction-0.5-architecture.svg /></div>
+<div align=center><img width="80%" height="80%" src=openfunction-0.5-architecture.svg /></div>
 
 ## Why a FaaS platform like OpenFunction needs Dapr
 
@@ -24,7 +24,7 @@ Functions are also distributed applications with similar requirements, like inpu
 
 In the _A Berkeley View on Serverless Computing_ paper, "Serverless" is defined as `Serverless = FaaS + BaaS`.
 
-<div align=center><img src=serverless.png /></div>
+<div align=center><img width="80%" height="80%" src=serverless.png /></div>
 
 Usually a FaaS platform supports several languages and it needs to communicate with various backend services such as object storage, database, message queue etc. Let's suppose a FaaS platform supports 5 languages and needs to communicate with 10 message queues. 
 
@@ -33,15 +33,15 @@ Usually a FaaS platform supports several languages and it needs to communicate w
 
 As you can see from the above analysis, the complexity of a FaaS platfrom has been significantly reduced by introducing Dapr.
 
-<div align=center><img src=faas_with_dapr.svg /></div>
+<div align=center><img width="80%" height="80%" src=faas_with_dapr.svg /></div>
 
 Dapr is actually another layer between FaaS and BaaS:
 
-<div align=center><img src=serverless_dapr_1.svg /></div>
+<div align=center><img width="60%" height="60%" src=serverless_dapr_1.svg /></div>
 
 It acts as a unified interface for FaaS to various backend services:
 
-<div align=center><img src=serverless_dapr_2.svg /></div>
+<div align=center><img width="60%" height="60%" src=serverless_dapr_2.svg /></div>
 
 ## Using Dapr in OpenFunction
 

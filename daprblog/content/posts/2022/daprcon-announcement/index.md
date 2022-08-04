@@ -13,6 +13,8 @@ Come celebrate [the third anniversary of Dapr](https://cloudblogs.microsoft.com/
 
 This year, DaprCon will be a hybrid event allowing everyone to join either in-person at KubeCon or from the comfort of their home or office.
 
+|  |  |
+| -------- | -------- |
 | **When** | October 25, 2022 from 9 a.m. to 5 p.m. EST |
 | **Where** | Detroit, MI |
 | **Cost** | Registration for DaprCon is _free_. |

@@ -17,7 +17,7 @@ This year, DaprCon will be a hybrid event, allowing everyone to join either in-p
 | -------- | -------- |
 | **When** | October 25, 2022 from 9 a.m. to 5 p.m. EST |
 | **Where** | Detroit, MI |
-| **Cost** | Registration for DaprCon is _free_. |
+| **Registration Costs** | Free with purchase of KubeCon NA 2022 ticket. |
 
 DaprCon will offer opportunities to:
 

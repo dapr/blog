@@ -9,9 +9,9 @@ type: blog
 
 <!-- <a href="DaprCon2021.ics" class="btn btn-primary" role="button">Download Calendar Placeholder</a> -->
 
-Come celebrate [the third anniversary of Dapr](https://cloudblogs.microsoft.com/opensource/2019/10/16/announcing-dapr-open-source-project-build-microservice-applications/) at the second annual DaprCon on 🎉 **October 25th, 2022**! 🎉 This year, as an incubating CNCF project, DaprCon will be hosted as a community day event during KubeCon NA: the same great event to share alongside a larger community!
+Come celebrate [the third anniversary of Dapr](https://cloudblogs.microsoft.com/opensource/2019/10/16/announcing-dapr-open-source-project-build-microservice-applications/) at the second annual DaprCon on 🎉 **October 25th, 2022**! 🎉 This year, as an incubating CNCF project, DaprCon will be hosted as a community day event during KubeCon NA: the same great event with a larger community!
 
-This year, DaprCon will be a hybrid event allowing everyone to join either in-person at KubeCon or from the comfort of their home or office.
+This year, DaprCon will be a hybrid event, allowing everyone to join either in-person at KubeCon or from the comfort of their home or office.
 
 |  |  |
 | -------- | -------- |

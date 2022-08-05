@@ -9,15 +9,17 @@ type: blog
 
 <!-- <a href="DaprCon2021.ics" class="btn btn-primary" role="button">Download Calendar Placeholder</a> -->
 
-Come celebrate [the third anniversary of Dapr](https://cloudblogs.microsoft.com/opensource/2019/10/16/announcing-dapr-open-source-project-build-microservice-applications/) at the second annual DaprCon on 🎉 **October 25th, 2022**! 🎉 This year, as an incubating CNCF project, DaprCon will be hosted as a community day event during KubeCon NA: the same great event with a larger community!
+Come celebrate [the third anniversary of Dapr](https://cloudblogs.microsoft.com/opensource/2019/10/16/announcing-dapr-open-source-project-build-microservice-applications/) at the second annual DaprCon on **October 25th, 2022**! 🎉🎉 
 
-This year, DaprCon will be a hybrid event, allowing everyone to join either in-person at KubeCon or from the comfort of their home or office.
+This year, as an incubating CNCF project, DaprCon will be hosted as a community day event during KubeCon NA: the same great event with a larger community!
+
+DaprCon will be a hybrid event, allowing everyone to join either in-person at KubeCon or from the comfort of their home or office.
 
 |  |  |
 | -------- | -------- |
 | **When** | October 25, 2022 from 9 a.m. to 5 p.m. EST |
 | **Where** | Detroit, MI |
-| **Registration Costs** | Free with purchase of KubeCon NA 2022 ticket. |
+| **Registration Costs** | Free with purchase of [KubeCon NA 2022 registration](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/register/). |
 
 DaprCon will offer opportunities to:
 

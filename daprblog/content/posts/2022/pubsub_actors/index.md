@@ -60,26 +60,26 @@ This request will be published in the specified topic as a Cloud Event that stor
 
 ### Subscribe for Actors
 To subscribe an Actor to a topic, it is required to include a Pubsub configuration in the Actor Runtime Configuration. Include the "Pubsub name", "topic", "Actor type", "method", and optionally include an "actorIdDataAttribute" to use an Actor’s id from the sent message.
-> Native go
+> Go
 ```go
 var daprConfigResponse = daprConfig{
-    Entities:                 []string{"Actor1"}
+    Entities:                 []string{"DemoActor"}
     ActorIdleTimeout:         "1h",
     ActorScanInterval:        "30s",
     DrainOngoingCallTimeout:  "30s",
     DrainRebalancedActors:    True,
-    Pubsub: []config.PubSubConfig{
+    Pubsub: []config.PubSubConfig{ // Subscription
         {
             PubSubName:  "myPubsub",
             Topic:       "myTopic",
-            ActorType:   "ActorType1",
-            Method:      "fakeMethod",
+            ActorType:   "DemoActor",
+            Method:      "mymethod1",
             actorIdDataAttribute: "id",
         },
     },
     EntitiesConfig: []config.EntityConfig{
         {
-            Entities: []string{"Actor1"},
+            Entities: []string{"DemoActor"},
             Reentrancy: config.ReentrancyConfig{
                 Enabled:       true,
                 MaxStackDepth: 5,

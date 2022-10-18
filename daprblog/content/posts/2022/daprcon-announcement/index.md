@@ -47,13 +47,13 @@ No matter what language you program in, platform you target, or architecture set
 |11:50 - 12:05 | Lightweight Dapr Microservices in WebAssembly | Michael Yuan, SecondState |
 |12:05 - 1:00 | Lunch On Own | -- |
 |1:00 - 1:30 | Dapr for Platform Engineering Teams | Yaron Schneider, Diagrid |
-|1:30 - 2:00 | Managed Dapr with Azure Container Apps - Nick Greenfield & Kendall Roden, Microsoft |
-|2:00 - 2:30 | Delivery Usage Case Using Dapr - Alexandre Bencz, Mottu |
-|2:30 - 3:00 | End User Panel - Kendall Roden (Microsoft) Karl Wehden (IBM) Alexandre Bencz (Mottu) Josh Carlisle (Zscaler) |
-|3:10 - 3:15 | Break |
-|3:15 - 3:45 | Exploring Pub/Sub Messaging with Dapr - Cecil Phillip, Stripe |
-|3:45 - 4:00 | Dapr Configuration API Building Block Overview - Deepanshu Agarwal, Microsoft |
-|4:00 - 4:15 | The Flywheel Effect of Kubernetes APIs - Bilgin Ibryam, Diagrid |
-|4:15 - 4:55 | Maintainer& Approver Panel - Yaron, Artur, Nyemade, Xavier |
-|4:55 - 5:05 | Keynote Closing - Nyemade & Artur, Microsoft |
-|5:05 | Conference Close |
+|1:30 - 2:00 | Managed Dapr with Azure Container Apps | Nick Greenfield & Kendall Roden, Microsoft |
+|2:00 - 2:30 | Delivery Usage Case Using Dapr | Alexandre Bencz, Mottu |
+|2:30 - 3:00 | End User Panel | Kendall Roden (Microsoft) Karl Wehden (IBM) Alexandre Bencz (Mottu) Josh Carlisle (Zscaler) |
+|3:10 - 3:15 | Break | -- |
+|3:15 - 3:45 | Exploring Pub/Sub Messaging with Dapr | Cecil Phillip, Stripe |
+|3:45 - 4:00 | Dapr Configuration API Building Block Overview | Deepanshu Agarwal, Microsoft |
+|4:00 - 4:15 | The Flywheel Effect of Kubernetes APIs | Bilgin Ibryam, Diagrid |
+|4:15 - 4:55 | Maintainer& Approver Panel | Yaron, Artur, Nyemade, Xavier |
+|4:55 - 5:05 | Keynote Closing | Nyemade & Artur, Microsoft |
+|5:05 | Conference Close | -- |

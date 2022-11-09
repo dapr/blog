@@ -8,8 +8,9 @@ theme = "docsy"
 [permalinks]
 posts = "/:section/:year/:month/:day/:slug/"
 
-[services.googleAnalytics]
-id = "G-60C6Q1ETC1"
+# Disable until https://github.com/dapr/blog/issues/94 is fixed
+# [services.googleAnalytics]
+# id = "G-60C6Q1ETC1"
 
 # Allow embedded HTML in pages
 [markup]

@@ -8,9 +8,8 @@ theme = "docsy"
 [permalinks]
 posts = "/:section/:year/:month/:day/:slug/"
 
-# Google Analytics - Dapr Blog Property
 [services.googleAnalytics]
-id = "UA-149338238-2"
+id = "G-60C6Q1ETC1"
 
 # Allow embedded HTML in pages
 [markup]

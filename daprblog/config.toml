@@ -8,9 +8,9 @@ theme = "docsy"
 [permalinks]
 posts = "/:section/:year/:month/:day/:slug/"
 
-# Google Analytics - Dapr Blog Property
-[services.googleAnalytics]
-id = "UA-149338238-2"
+# Disable until https://github.com/dapr/blog/issues/94 is fixed
+# [services.googleAnalytics]
+# id = "G-60C6Q1ETC1"
 
 # Allow embedded HTML in pages
 [markup]

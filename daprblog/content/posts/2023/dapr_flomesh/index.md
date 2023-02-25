@@ -21,7 +21,7 @@ Kubernetes adheres to a design philosophy of loose coupling and scalability, whi
 
 [Dapr](https://dapr.io) is a distributed application toolkit that decouples applications and peripheral functional components by providing simple and stable APIs. This enables developers to focus on business functionality development. By decoupling from peripheral components, applications become more portable and cloud-native. Enterprises can easily migrate applications to different environments at a low cost.
 
-The Dapr toolkit provides rich features such as service invocation, resilience policies, state storage, publish/subscribe, binding, distributed locking, name resolution, etc. However, it does not support advanced service governance functions such as canary release and cross-cluster service invocation.
+Dapr provides rich features such as service invocation, resilience policies, state storage, publish/subscribe, binding, distributed locking, name resolution, etc. However, it does not support advanced service governance functions, such as canary release and cross-cluster service invocation.
 
 ### Flomesh Service Mesh
 

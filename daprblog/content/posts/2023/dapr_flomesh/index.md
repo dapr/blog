@@ -49,7 +49,11 @@ The NodeApp in the example has three endpoints:
 - `POST /neworder`: creates a new order
 - `GET /order`: queries an order
   
-The following demonstration will start from creating a cluster and step-by-step introduce the configuration of the environment, installation and configuration of various components, deployment of applications, and so on.
+Follow along with the demo to:
+1. Create multiple clusters. 
+1. Configure the environment.
+1. Install and configure various components.
+1. Deploy the application. 
 
 ## One-Click Installation Script
 

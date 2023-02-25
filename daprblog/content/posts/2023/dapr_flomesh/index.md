@@ -88,7 +88,7 @@ To perform the demonstration, you need the following tools:
 - kubectx
 
 
-### Creating Multiple Clusters
+### Create multiple clusters
 
 Obtain the IP address of the local machine as the communication address between clusters.
 

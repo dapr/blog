@@ -487,7 +487,7 @@ do
 done
 ```
 
-## Test
+### Test
 
 Switch to cluster `cluster-2` and make a request from the `curl` pod to test.
 

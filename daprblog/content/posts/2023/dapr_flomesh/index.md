@@ -517,7 +517,9 @@ spec:
 EOF
 ```
 
-Sending the request again now results in a successful response.
+### Test again
+
+Sending the request again now results in a successful response:
 
 ```shell
 kubectl exec "${curl_client}" -n curl -c curl -- curl -s http://nodeapp.dapr-test:3000/ports

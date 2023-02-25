@@ -503,7 +503,9 @@ kubectl exec "${curl_client}" -n curl -c curl -- curl -s http://nodeapp.dapr-tes
 command terminated with exit code 7
 ```
 
-### Setting Traffic Policies
+### Set traffic policies
+
+Let's resolve the above error by setting a different traffic policy on the failing `cluster-2`. 
 
 There are three types of traffic policies for cross-cluster traffic management:
 

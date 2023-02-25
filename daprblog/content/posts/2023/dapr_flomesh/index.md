@@ -386,7 +386,7 @@ EOF
 done
 ```
 
-Deploy the `curl` application in the `curl` namespace of the `cluster-2` cluster. This namespace is managed by the service mesh and the injected sidecar allows for seamless cross-cluster traffic routing.
+Deploy the curl application in the `curl` namespace of the `cluster-2` cluster. This namespace is managed by the service mesh and the injected Dapr sidecar, allowing for seamless cross-cluster traffic routing.
 
 ```shell
 export NAMESPACE=curl

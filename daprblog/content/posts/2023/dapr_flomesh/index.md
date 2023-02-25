@@ -254,7 +254,7 @@ dapr-api                ClusterIP   10.43.126.14    <none>        80/TCP        
 dapr-sentry             ClusterIP   10.43.41.10     <none>        80/TCP               5h50m
 ```
 
-To allow traffic to flow through the `Dapr` components and `Redis` ports, you can add the necessary traffic rules to the OSM data plane.
+To allow traffic to flow through the Dapr components and Redis ports, add the necessary traffic rules to the OSM data plane.
 
 ```shell
 for CLUSTER_NAME in cluster-1 cluster-2 cluster-3

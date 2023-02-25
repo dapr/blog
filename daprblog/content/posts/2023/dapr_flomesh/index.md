@@ -496,7 +496,7 @@ kubectx k3d-cluster-2
 curl_client="$(kubectl get pod -n curl -l app=curl -o jsonpath='{.items[0].metadata.name}')"
 ```
 
-An error occurred when sending a request to access the nodeapp because the nodeapp application was not deployed in `cluster-2`. By default, when no cross-cluster traffic policy is specified, it will only attempt to call local services and will not schedule traffic to other clusters.
+An error occurred when sending a request to access the NodeApp because the NodeApp application was not deployed in `cluster-2`. By default, when no cross-cluster traffic policy is specified, it will only attempt to call local services and will not schedule traffic to other clusters.
 
 ```shell
 kubectl exec "${curl_client}" -n curl -c curl -- curl -s http://nodeapp.dapr-test:3000/ports

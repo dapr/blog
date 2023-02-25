@@ -10,7 +10,7 @@ How combining Dapr with [Flomesh](https://flomesh.io) Service Mesh brings Dapr f
 
 ## Background
 
-With the continuous evolution of technology and architecture, there is a trend towards multiple runtimes. The basic capabilities of modern applications are constantly being separated from the application itself as independent runtimes. Among them are distributed application runtimes and service meshes. In this article, we will introduce the integration of [Dapr](https://dapr.io/) and [Flomesh](https://flomesh.io) Service Mesh to achieve "true" cross-cluster interconnectivity for service invocation.
+The continuous evolution of technology and architecture is trending towards multiple runtimes. The basic capabilities of modern applications are consistently separated from the application as independent runtimes. Among them are distributed application runtimes and service meshes. This article introduces the integration of [Dapr](https://dapr.io/) and [Flomesh](https://flomesh.io) Service Mesh to achieve "true" cross-cluster interconnectivity for service invocation.
 
 ### Multi-Cluster
 

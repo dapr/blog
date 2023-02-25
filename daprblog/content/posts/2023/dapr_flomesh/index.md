@@ -117,7 +117,9 @@ do
 done
 ```
 
-This command will create four `k3d` clusters and install and configure the necessary components for the Flomesh service mesh on each cluster.
+The above command:
+- Creates four `k3d` clusters 
+- Installs and configures the necessary components for the Flomesh service mesh on each cluster
 
 ### Install FSM
 

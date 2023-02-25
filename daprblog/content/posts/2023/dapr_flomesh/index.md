@@ -280,7 +280,7 @@ services:
     command: redis-server --appendonly yes --requirepass changeme
 ```
 
-### Create demo namespace
+### Create namespace
 
 Create and add a namespace to be monitored by osm-edge Service Mesh
 

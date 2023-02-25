@@ -34,7 +34,7 @@ Dapr provides rich features such as service invocation, resilience policies, sta
 
 With the rise of microservices architecture, as the scale grows larger, the difficulty and fragmentation of service governance has significantly increased. The emergence of service meshes solves these problems. A service mesh is a dedicated infrastructure layer for handling communication between services. Through it, functionality such as observability, traffic management, and security can be added transparently without adding it to your code.
 
-[Flomesh](https://flomesh.io) service mesh uses the programmable proxy [Pipy](https://github.com/flomesh-io/pipy) as the core to provide east-west and north-south traffic management. Through L7-based traffic management capabilities, it breaks through the network isolation between computing environments, proposes a virtual flat network, and enables communication between applications in different computing environments. Flomesh service mesh can be imagined as a "big mesh" that covers multiple clusters.
+[Flomesh](https://flomesh.io) service mesh uses the programmable proxy [Pipy](https://github.com/flomesh-io/pipy) as the core to provide east-west and north-south traffic management. Through L7-based traffic management capabilities, it breaks through the network isolation between computing environments, proposes a virtual flat network, and enables communication between applications in different computing environments. Flomesh service mesh can be imagined as a "big mesh" that covers multiple clusters. Flomesh service mesh is a suite of components including [osm-edge](https://flomesh.io/osm-edge) a lightweight Service Mesh Interface (SMI) compatible service mesh for, [FSM](https://github.com/flomesh-io/fsm) components like Ingress controller, Egress gateway, Loadbalancer, Kubernetes MCS API implementation, Kubernetes Gateway API implementation etc.
 
 {{< imgproc flomesh_dapr_blog_arch.png  Resize "800x" />}}
 
@@ -71,13 +71,15 @@ For this demo, we provide a quick, one-click installation script to avoid the te
 
 Before using the one-click script, install `Docker` and `kubectl`. The script will check during runtime and install tools such as `k3d`, `helm`, `jq`, `pv`, etc. Commands include:
 
-- `flomesh.sh` - provides no parameters, the script will create 4 clusters, complete the environment installation and configuration, and run the demo
-- `flomesh.sh -h` - prints help information
-- `flomesh.sh -i` - creates 4 clusters, completes environment installation and configuration
-- `flomesh.sh -d` - runs the demo
-- `flomesh.sh -r` - cleans up demo-related resources
-- `flomesh.sh -u` - deletes all clusters
-- 
+| Command         |  Description |
+| --------------- | ------------- |
+| `flomesh.sh`    | Provides no parameters, the script will create 4 clusters, complete the environment installation and configuration, and run the demo |
+| `flomesh.sh -h` | Prints help information |
+| `flomesh.sh -i` | Creates 4 clusters, completes environment installation and configuration |
+| `flomesh.sh -d` | Runs the demo  |
+| `flomesh.sh -r` | Cleans up demo-related resources |
+| `flomesh.sh -u` | Deletes all clusters |
+
 After downloading the script, execute the following command to install and configure the environment and run the demo.
 
 ```shell
@@ -564,7 +566,8 @@ kubectl exec "${curl_client}" -n curl -c curl -- curl -s http://nodeapp.dapr-tes
 {"orderId":"42"}, from cluster: cluster-1
 ```
 
+## Summary
 
+Kubernetes is no longer constrained to a single boundary, and use cases of having multiple Kubernetes clusters are becoming quite common. There wasn't a typical or standard way of connecting numerous clusters and providing a transparent means to access services across boundaries. Kubernetes multi-cluster special interest group is working on proposals to provide a common set of APIs that can be implemented by vendors and provide a consistent way for k8s users to access services within or across boundaries.
 
-
-
+[Flomesh Service Mesh(FSM)](https://github.com/flomesh-io/fsm) from [Flomesh](https://flomesh.io) is a Kubernetes North-South traffic manager, that provides Ingress controllers, Gateway API, Load Balancer, and cross-cluster service registration and service discovery. FSM uses [Pipy](https://github.com/flomesh-io/pipy) - a programmable network proxy, as its data plane and is suitable for cloud, edge, and IoT.

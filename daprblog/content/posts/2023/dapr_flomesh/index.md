@@ -499,7 +499,7 @@ There are three types of traffic policies for cross-cluster traffic management:
 - `ActiveActive`: Proxy to other clusters normally, even when the local cluster is up and running. Similar to active-active.
 
 
-Next, we will create and apply an `ActiveActive` policy in the `cluster-2` cluster.
+Currently, `cluster-2` defaults to the `Locality` traffic policy type. Create and apply an `ActiveActive` policy in the `cluster-2` cluster:
 
 ```shell
 kubectl apply -n dapr-test -f - <<EOF

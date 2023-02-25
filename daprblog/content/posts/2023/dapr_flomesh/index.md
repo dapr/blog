@@ -265,6 +265,7 @@ done
 ```
 
 ### Install Redis
+Install Redis with the following YAML:
 
 ```yaml
 version: '3'

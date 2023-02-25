@@ -35,7 +35,7 @@ With the rise of microservices architecture, as the scale grows larger, the diff
 
 The image below shows an example of how Dapr and Flomesh service mesh can be integrated to enable cross-cluster service communication. The example consists of two components: a server-side NodeApp and a client-side curl.
 
-The server-side NodeApp is a Dapr application, which is modified based on the NodeApp in the [Dapr hello-kubernetes](https://github.com/dapr/quickstarts/tree/master/tutorials/hello-kubernetes) example. When it returns a response, it displays the name of the current cluster.
+The server-side NodeApp is a Dapr application, modified from the NodeApp in the [Dapr hello-kubernetes](https://github.com/dapr/quickstarts/tree/master/tutorials/hello-kubernetes) tutorial example. When it returns a response, it displays the name of the current cluster.
 
 The client-side curl is used to send requests to NodeApp but is not declared as a Dapr application. This demonstrates how Flomesh service mesh can enable communication between a Dapr application and a non-Dapr application, enabling cross-cluster communication.
 

@@ -55,7 +55,10 @@ Follow along with the demo to:
 1. Install and configure various components.
 1. Deploy the application. 
 
-## One-Click Installation Script
+### Before you begin
+
+
+#### One-click installation script
 
 We also provide a script for one-click installation and quick experience, eliminating the tedious configuration of the environment and components. You can visit [GitHub](https://github.com/addozhang/flomesh-dapr-demo) to get the script content.
 

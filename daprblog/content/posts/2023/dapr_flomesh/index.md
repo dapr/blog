@@ -282,7 +282,7 @@ services:
 
 ### Create demo namespace
 
-create namespace and add that namespace to be monitored by `osm-edge` Service Mesh
+Create and add a namespace to be monitored by osm-edge Service Mesh
 
 ```shell
 export NAMESPACE=dapr-test

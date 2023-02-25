@@ -60,7 +60,7 @@ Follow along with the demo to:
 
 #### One-click installation script
 
-We also provide a script for one-click installation and quick experience, eliminating the tedious configuration of the environment and components. You can visit [GitHub](https://github.com/addozhang/flomesh-dapr-demo) to get the script content.
+For this demo, we provide a quick, one-click installation script to avoid the tedious configuration of the environment and components. [Get the script content from GitHub](https://github.com/addozhang/flomesh-dapr-demo).
 
 Before using this script, make sure that `Docker` and `kubectl` are already installed on the system. The script will check during runtime and install tools such as `k3d`, `helm`, `jq`, `pv`, etc.
 

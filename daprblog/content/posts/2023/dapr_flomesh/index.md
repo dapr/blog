@@ -325,7 +325,7 @@ EOF
 done
 ```
 
-### Deploy Demo applications
+### Deploy the applications
 
 Deploy the `nodeapp` application in the `httpbin` namespace (managed by the service mesh and injected with a sidecar) in clusters `cluster-1` and `cluster-3`.
 

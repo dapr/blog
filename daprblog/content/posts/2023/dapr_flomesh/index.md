@@ -62,7 +62,7 @@ Follow along with the demo to:
 
 For this demo, we provide a quick, one-click installation script to avoid the tedious configuration of the environment and components. [Get the script content from GitHub](https://github.com/addozhang/flomesh-dapr-demo).
 
-Before using this script, make sure that `Docker` and `kubectl` are already installed on the system. The script will check during runtime and install tools such as `k3d`, `helm`, `jq`, `pv`, etc.
+Before using the one-click script, install `Docker` and `kubectl`. The script will check during runtime and install tools such as `k3d`, `helm`, `jq`, `pv`, etc. Commands include:
 
 - `flomesh.sh` - provides no parameters, the script will create 4 clusters, complete the environment installation and configuration, and run the demo
 - `flomesh.sh -h` - prints help information

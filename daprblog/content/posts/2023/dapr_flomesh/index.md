@@ -327,7 +327,7 @@ done
 
 ### Deploy the applications
 
-Deploy the `nodeapp` application in the `httpbin` namespace (managed by the service mesh and injected with a sidecar) in clusters `cluster-1` and `cluster-3`.
+Deploy the NodeApp application in the `httpbin` namespace (managed by the service mesh and injected with a Dapr sidecar) in `cluster-1` and `cluster-3`.
 
 ```shell
 export NAMESPACE=dapr-test

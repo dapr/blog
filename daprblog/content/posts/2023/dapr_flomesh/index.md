@@ -444,7 +444,7 @@ sleep 3
 kubectl wait --for=condition=ready pod -n ${NAMESPACE} --all --timeout=60s
 ```
 
-### Exporting Services
+### Export services
 
 ```shell
 export NAMESPACE=dapr-test

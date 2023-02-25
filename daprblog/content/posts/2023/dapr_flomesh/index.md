@@ -470,7 +470,7 @@ sleep 1
 done
 ```
 
-After exporting a service, FSM will automatically create Ingress rules for it. With these rules, the services can be accessed through the Ingress.
+After exporting a service, Flomesh service mesh will automatically create ingress rules for it. With these rules, the services can be accessed through the ingress.
 
 ```shell
 for CLUSTER_NAME_INDEX in 1 3

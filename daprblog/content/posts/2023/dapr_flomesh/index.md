@@ -25,7 +25,7 @@ Dapr provides rich features such as service invocation, resilience policies, sta
 
 ### Flomesh Service Mesh
 
-After the rise of microservices architecture, as the scale grows larger, the difficulty and fragmentation of service governance have significantly increased. The emergence of service meshes solves these problems. A service mesh is a dedicated infrastructure layer for handling communication between services. Through it, functionality such as observability, traffic management, and security can be added transparently without adding it to your code.
+With the rise of microservices architecture, as the scale grows larger, the difficulty and fragmentation of service governance has significantly increased. The emergence of service meshes solves these problems. A service mesh is a dedicated infrastructure layer for handling communication between services. Through it, functionality such as observability, traffic management, and security can be added transparently without adding it to your code.
 
 [Flomesh](https://flomesh.io) service mesh uses the programmable proxy [Pipy](https://github.com/flomesh-io/pipy) as the core to provide east-west and north-south traffic management. Through L7-based traffic management capabilities, it breaks through the network isolation between computing environments, proposes a virtual flat network, and enables communication between applications in different computing environments. Flomesh service mesh can be imagined as a "big mesh" that covers multiple clusters.
 

@@ -14,7 +14,14 @@ The continuous evolution of technology and architecture is trending towards mult
 
 ### Multi-Cluster
 
-Kubernetes adheres to a design philosophy of loose coupling and scalability, which has brought about the flourishing development of the Kubernetes ecosystem. However, most of these are limited to a single cluster, and more and more clusters are being created within enterprises for various reasons and purposes, such as single-cluster failures, regulatory requirements, cross-data center disaster recovery for multiple regions, hybrid clouds for agility and cost reduction, multi-cloud deployment, limited capacity of a single cluster, coexistence of multiple versions of Kubernetes clusters, etc.
+Kubernetes adheres to a design philosophy of loose coupling and scalability, which encourages the flourishing development of the Kubernetes ecosystem. However, since most of these are limited to a single cluster, more and more clusters are being created within enterprises for various reasons and purposes, such as:
+- Single-cluster failures
+- Regulatory requirements
+- Cross-data center disaster recovery for multiple regions
+- Hybrid clouds for agility and cost reduction
+- Multi-cloud deployment
+- Limited capacity of a single cluster
+- Coexistence of multiple versions of Kubernetes clusters, etc.
 
 
 ### Dapr

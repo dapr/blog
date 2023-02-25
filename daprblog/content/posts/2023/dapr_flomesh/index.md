@@ -77,7 +77,6 @@ After downloading the script, execute the following command to install and confi
 curl -sL https://raw.githubusercontent.com/addozhang/flomesh-dapr-demo/main/flomesh.sh | bash -
 ```
 
-## Step-by-Step Demonstration
 ### Prerequisites
 
 To perform the demonstration, we need the following tools:

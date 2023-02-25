@@ -296,6 +296,8 @@ done
 
 ### Register Redis state store component
 
+Run the following command to register the Redis state store component:
+
 ```shell
 export NAMESPACE=dapr-test
 for CLUSTER_NAME in cluster-1 cluster-2 cluster-3

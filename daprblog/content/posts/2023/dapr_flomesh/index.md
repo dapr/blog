@@ -121,7 +121,9 @@ The above command:
 - Creates four `k3d` clusters 
 - Installs and configures the necessary components for the Flomesh service mesh on each cluster
 
-### Install FSM
+### Install Flomesh service mesh
+
+Install Flomesh with the following command:
 
 ```shell
 helm repo add fsm https://charts.flomesh.io

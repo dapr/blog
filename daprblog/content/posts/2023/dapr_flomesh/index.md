@@ -71,7 +71,7 @@ Before using this script, make sure that `Docker` and `kubectl` are already inst
 - `flomesh.sh -r` - cleans up demo-related resources
 - `flomesh.sh -u` - deletes all clusters
 - 
-Execute the following command to complete the environment installation and configuration, and run the demo.
+After downloading the script, execute the following command to install and configure the environment and run the demo.
 
 ```shell
 curl -sL https://raw.githubusercontent.com/addozhang/flomesh-dapr-demo/main/flomesh.sh | bash -

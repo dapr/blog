@@ -79,7 +79,7 @@ curl -sL https://raw.githubusercontent.com/addozhang/flomesh-dapr-demo/main/flom
 
 #### Prerequisites
 
-To perform the demonstration, we need the following tools:
+To perform the demonstration, you need the following tools:
 
 - Docker
 - Kubectl

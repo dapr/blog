@@ -37,7 +37,7 @@ The image below shows an example of how Dapr and Flomesh service mesh can be int
 
 The server-side NodeApp is a Dapr application, modified from the NodeApp in the [Dapr hello-kubernetes](https://github.com/dapr/quickstarts/tree/master/tutorials/hello-kubernetes) tutorial example. When it returns a response, it displays the name of the current cluster.
 
-The client-side curl is used to send requests to NodeApp but is not declared as a Dapr application. This demonstrates how Flomesh service mesh can enable communication between a Dapr application and a non-Dapr application, enabling cross-cluster communication.
+The client-side curl is used to send requests to the NodeApp, but is not declared as a Dapr application. This demonstrates how Flomesh service mesh can enable communication between a Dapr application and a non-Dapr application, facilitating cross-cluster communication.
 
 
 {{< imgproc flomesh_dapr_blog_demo_arch.png  Resize "1200x" />}}

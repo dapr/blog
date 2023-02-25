@@ -217,7 +217,7 @@ done
 
 ### Install Dapr
 
-Invoke below command to install `Dapr` on clusters `cluster-1`,`cluster-2`, and `cluster-3` :
+Invoke below command to install Dapr on `cluster-1`, `cluster-2`, and `cluster-3` :
 
 ```shell
 for CLUSTER_NAME in cluster-1 cluster-2 cluster-3

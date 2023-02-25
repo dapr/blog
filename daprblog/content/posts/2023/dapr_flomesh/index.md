@@ -495,7 +495,7 @@ command terminated with exit code 7
 There are three types of traffic policies for cross-cluster traffic management:
 
 - `Locality`: Only use local services, which is the default type. This is why accessing the nodeapp application fails when we don't provide any global policies, because the service is not available in the `cluster-2`.
-- `FailOver`: Only proxy to other clusters when local cluster fails, similar to the concept of active-passive failover.
+- `FailOver`: Only proxy to other clusters when the local cluster fails. Similar to the concept of active-passive failover.
 - `ActiveActive`: Proxy to other clusters normally even when local cluster is up and running, similar to active-active.
 
 

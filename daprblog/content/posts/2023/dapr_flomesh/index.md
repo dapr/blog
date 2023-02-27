@@ -1,5 +1,5 @@
 ---
-date: "2023-02-23T04:00:00+08:00"
+date: "2023-02-26T04:00:00+08:00"
 title: "Achieving Multi-cluster Dapr support with Flomesh Service Mesh"
 linkTitle: "Achieving Multi-cluster Dapr support with Flomesh Service Mesh"
 author:  "Addo Zhang - Flomesh"

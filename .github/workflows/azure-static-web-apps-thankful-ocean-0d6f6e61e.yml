@@ -20,7 +20,7 @@ jobs:
           submodules: recursive
       - name: Build And Deploy
         id: builddeploy
-        uses: Azure/static-web-apps-deploy@v0.0.1-preview
+        uses: Azure/static-web-apps-deploy@v1
         env:
           HUGO_ENV: production
         with:

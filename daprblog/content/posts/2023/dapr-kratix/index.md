@@ -52,7 +52,7 @@ The nice thing with this approach is [Kratix provides a Dapr Promise](https://gi
 
 For this example, we will be creating our custom Kratix Promise that allows us to create a **Dapr StateStore Component** that connects to a Redis database – which is being provisioned using the [Kratix Redis Promise](kratix.io/marketplace) (also available in their Marketplace). 
 
-You can follow a [step-by-step tutorial](https://github.com/salaboy/from-monolith-to-k8s/platform/kratix-dapr) here to get this setup working in your laptop/workstation.
+You can follow a [step-by-step tutorial](https://github.com/salaboy/from-monolith-to-k8s/tree/main/platform/dapr-kratix) here to get this setup working in your laptop/workstation.
 
 ![Environment Kratix Promise](dapr-kratix-04.png "Environment Kratix Promise")
 

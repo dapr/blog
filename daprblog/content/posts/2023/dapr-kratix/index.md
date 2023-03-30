@@ -70,7 +70,7 @@ spec:
     name: "my-redis-statestore"
 ```
 
-With this environment definition, we can request our platform to creates a new development environment, with the applications that we want to modify deployed and with a database provisioned specifically for these environments (in contrast with connecting to an existing database). 
+With this environment definition, we can request our platform to create a new development environment, with the applications that we want to modify deployed and with a database provisioned specifically for these environments (in contrast with connecting to an existing database). 
 
 For this to work, the promise definition needs to include a reference to our **Environment CRD**, to the [Dapr]() and [Redis]() Promise coming from the Marketplace, and to a Pipeline that will glue things together. 
 

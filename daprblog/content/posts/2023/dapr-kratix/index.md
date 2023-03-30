@@ -82,7 +82,7 @@ For this example, the pipeline is defined [here](https://github.com/salaboy/from
 
 Once the environment is created, we can deploy applications that connect and use the Dapr Statestore by sending HTTP/GRPC requests or by using the Dapr SDK available for your programming language of choice. 
 
-For this simple example, we will deploy two applications, one that writes data to the statestore and one that reads data from the statestore. The application that writes data into the statestore is written in Java and the application that reads from the statestore is written in Go. For this simple applications we have used the Dapr SDKs (Java and Go), but the same behaviour can be implemented using plain HTTP or GRPC calls to the Dapr Sidecar that gets injected when we deploy these applications. 
+For this small example, we will deploy two applications, one that writes data to the statestore and one that reads data from the statestore. The application that writes data into the statestore is written in Java and the application that reads from the statestore is written in Go. For this small application we have used the Dapr SDKs (Java and Go), but the same behaviour can be implemented using plain HTTP or GRPC calls to the Dapr Sidecar that gets injected when we deploy these applications. 
 
 ![Example apps](dapr-kratix-06.png "Example apps")
  

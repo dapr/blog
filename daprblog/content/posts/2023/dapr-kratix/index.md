@@ -56,7 +56,7 @@ You can follow a [step-by-step tutorial](https://github.com/salaboy/from-monolit
 
 ![Environment Kratix Promise](dapr-kratix-04.png "Environment Kratix Promise")
 
-Our Environment CRD is quite simple, but in real life, this should contain all the parameters that development teams can tweak when creating requests to our platform. 
+Our Environment CRD is quite basic, but in real life, this should contain all the parameters that development teams can tweak when creating requests to our platform. 
 
 ```
 apiVersion: marketplace.kratix.io/v1alpha1

@@ -35,7 +35,7 @@ Stepping back, an empty Kratix is not much use on its own. It’s power comes wh
 * A definition of the as-a-service API contract that enables the consumption of the capability. 
 * A Pipeline which executes on each API request which can codify your own policies and opinions (security, compliance, etc). Pipelines are no more than a chain of containers that will run to wire things up.  
 * The dependencies required to run the capability. These can be Operators, Helm charts or even [Crossplane](https://crossplane.io) compositions. 
-* Scheduling hints that determine to which worker cluster each Promise is scheduled. For example, users can request Promises are sent to their own dev cluster through a simple label and selector pattern. Kratix also supports more complex scheduling patterns. i.e platform operators can determine that all clusters are given a certain set of Promises (security, billing, observability).  
+* Scheduling hints that determine to which worker cluster each Promise is scheduled. For example, users can request Promises are sent to their own dev cluster through a label and selector pattern. Kratix also supports more complex scheduling patterns. i.e platform operators can determine that all clusters are given a certain set of Promises (security, billing, observability).  
 
 
 This contract, defined by the Promise, allows us to link a Kubernetes Custom Resource Definition (as the interface for the contract) to a pipeline (or a set of pipelines) that will execute the contract every time a team creates a request. 

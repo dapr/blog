@@ -10,7 +10,7 @@ Creating platforms on top of Kubernetes is not an easy task, but some tools will
 
 In this blog post, we will be using Kratix to define and provision development environments that are Dapr-enabled. This enables teams working in these environments to write applications that are aware of the Dapr components (databases, message brokers, secret stores, etc.) that are available without worrying about where these components are running or how to connect to them. By using Dapr alongside Kratix we enable Platform teams not only to provision application infrastructure, but also to expose these components by using a set of APIs defined by the Dapr project.
 
-It is essential to note that [Kratix and Crossplane play nice together](https://www.syntasso.io/post/kratix-and-crossplane), so everything discussed in my previous blog also applies to Kratix. Take a look at the Kratix Marketplace to see which tools are already integrated into Kratix: [https://kratix.io/marketplace](https://kratix.io/marketplace), as today we will be looking at the Dapr integration. 
+It is essential to note that [Kratix and Crossplane play nice together](https://www.syntasso.io/post/kratix-and-crossplane), so everything discussed in [my previous blog post](https://blog.crossplane.io/crossplane-and-dapr/) also applies to Kratix. Take a look at the Kratix Marketplace to see which tools are already integrated into Kratix: [https://kratix.io/marketplace](https://kratix.io/marketplace), as today we will be looking at the Dapr integration. 
 
 Before jumping into the Dapr integration, there are a couple of concepts that we need to understand about Kratix.
 

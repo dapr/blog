@@ -48,7 +48,7 @@ With Promises, we can compose complex platforms that enable teams to provision a
 
 # Let’s create a Dapr-Enabled Environment
 
-The nice thing with this approach is [Kratix provides a Dapr Promise](https://github.com/syntasso/kratix-marketplace/tree/main/dapr) that we can use out-of-the-box, for example, to create a development environment that provision all the components that the application needs to work.
+The nice thing with this approach is [Kratix provides a Dapr Promise](https://github.com/syntasso/kratix-marketplace/tree/main/dapr) that we can use out-of-the-box, for example, to create a development environment that provisions all the components that the application needs to work.
 
 For this example, we will be creating our custom Kratix Promise that allows us to create a **Dapr StateStore Component** that connects to a Redis database – which is being provisioned using the [Kratix Redis Promise](kratix.io/marketplace) (also available in their Marketplace). 
 

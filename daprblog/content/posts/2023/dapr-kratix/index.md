@@ -94,7 +94,7 @@ Do you want to help me to add that to the example? Get in touch! Drop me a messa
 
 # Sum up
 
-In this short blog post, we have enabled the platform team(s) to define an Environment Promise that application teams can request on demand. We have used two existing Kratix Promises to compose a higher-level Promise that our simple Environment resource can expose. While Kratix uses Kubernetes CRDs to create these resources, how all this is glued together is left to a Pipeline that is implemented as a container, where platform teams can use any tool that they need to wire things up together. 
+In this short blog post, we have enabled the platform team(s) to define an Environment Promise that application teams can request on demand. We have used two existing Kratix Promises to compose a higher-level Promise that our basic Environment resource can expose. While Kratix uses Kubernetes CRDs to create these resources, how all this is glued together is left to a Pipeline that is implemented as a container, where platform teams can use any tool that they need to wire things up together. 
 
 By having more and more Kratix Promises in their [Marketplace](https://kratix.io/marketplace), Platform teams can easily create a platform that exposes popular tooling and then create their custom Promises for their domain-specific components and configurations.
 

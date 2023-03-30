@@ -20,13 +20,13 @@ I strongly recommend checking out the Kratix docs site, which contains a great a
 
 In this short section, we will look into some of the Kratix core components. A goal of using Kratix is to be able to define a simple interface for our teams to consume, while at the same time enabling the Platform team(s) to have control over how different tools are installed and configured to work together. 
 
-Because [Kratix](https://kratix.io) was designed from the ground up to help Platform teams to build platforms, it allows us to  manage multiple compute clusters and the scheduling of workloads to them . We will install Kratix into a Kubernetes Cluster – Kratix labels this cluster the ‘platform cluster’, Kratix then allows simple registration of new ‘worker’ Clusters to which teams can intelligently request their workloads. I.e A Kratix user can ask the Kratix platform to provision them a Redis cluster onto their development cluster. 
+Because [Kratix](https://kratix.io) was designed from the ground up to help Platform teams to build platforms, it allows us to  manage multiple compute clusters and the scheduling of workloads to them . We will install Kratix into a Kubernetes Cluster – Kratix labels this cluster the ‘platform cluster’, Kratix then allows simple registration of new ‘worker’ Clusters to which teams can send requests to schedule their workloads. I.e An application development team can ask the Kratix platform to provision them a Redis cluster onto their development cluster. 
 
 ![Kratix Platform and Workers](dapr-kratix-01.png "Kratix Platform and Workers")
 
-Inside Worker Clusters, teams can have their workloads and environment provisioned. This cluster management feature is fundamental to enable platform teams to scale without being restricted to a single Kubernetes Cluster and without pushing them to build from scratch all the cluster registration and workload scheduling features. 
+Inside Worker Clusters, teams can have their workloads and environment provisioned. This cluster management feature is fundamental to enable platform teams to improve their productivity without being restricted to a single Kubernetes Cluster and without pushing them to build from scratch all the cluster registration and workload scheduling features. 
 
-Under the hood, Kratix leverages Gitops to handle the state of workloads on worker clusters. The complexity of the Gitops configuration and workflow management is managed declaratively by Kratix bringing the power of Gitops for free. For this example, [Flux CD]() is being used but Kratix also supports other Gitops providers such as [ArgoCD](). 
+Under the hood, Kratix leverages Gitops to handle the state of workloads on worker clusters. The complexity of the Gitops configuration and workflow management is managed declaratively by Kratix bringing the power of Gitops for free. For this example, [Flux CD](https://fluxcd.io) is being used but Kratix also supports other Gitops providers such as [ArgoCD](https://argo-cd.readthedocs.io/en/stable/getting_started/). 
 
 ![Kratix GitOps approach](dapr-kratix-02.png "Kratix GitOps approach")
 
@@ -72,7 +72,7 @@ spec:
 
 With this environment definition, we can request our platform to create a new development environment, with the applications that we want to modify deployed and with a database provisioned specifically for these environments (in contrast with connecting to an existing database). 
 
-For this to work, the promise definition needs to include a reference to our **Environment CRD**, to the [Dapr]() and [Redis]() Promise coming from the Marketplace, and to a Pipeline that will glue things together. 
+For this to work, the promise definition needs to include a reference to our **Environment CRD**, to the [Dapr](https://github.com/syntasso/kratix-marketplace/tree/main/dapr) and [Redis](https://github.com/syntasso/kratix-marketplace/tree/main/redis) Promise coming from the Marketplace, and to a Pipeline that will glue things together. 
 
 You can check the Promise YAML file [here](https://github.com/salaboy/from-monolith-to-k8s/blob/main/platform/dapr-kratix/env-promise/promise.yaml) (as it is quite long, and there is no point in listing it here)
 

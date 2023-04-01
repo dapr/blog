@@ -30,7 +30,9 @@ Under the hood, Kratix leverages Gitops to handle the state of workloads on work
 
 ![Kratix GitOps approach](dapr-kratix-02.png "Kratix GitOps approach")
 
-Stepping back, an empty Kratix is not much use on its own. It’s power comes when you load new capabilities into it – this is done through the concept of a **Promise**. Examples of Promises are foundational platform-building blocks such as databases or messaging technologies, or they can represent more complex customized concerns such as your organization's golden paths. Promise encapsulate 4 main features:
+Stepping back, an empty Kratix is not much use on its own. It’s power comes when you load new capabilities into it – this is done through the concept of a **Promise**. Examples of Promises are foundational platform-building blocks such as databases or messaging technologies, or they can represent more complex customized concerns such as your organization's golden paths. For example, setting up application infrastructure (databases, message brokers, identity management solutions), cloud resources (networks, hardware) and configuring all these to work together for teams to consume using a self-service approach. 
+
+A **Promise** encapsulate 4 main features:
 
 * A definition of the as-a-service API contract that enables the consumption of the capability. 
 * A Pipeline which executes on each API request which can codify your own policies and opinions (security, compliance, etc). Pipelines are no more than a chain of containers that will run to wire things up.  

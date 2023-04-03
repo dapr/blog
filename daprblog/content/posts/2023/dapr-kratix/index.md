@@ -1,7 +1,7 @@
 ---
 date: "2023-04-02T07:00:00-07:00"
 title: "Creating Dapr-enabled Platforms with Kratix"
-linkTitle: "Dapr + Kratix"
+linkTitle: "Creating Dapr-enabled Platforms with Kratix"
 author: Mauricio Salatino
 type: blog
 ---

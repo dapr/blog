@@ -1,5 +1,5 @@
 ---
-date: "2023-02-16T07:00:00-07:00"
+date: "2023-04-03T07:00:00-07:00"
 title: "Creating Dapr-enabled Platforms with Kratix"
 linkTitle: "Dapr + Kratix"
 author: Mauricio Salatino

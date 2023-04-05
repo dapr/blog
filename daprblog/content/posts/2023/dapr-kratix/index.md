@@ -6,9 +6,9 @@ author: Mauricio Salatino
 type: blog
 ---
 
-Creating platforms on top of Kubernetes is not an easy task, but some tools will make your life easier when doing so. There seems to be a trend in the Cloud-Native space where the Kubernetes API is extended to serve as the Platform interface for Development teams to request the resources they need to do their work. We have seen how this can be achieved [with tools like Crossplane in this other blog post](https://blog.crossplane.io/crossplane-and-dapr/), but this time we will look into [Kratix](kratix.io), a project born to help Platform builders build flexible platforms. 
+Creating platforms on top of Kubernetes is not an easy task, but some tools will make your life easier when doing so. There seems to be a trend in the Cloud-Native space where the Kubernetes API is extended to serve as the Platform interface for development teams to request the resources they need to do their work. We have seen how this can be achieved [with tools like Crossplane in this other blog post](https://blog.crossplane.io/crossplane-and-dapr/), but this time we will look into [Kratix](kratix.io), a project born to help platform builders build flexible platforms.
 
-In this blog post, we will be using Kratix to define and provision development environments that are Dapr-enabled. This enables teams working in these environments to write applications that are aware of the Dapr components (databases, message brokers, secret stores, etc.) that are available without worrying about where these components are running or how to connect to them. By using Dapr alongside Kratix we enable Platform teams not only to provision application infrastructure, but also to expose these components by using a set of APIs defined by the Dapr project.
+In this blog post, we will be using Kratix to define and provision development environments that are Dapr-enabled. This enables teams working in these environments to write applications that are aware of the Dapr components (databases, message brokers, secret stores, etc.) that are available without worrying about where these components are running or how to connect to them. By using Dapr alongside Kratix we enable platform teams not only to provision application infrastructure, but also to expose these components by using a set of APIs defined by the Dapr project.
 
 It is essential to note that [Kratix and Crossplane play nice together](https://www.syntasso.io/post/kratix-and-crossplane), so everything discussed in [my previous blog post](https://blog.crossplane.io/crossplane-and-dapr/) also applies to Kratix. Take a look at the Kratix Marketplace to see which tools are already integrated into Kratix: [https://kratix.io/marketplace](https://kratix.io/marketplace), as today we will be looking at the Dapr integration. 
 
@@ -18,19 +18,19 @@ Before jumping into the Dapr integration, there are a couple of concepts that we
 
 I strongly recommend checking out the Kratix docs site, which contains a great article about the value that the project brings compared to others: [https://kratix.io/docs/main/value-of-kratix](https://kratix.io/docs/main/value-of-kratix) 
 
-In this short section, we will look into some of the Kratix core components. A goal of using Kratix is to be able to define a simple interface for our teams to consume, while at the same time enabling the Platform team(s) to have control over how different tools are installed and configured to work together. 
+In this short section, we will look into some of the Kratix core components. A goal of using Kratix is to be able to define a simple interface for our teams to consume, while at the same time enabling the platform team(s) to have control over how different tools are installed and configured to work together. 
 
-Because [Kratix](https://kratix.io) was designed from the ground up to help Platform teams to build platforms, it allows us to  manage multiple compute clusters and the scheduling of workloads to them . We will install Kratix into a Kubernetes Cluster – Kratix labels this cluster the ‘platform cluster’, Kratix then allows simple registration of new ‘worker’ Clusters to which teams can send requests to schedule their workloads. I.e An application development team can ask the Kratix platform to provision them a Redis cluster onto their development cluster. 
+Because [Kratix](https://kratix.io) was designed from the ground up as a platform building tool, it allows us to manage multiple compute clusters and the scheduling of workloads on them .We will install Kratix into a Kubernetes Cluster – Kratix labels this cluster the ‘platform cluster’, Kratix then allows simple registration of new ‘worker’ clusters to which teams can send requests to schedule their workloads. I.e An application development team can ask the Kratix platform to provision them a Redis cluster onto their development cluster. 
 
 ![Kratix Platform and Workers](dapr-kratix-01.png "Kratix Platform and Workers")
 
 Inside Worker Clusters, teams can have their workloads and environment provisioned. This cluster management feature is fundamental to enable platform teams to improve their productivity without being restricted to a single Kubernetes Cluster and without pushing them to build from scratch all the cluster registration and workload scheduling features. 
 
-Under the hood, Kratix leverages Gitops to handle the state of workloads on worker clusters. The complexity of the Gitops configuration and workflow management is managed declaratively by Kratix bringing the power of Gitops for free. For this example, [Flux CD](https://fluxcd.io) is being used but Kratix also supports other Gitops providers such as [ArgoCD](https://argo-cd.readthedocs.io/en/stable/getting_started/). 
+Under the hood, Kratix leverages Gitops to handle the state of workloads on worker clusters. The complexity of the GitOps configuration and workflow management is managed declaratively by Kratix bringing the power of GitOps for free. For this example, [Flux CD](https://fluxcd.io) is being used but Kratix also supports other Gitops providers such as [ArgoCD](https://argo-cd.readthedocs.io/en/stable/getting_started/). 
 
 ![Kratix GitOps approach](dapr-kratix-02.png "Kratix GitOps approach")
 
-Stepping back, an empty Kratix is not much use on its own. It’s power comes when you load new capabilities into it – this is done through the concept of a **Promise**. Examples of Promises are foundational platform-building blocks such as databases or messaging technologies, or they can represent more complex customized concerns such as your organization's golden paths. For example, setting up application infrastructure (databases, message brokers, identity management solutions), cloud resources (networks, hardware) and configuring all these to work together for teams to consume using a self-service approach. 
+Stepping back, an empty Kratix is not much use on its own. It’s power comes when you load new capabilities into it – this is done through the concept of a **Promise**. Examples of promises are foundational platform-building blocks such as databases or messaging technologies, or they can represent more complex customized concerns such as your organization's golden paths. For example, setting up application infrastructure (databases, message brokers, identity management solutions), cloud resources (networks, hardware) and configuring all these to work together for teams to consume using a self-service approach. 
 
 A **Promise** encapsulate 4 main features:
 
@@ -74,7 +74,7 @@ spec:
 
 With this environment definition, we can request our platform to create a new development environment, with the applications that we want to modify deployed and with a database provisioned specifically for these environments (in contrast with connecting to an existing database). 
 
-For this to work, the promise definition needs to include a reference to our **Environment CRD**, to the [Dapr](https://github.com/syntasso/kratix-marketplace/tree/main/dapr) and [Redis](https://github.com/syntasso/kratix-marketplace/tree/main/redis) Promise coming from the Marketplace, and to a Pipeline that will glue things together. 
+For this to work, the promise definition needs to include a reference to our **Environment CRD**, to the [Dapr](https://github.com/syntasso/kratix-marketplace/tree/main/dapr) and [Redis](https://github.com/syntasso/kratix-marketplace/tree/main/redis) Promise coming from the Marketplace, and to a pipeline that will glue things together. 
 
 You can check the Promise YAML file [here](https://github.com/salaboy/from-monolith-to-k8s/blob/main/platform/dapr-kratix/env-promise/promise.yaml) (as it is quite long, and there is no point in listing it here)
 
@@ -82,21 +82,21 @@ For this example, the pipeline is defined [here](https://github.com/salaboy/from
 
 ![Environment Status Chain](dapr-kratix-05.png "Environment Status Chain")
 
-Once the environment is created, we can deploy applications that connect and use the Dapr Statestore by sending HTTP/GRPC requests or by using the Dapr SDK available for your programming language of choice. 
+Once the environment is created, we can deploy applications that connect and use the Dapr Statestore by sending HTTP/gRPC requests or by using the Dapr SDK available for your programming language of choice. 
 
-For this small example, we will deploy two applications, one that writes data to the statestore and one that reads data from the statestore. The application that writes data into the statestore is written in Java and the application that reads from the statestore is written in Go. For this small application we have used the Dapr SDKs (Java and Go), but the same behaviour can be implemented using plain HTTP or GRPC calls to the Dapr Sidecar that gets injected when we deploy these applications. 
+For this small example, we will deploy two applications, one that writes data to the statestore and one that reads data from the statestore. The application that writes data into the statestore is written in Java and the application that reads from the statestore is written in Go. For this small application we have used the Dapr SDKs (Java and Go), but the same behaviour can be implemented using plain HTTP or gRPC calls to the Dapr Sidecar that gets injected when we deploy these applications. 
 
 ![Example apps](dapr-kratix-06.png "Example apps")
  
 You can run this example into a local Kubernetes KinD cluster by following the [step-by-step instructions located in this repository](https://github.com/salaboy/from-monolith-to-k8s/tree/main/platform/dapr-kratix/).
 
-Adding other Dapr Components to the environments would only require to modify the Pipeline and probably reusing another Kratix Promise from the marketplace, such as the RabbitMQ Promise for supporting the Dapr Pub/Sub component. 
+Adding other Dapr components to the environments would only require to modify the Pipeline and probably reusing another Kratix Promise from the marketplace, such as the RabbitMQ Promise for supporting the Dapr Pub/Sub component. 
 
 Do you want to help me to add that to the example? Get in touch! Drop me a message, and let’s work together on that. 
 
 # Sum up
 
-In this short blog post, we have enabled the platform team(s) to define an Environment Promise that application teams can request on demand. We have used two existing Kratix Promises to compose a higher-level Promise that our basic Environment resource can expose. While Kratix uses Kubernetes CRDs to create these resources, how all this is glued together is left to a Pipeline that is implemented as a container, where platform teams can use any tool that they need to wire things up together. 
+In this short blog post, we have enabled platform teams to define an Environment Promise that application teams can request on demand. We have used two existing Kratix Promises to compose a higher-level Promise that our basic Environment resource can expose. While Kratix uses Kubernetes CRDs to create these resources, how all this is glued together is left to a Pipeline that is implemented as a container, where platform teams can use any tool that they need to wire things up together. 
 
 By having more and more Kratix Promises in their [Marketplace](https://kratix.io/marketplace), Platform teams can easily create a platform that exposes popular tooling and then create their custom Promises for their domain-specific components and configurations.
 

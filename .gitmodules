@@ -1,3 +1,6 @@
 [submodule "daprblog/themes/docsy"]
 	path = daprblog/themes/docsy
 	url = https://github.com/google/docsy.git
+[submodule "themes/docsy"]
+	path = themes/docsy
+	url = https://github.com/google/docsy.git

@@ -88,7 +88,7 @@ Use the following to create a file called dapr-annotations.yaml to set up annota
 apisix:
   podAnnotations:
     dapr.io/enabled: 'true'
-    dapr.io/app-id: ' apisix-gateway'
+    dapr.io/app-id: 'apisix-gateway'
 dapr.io/app-port: '9080'
 dapr.io/enable-metrics: 'true'
 dapr.io/metrics-port: '9099'

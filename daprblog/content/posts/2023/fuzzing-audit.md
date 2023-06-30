@@ -1,7 +1,7 @@
 ---
 date: "2023-06-30T07:00:00-07:00"
 title: "Dapr completes fuzzing audit"
-linkTitle: "dapr-fuzzing-audit"
+linkTitle: "Dapr completes fuzzing audit"
 author: Dapr project maintainers
 type: blog
 ---

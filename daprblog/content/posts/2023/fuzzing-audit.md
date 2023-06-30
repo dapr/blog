@@ -6,7 +6,7 @@ author: Dapr project maintainers
 type: blog
 ---
 
-The Dapr project is happy to announce the completion of their fuzzing audit which added 39 fuzzers covering Dapr Runtime, Kit and Components-Contrib. The audit is part of an initiative by the CNCF to improve the security posture of open source cloud native projects [by way of fuzzing](https://www.cncf.io/blog/2022/06/28/improving-security-by-fuzzing-the-cncf-landscape/). The audit was carried out by Ada Logics in May and June 2023. The Ada Logics team is thankful for the opportunity to help improve Daprs security posture and were impressed with the low count of issues found given the large number of fuzzers created. This is a testament to the well-written and well-maintained codebase of the Dapr project. 
+The Dapr project is happy to announce the completion of their fuzzing audit which added 39 fuzzers covering Dapr Runtime, Kit and Components-Contrib. The audit is part of an initiative by the CNCF to improve the security posture of open source cloud native projects [by way of fuzzing](https://www.cncf.io/blog/2022/06/28/improving-security-by-fuzzing-the-cncf-landscape/). The audit was carried out by [Ada Logics](https://adalogics.com/) in May and June 2023. The Ada Logics team is thankful for the opportunity to help improve Daprs security posture and were impressed with the low count of issues found given the large number of fuzzers created. This is a testament to the well-written and well-maintained codebase of the Dapr project. 
 
 The full report from the audit is available [here](https://docs.dapr.io/docs/Dapr-june-2023-fuzzing-audit-report.pdf).
 

@@ -1,5 +1,5 @@
 ---
-date: "2023-09-06T08:00:00-07:00"
+date: "2023-09-05T08:00:00-07:00"
 title: "Dapr Completes 2023 Security Audit - Increasing Enterprise Confidence"
 linkTitle: "Dapr Completes 2023 Security Audit - Increasing Enterprise Confidence"
 author: Yaron Schneider

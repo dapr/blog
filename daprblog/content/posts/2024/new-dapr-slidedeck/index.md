@@ -22,7 +22,7 @@ Here are some slides from the deck:
 
 ![Workflow example](slide52.png "Workflow example")
 
-The slide deck is large (over 140 slides) and is intended to be used as a starting point for your presentation. Remove or hide what is not necessary for your audience, and add new slides to add relevance to your story.
+The slide deck consists of over 140 slides that can be used as a starting point for your presentation. Remove or hide what is not necessary for your audience, and add new slides to add relevance to your story.
 
 There are instructions on the first 3 slides on building new slides and diagrams. The last 20 slides in the deck contain visual assets you can use.
 

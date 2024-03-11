@@ -10,7 +10,7 @@ A new [Dapr slide deck](https://docs.dapr.io/contributing/presentations/) is ava
 
 ![Slide deck overview](slide-overview.png)
 
-The deck contains new icons for all Dapr APIs and built-in features such as security, resiliency, and observability. The presentation style matches the [dapr.io](http://dapr.io) website that was redesigned a while ago.
+The deck contains new icons for all the Dapr APIs and built-in features, such as security, resiliency, and observability. The presentation style matches the recently redesigned [dapr.io](http://dapr.io) website.
 
 Here are some slides from the deck:
 

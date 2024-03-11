@@ -1,5 +1,5 @@
 ---
-date: "2024-02-23T07:00:00-07:00"
+date: "2024-03-10T07:00:00-07:00"
 title: "New Dapr slide deck for your presentations"
 linkTitle: "New Dapr slide deck for your presentations"
 author: Marc Duiker
@@ -28,4 +28,4 @@ There are instructions on the first 3 slides on building new slides and diagrams
 
 ![Visual assets](asset-slides.png "Visual assets")
 
-The [Dapr slide deck](https://docs.dapr.io/contributing/presentations/) is open source, so contributions are welcome!
+The [Dapr slide deck](https://docs.dapr.io/contributing/presentations/) (PowerPoint format) is open source, so contributions are welcome!

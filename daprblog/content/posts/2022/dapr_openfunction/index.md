@@ -69,7 +69,7 @@ Here you can find a [elastic log alerting](https://github.com/OpenFunction/sampl
 
 <div align=center><img src=elastic-log-processing.svg /></div>
 
-This async function is defined as below, you can find familar Dapr component definitions:
+The async function is defined below, with familiar Dapr component definitions:
 
 ```yaml=
 apiVersion: core.openfunction.io/v1beta1

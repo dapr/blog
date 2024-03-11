@@ -1,5 +1,5 @@
 ---
-date: "2024-03-11T07:00:00-07:00"
+date: "2024-03-10T07:00:00-07:00"
 title: "New Dapr slide deck for your presentations"
 linkTitle: "New Dapr slide deck for your presentations"
 author: Marc Duiker

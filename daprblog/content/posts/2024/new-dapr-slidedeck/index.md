@@ -28,4 +28,4 @@ Follow the instructions on the first 3 slides to get started on building new sli
 
 ![Visual assets](asset-slides.png "Visual assets")
 
-The [Dapr slide deck](https://docs.dapr.io/contributing/presentations/) (PowerPoint format) is open source, so contributions are welcome!
+Like the Dapr diagram slide deck, the [Dapr presentation slide deck](https://docs.dapr.io/contributing/presentations/) (PowerPoint format) is open source, so contributions are welcome!

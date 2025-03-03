@@ -8,7 +8,7 @@ type: blog
 
 ![Dapr at KubeCon Europe 2025](dapr-kubecon-london-header-v1.png)
 
-Dapr will present be at the Project Pavilion at [KubeCon Europe](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/) from Wednesday to Friday (April 2-4) during the showcase hours. Dapr is represented at the project kiosk by:
+Dapr will be present at the Project Pavilion at [KubeCon Europe](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/) from Wednesday to Friday (April 2-4) during the showcase hours. Dapr is represented at the project kiosk by:
 
 - Oli Tomlinson (Steering and Technical Committee member)
 - Mike Nguyen (Maintainer)

@@ -1,5 +1,5 @@
 ---
-date: "2025-09-16T07:00:00-07:00"
+date: "2025-09-16T07:00:00-00:00"
 title: "Dapr v1.16 is now available"
 linkTitle: "Dapr v1.16 is now available"
 author: Dapr project maintainers

@@ -6,7 +6,7 @@ author: Dapr project maintainers
 type: blog
 ---
 
-We're excited to announce the release of Dapr 1.16! There have been in improvements to workflow performance, issues resolved and features that we recommend you upgrade.
+We're excited to announce the release of Dapr 1.16! There have been improvements to workflow performance, issues resolved and features that we recommend you upgrade.
 
 Thanks to all the new and existing contributors who helped make this release happen.
 
@@ -31,9 +31,9 @@ These are the v1.16 release highlights:
 
 The Workflow API now supports multi-application workflows, enabling you to orchestrate complex business processes that span across multiple applications. This allows a workflow to call activities or start child workflows in different applications, distributing the workflow execution while maintaining the security, reliability, and durability guarantees of Dapr's workflow engine.
 
-By using multi-app workflows, you can design distributed business processes, such as cross-application order processing, complex approval chains that involve multiple workflows and activites, and AI/ML pipelines that coordinate between LLM services and GPU-intensive workloads. Workflow durability and consistency is maintained across application boundaries, ensuring your distributed workflows remain resilient even when individual applications experience temporary failures.
+By using multi-app workflows, you can design distributed business processes, such as cross-application order processing, complex approval chains that involve multiple workflows and activities, and AI/ML pipelines that coordinate between LLM services and GPU-intensive workloads. Workflow durability and consistency is maintained across application boundaries, ensuring your distributed workflows remain resilient even when individual applications experience temporary failures.
 
-Mutli-application workflows are supported in Java and Go SDKs as of this release. Learn more with the [multi-app workflows documentation](https://v1-16.docs.dapr.io/developing-applications/building-blocks/workflow/workflow-multi-app/).
+Multi-application workflows are supported in Java and Go SDKs as of this release. Learn more with the [multi-app workflows documentation](https://v1-16.docs.dapr.io/developing-applications/building-blocks/workflow/workflow-multi-app/).
 
 ### Workflow performance
 
@@ -81,7 +81,7 @@ The v1.16 engine uses less CPU & memory and its usage is more stable.
 
 ### HTTP Streaming / SSE support for HTTP Endpoints
 
-You can now use Dapr to proxy requests to external HTTP servers that work with streaming or Server-Sent Events (SSE), allowing Dapr to provide important functionality when communicating with MCP servers and AI agents like middleware authenticaton, resiliency policies, telemetry and distributed tracing.
+You can now use Dapr to proxy requests to external HTTP servers that work with streaming or Server-Sent Events (SSE), allowing Dapr to provide important functionality when communicating with MCP servers and AI agents like middleware authentication, resiliency policies, telemetry and distributed tracing.
 
 [Learn more on HTTP streaming with service invocation](https://v1-16.docs.dapr.io/developing-applications/building-blocks/service-invocation/howto-invoke-non-dapr-endpoints/#server-sent-events).
 
@@ -138,7 +138,7 @@ The following new components have been added. The total number of components is 
 - [Oracle Coherence state store](https://v1-16.docs.dapr.io/reference/components-reference/supported-state-stores/setup-coherence/)
 
 ### Component improvements
-Component registration fixes have been implemented across numerous components to ensure proper functionality. Various bug fixes address issues with Cosmos DB transactional operations, Kafka consumer shutdown, MQTT3 certification tests, and PostgresSQL documentation links.
+Component registration fixes have been implemented across numerous components to ensure proper functionality. Various bug fixes address issues with Cosmos DB transactional operations, Kafka consumer shutdown, MQTT3 certification tests, and PostgreSQL documentation links.
 
 - AWS SDK v2 migration has been completed across multiple AWS components due to the end-of-support being reached for AWS v1 SDK.
 - [Conversation API components](https://v1-16.docs.dapr.io/reference/components-reference/supported-conversation/) updated with LangChain Go common model refactoring, OpenAI compatibility layer for Gemini integration, and proper component registration in the metadata schema and bundle.
@@ -267,7 +267,7 @@ The MSRV remains at 1.78 for this release.
 - **ADDED** Add Tag Support to AWS S3 Output Binding [3791](https://github.com/dapr/components-contrib/issues/3791)
 - **ADDED** Support Oracle Connect Descriptors for Load Balancing & Failover in `state.oracledatabase` [3794](https://github.com/dapr/components-contrib/issues/3794)
 - **UPDATED** Supporting more properties for rabbitmq [3806](https://github.com/dapr/components-contrib/pull/3806)
-- **FIXED** MQTT3 Certificaiton test [3807](https://github.com/dapr/components-contrib/issues/3807)
+- **FIXED** MQTT3 Certification test [3807](https://github.com/dapr/components-contrib/issues/3807)
 - **UPDATED** conversation api - refactor langchaingo common models [3846](https://github.com/dapr/components-contrib/pull/3846)
 - **UPDATED** feat: Add support for replicateSubscriptionState in Pulsar pubsub component [3853](https://github.com/dapr/components-contrib/pull/3853)
 - **ADDED** feat: aws v2 provider [3856](https://github.com/dapr/components-contrib/pull/3856)
@@ -279,7 +279,7 @@ The MSRV remains at 1.78 for this release.
 - **UPDATED** feat: allow specifying Redis Sentinel auth [3905](https://github.com/dapr/components-contrib/pull/3905)
 - **ADDED** Add Path Filter Support to OAuth2 and Client Credentials Middlewares [3906](https://github.com/dapr/components-contrib/pull/3906)
 - **FIXED** fix: Fix kafka consumer shutdown [3907](https://github.com/dapr/components-contrib/pull/3907)
-- **FIXED** Added enpoint in configuration [3931](https://github.com/dapr/components-contrib/pull/3931)
+- **FIXED** Added endpoint in configuration [3931](https://github.com/dapr/components-contrib/pull/3931)
 - **UPDATED** chore: Move kafka to use aws sdk v2 [3940](https://github.com/dapr/components-contrib/pull/3940)
 - **FIXED** fix: 'ttlInSeconds' metadata key now respected when publishing to Azure Service Bus Topics. [3942](https://github.com/dapr/components-contrib/pull/3942)
 - **ADDED** feat: add state component registrations [3951](https://github.com/dapr/components-contrib/pull/3951)
@@ -415,7 +415,7 @@ The MSRV remains at 1.78 for this release.
 - **FIXED** [PubSub] Fix spelling of `lookupTopicWilcard` method on subscriptionManager [665](https://github.com/dapr/js-sdk/issues/665)
 - **DEPRECATED** Disable issue closing bot in JS SDK [676](https://github.com/dapr/js-sdk/issues/676)
 - **UPDATED** [Workflow] Remove arguments/references to workflow component [679](https://github.com/dapr/js-sdk/issues/679)
-- **UPDARED** Update package.json to reflect updated author and license values [681](https://github.com/dapr/js-sdk/issues/681)
+- **UPGRADED** Update package.json to reflect updated author and license values [681](https://github.com/dapr/js-sdk/issues/681)
 - **FIXED** [Infrastructure] Remove prettifier from build pipeline [683](https://github.com/dapr/js-sdk/issues/683)
 - **UPDATED** [Infrastructure] Update Dapr CLI/Runtime version used in E2E tests [685](https://github.com/dapr/js-sdk/issues/685)
 

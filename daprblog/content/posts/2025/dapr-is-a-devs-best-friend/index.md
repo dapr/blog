@@ -6,9 +6,7 @@ author: Fraser Marlow
 type: blog
 ---
 
-You might see the value Dapr can bring to our organization’s development efforts, but how do you bring others along?  Or maybe you pitched Dapr to your team in the past, but faced some pushback?
-
-Driving change in an organization takes patience and commitment, but when you get it right, the payoff is huge.
+You might see the value Dapr can bring to our organization’s development efforts, but how do you bring others along?
 
 Dapr has evolved by leaps and bounds, so whether you are pitching it for the first time or building your case for Dapr adoption, this guide is your cheat sheet for making the case for Dapr in 2025: why engineers love it, why architects trust it, why managers back it, and why your organization can adopt it with confidence.
 
@@ -76,6 +74,42 @@ And from the Dapr end-user interview playlist:
 
 * “**Component-based approach** … lets us vet different technologies without overhauling our entire stack.” —[James Fefes ](https://www.youtube.com/watch?v=UPyMxJ5mIcQ)
 
+
+## **Dapr Workflows: Stable, Scalable, and Built for Real-World Automation**
+
+With the release of **[Dapr v1.15](https://blog.dapr.io/posts/2025/02/27/dapr-v1.15-is-now-available/#dapr-workflow-stable)** earlier this year, the **Dapr Workflows** API is now **stable and production-ready**—a major milestone for developers and architects looking to automate distributed systems with confidence.  
+
+Workflows let you orchestrate long-running, durable processes using Dapr’s familiar building blocks—**service invocation, pub/sub, state management, bindings, and secrets**—without coupling logic to infrastructure. Each workflow runs inside the Dapr runtime, which provides consistency, reliability, and visibility across every step.
+
+### **No application is an island**
+
+Cloud-native applications never operate in isolation. They involve multi-step processes involving data enrichment, approvals, asynchronous transactions, event-driven triggers. Each step need to run **reliably, even when things fail**. Dapr Workflows deliver this capability through a simple, language-agnostic API that developers can use in .NET, Python, Java, or Go.  
+
+Key advantages include:
+
+* **Durable execution:** Dapr automatically checkpoints workflow state, allowing seamless recovery after crashes, restarts, or redeployments.  
+* **Cross-language orchestration:** Combine components written in different languages into a single consistent flow.  
+* **Native observability:** Every workflow step integrates with Dapr’s tracing, metrics, and logs, so no extra plumbing is needed.  
+* **Cloud portability:** Since workflow definitions build on Dapr APIs, you can run them on any supported environment—**Kubernetes, VM, edge, or multi-cloud**—without rewriting orchestration logic.  
+* **Declarative composition:** Workflows are defined as code, so they’re versionable, testable, and fit naturally into CI/CD pipelines.  
+
+### **Real-World Use Cases for Dapr Workflows**
+
+Teams use Dapr Workflows today to coordinate complex processes like:
+
+* Event-driven data pipelines and ETL jobs  
+* Payment and transaction processing with compensations  
+* Customer onboarding and document verification flows  
+* Automated deployment or model training pipelines  
+* IoT device provisioning and firmware rollout sequences  
+
+In each of these, Dapr’s building blocks eliminate boilerplate, letting developers focus on business logic while Dapr ensures that every step is executed, retried, and observed consistently.
+
+### **The Foundation for Composable Automation**
+
+With workflows now stable, Dapr provides a **unified orchestration layer** for distributed applications—one that is **polyglot, fault-tolerant, and operations-friendly**. Teams can confidently model their end-to-end systems as orchestrated flows that scale with their architecture, not against it.  
+
+Dapr Workflows are more than a feature—they’re the foundation for building **adaptive, event-driven systems** that can evolve alongside your organization’s needs.
 
 ## **Agentic Workflows: LLMs Meet Dapr**
 

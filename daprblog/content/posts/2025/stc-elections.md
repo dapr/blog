@@ -1,5 +1,5 @@
 ---
-date: "2025-10-316T08:00:00-07:00"
+date: "2025-10-31T08:00:00-07:00"
 title: "Dapr Steering and Technical Commitee Elections - Call for Nominations"
 linkTitle: "Dapr Steering and Technical Commitee Elections - Call for Nominations"
 author: Dapr STC

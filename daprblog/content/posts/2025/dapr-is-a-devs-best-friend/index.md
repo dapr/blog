@@ -19,7 +19,7 @@ Check out [the Dapr presentation deck](https://docs.dapr.io/contributing/present
 
 ## **Governance you can trust**
 
-Dapr isn’t a vendor product—it’s a **[CNCF Graduated open-source project](https://www.cncf.io/projects/dapr/)**, placing it in the foundation’s top tier alongside Kubernetes and Prometheus. [Dapr’s graduation in November ](https://www.cncf.io/announcements/2024/11/12/cloud-native-computing-foundation-announces-dapr-graduation/)2024 signals real-world maturity and broad ecosystem backing. 
+Dapr isn’t a vendor product, it’s a **[CNCF Graduated open-source project](https://www.cncf.io/projects/dapr/)**, placing it in the foundation’s top tier alongside Kubernetes and Prometheus. [Dapr’s graduation in November](https://www.cncf.io/announcements/2024/11/12/cloud-native-computing-foundation-announces-dapr-graduation/) 2024 signals strong end-user adoption, project maturity and broad ecosystem backing. 
 
 The project direction and roadmap are determined by Dapr’s elected **[Steering and Technical Committee (STC)](https://github.com/dapr/community/blob/master/steering-and-technical-committee-charter.md)**. It’s a standing governance body with published charters and elections, not a single commercial owner. That structure exists specifically to avoid over-representation by any one company and keep the roadmap community-driven. This said, the project is backed and supported by several large companies that have a large vested interest in seeing Dapr succeed.
 

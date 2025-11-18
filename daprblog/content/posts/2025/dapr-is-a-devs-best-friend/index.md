@@ -24,7 +24,7 @@ Dapr isn’t a vendor product, it’s a **[CNCF Graduated open-source project](h
 The project direction and roadmap are determined by Dapr’s elected **[Steering and Technical Committee (STC)](https://github.com/dapr/community/blob/master/steering-and-technical-committee-charter.md)**. It’s a standing governance body with published charters and elections, not a single commercial owner. That structure exists specifically to avoid over-representation by any one company and keep the roadmap community-driven. This said, the project is backed and supported by several large companies that have a large vested interest in seeing Dapr succeed.
 
 
-## **The core Dapr pitch still stands: less boilerplate, more shipping**
+## **The core Dapr pitch still stands: less boilerplate & faster shipping**
 
 The point isn’t gRPC or sidecars, it’s **developer velocity**. Dapr gives developers *[building blocks](https://docs.dapr.io/concepts/building-blocks-concept/)* (standard APIs) for service invocation, pub/sub, state, secrets, workflows, jobs, actors, and more, which decouples the infrastructure from the application code, so teams write business logic instead of plumbing. With the new dapr-agents framework, developers can now extend this same pattern to LLM-powered agents and workflows, letting intelligent components participate in resilient, observable service meshes without custom wiring.
 

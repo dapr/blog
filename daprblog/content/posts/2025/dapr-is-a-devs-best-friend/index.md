@@ -1,5 +1,5 @@
 ---
-date: "2025-10-23T07:00:00-07:00"
+date: "2025-11-18T07:00:00-07:00"
 title: "Dapr is a dev's best friend"
 linkTitle: "Dapr Is a Dev’s Best Friend: How to Convince Your Colleagues to Use Dapr"
 author: Fraser Marlow

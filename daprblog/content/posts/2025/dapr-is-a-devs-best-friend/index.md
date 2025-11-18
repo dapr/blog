@@ -209,7 +209,7 @@ You can find more information and get involved by visiting[ dapr.io/community](h
 
 * **Developer:** “You keep your language and framework; Dapr lifts the cross-cutting stuff—retries, mTLS, service discovery, pub/sub, state, workflows—behind a clean API. Less glue code, more product.”
 
-* **Architect:** “Uniform patterns, polyglot safe, and portability without framework lock-in. Strong security defaults and consistent resiliency across services.”
+* **Architect:** “Uniform patterns, polyglot, and portability without vendor lock-in. Strong security defaults, built-in observability, and consistent resiliency across services.”
 
 * **Platform/DevOps:** “Centralized, observable runtime; configurable components; easier upgrades and policy enforcement. Fewer one-off snowflakes.”
 

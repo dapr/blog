@@ -203,7 +203,7 @@ You can find more information and get involved by visiting[ dapr.io/community](h
 
 4. **Show production voices, not slides:** Keep two or three short quotes handy (like the ones above) and link to the CNCF case study pages for credibility with legal/compliance and the PMO.
 
-5. **Adopt incrementally:** Introduce Dapr API-by-API (e.g., start with service invocation + mTLS, then add pub/sub, then state). This lets teams feel wins quickly without a “big-bang” rewrite.
+5. **Adopt incrementally:** Introduce Dapr API-by-API (e.g., start with secrets, then service invocation, then add pub/sub, then state etc). This lets teams feel wins quickly without a “big-bang” rewrite.
 
 ## **Quick talk tracks by persona**
 

@@ -207,7 +207,7 @@ You can find more information and get involved by visiting[ dapr.io/community](h
 
 ## **Quick talk tracks by persona**
 
-* **Developer:** “You keep your language and framework; Dapr lifts the cross-cutting stuff—retries, mTLS, service discovery, pub/sub, state, workflows—behind a clean API. Less glue code, more product.”
+* **Developer:** “You keep your language and framework; Dapr lifts the cross-cutting stuff and infra-dependent code—retries, mTLS, service discovery, pub/sub, state, workflows—behind a clean API. Less glue code, more product.”
 
 * **Architect:** “Uniform patterns, polyglot, and portability without vendor lock-in. Strong security defaults, built-in observability, and consistent resiliency across services.”
 

@@ -199,7 +199,7 @@ You can find more information and get involved by visiting[ dapr.io/community](h
     * *“What if we could swap Kafka ↔ RabbitMQ **via config, not code**?”*
     * *“What if moving regions/clouds **didn’t require rewrites**?”*
 
-3. **Pick a pilot with visible pain:** A new service or a thorny cross-cutting concern (auth, pub/sub, state, workflow). Aim to replace boilerplate with Dapr APIs and measure the deltas (lead time, defect rate, on-call toil). Or, pick an AI-augmented workflow pilot (for example, a summarization or monitoring agent). It’s a fast way to showcase how Dapr extends naturally into agentic architectures.
+3. **Pick a pilot with visible pain:** A new service or a thorny cross-cutting concern (auth, secrets, pub/sub, state, workflow). Aim to replace boilerplate with Dapr APIs and measure the deltas (lead time, defect rate, on-call toil). Or, pick an AI-augmented workflow PoC (for example, a summarization or monitoring agent). It’s a fast way to showcase how Dapr extends naturally into agentic architectures.
 
 4. **Show production voices, not slides:** Keep two or three short quotes handy (like the ones above) and link to the CNCF case study pages for credibility with legal/compliance and the PMO.
 

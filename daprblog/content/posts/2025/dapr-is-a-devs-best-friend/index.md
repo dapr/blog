@@ -8,7 +8,7 @@ type: blog
 
 You might see the value Dapr can bring to our organization’s development efforts, but how do you bring others along?
 
-Dapr has evolved by leaps and bounds, so whether you are pitching it for the first time or building your case for Dapr adoption, this guide is your cheat sheet for making the case for Dapr in 2025: why engineers love it, why architects trust it, why managers back it, and why your organization can adopt it with confidence.
+Dapr has evolved significantly since it's inception in 2019, so whether you are pitching it for the first time or building your case for Dapr adoption in your organization, this guide is your cheat sheet for making the case for Dapr: why developers love it, why architects trust it, why managers back it, and why your organization can adopt it with confidence.
 
 <center>
 

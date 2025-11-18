@@ -26,7 +26,7 @@ The project direction and roadmap are determined by Dapr’s elected **[Steering
 
 ## **The core Dapr pitch still stands: less boilerplate & faster shipping**
 
-The point isn’t gRPC or sidecars, it’s **developer velocity**. Dapr gives developers *[building blocks](https://docs.dapr.io/concepts/building-blocks-concept/)* (standard APIs) for service invocation, pub/sub, state, secrets, workflows, jobs, actors, and more, which decouples the infrastructure from the application code, so teams write business logic instead of plumbing. With the new dapr-agents framework, developers can now extend this same pattern to LLM-powered agents and workflows, letting intelligent components participate in resilient, observable service meshes without custom wiring.
+The point isn’t gRPC or sidecars, it’s **developer velocity**. Dapr gives developers *[building blocks](https://docs.dapr.io/concepts/building-blocks-concept/)* (standard APIs) for service invocation, pub/sub, state, secrets, workflows, jobs, actors, and more, which decouples the infrastructure from the application code, so teams write business logic instead of plumbing. With the new Dapr Agents framework, developers can now extend this same pattern to LLM-powered agents and workflows, letting intelligent components participate in resilient & observable distributed systems.
 
 
 * **No more boilerplate:** Store state through the Dapr API and let the platform team pick Redis, Cosmos DB, DynamoDB, etc. Doing pub/sub messaging? Swap RabbitMQ for Kafka via config, not code.

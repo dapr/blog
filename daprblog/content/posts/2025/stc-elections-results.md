@@ -13,7 +13,7 @@ We are happy to announce the results of the 2025 Dapr Steering and Technical Com
 The newly elected members are (sorted by GitHub handle):
 
 * daxiang0, **Loong Dai**, Tencent
-* msfussel, **Mark Fussell**, Diagrid
+* msfussell, **Mark Fussell**, Diagrid
 * olitomlinson, **Oli Tomlinson**, Dotmatics (Siemens)
 * paulyuk, **Paul Yuknewicz**, Microsoft
 * Cyb3rWard0g, **Roberto Rodriguez**, NVIDIA

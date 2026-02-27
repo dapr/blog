@@ -1,5 +1,5 @@
 ---
-date: "2026-02-24T05:00:00-00:00"
+date: "2026-02-27T05:00:00-00:00"
 title: "Dapr v1.17 is now available"
 linkTitle: "Dapr v1.17 is now available"
 author: Dapr project maintainers
@@ -29,17 +29,17 @@ These are the v1.17 release highlights:
 
 ### Workflow Versioning
 
-Dapr v1.17 introduces workflow versioning, giving developers the tools to safely evolve workflow code while in-flight workflows continue to run correctly. This is critical because Dapr workflows are durable, may run for extended periods, and application upgrades can introduce changes that break deterministic replay of existing workflow instances.
+Dapr v1.17 introduces [workflow versioning](https://v1-17.docs.dapr.io/developing-applications/building-blocks/workflow/workflow-versioning/), giving developers the tools to safely evolve workflow code while in-flight workflows continue to run correctly. This is critical because Dapr workflows are durable, may run for extended periods, and application upgrades can introduce changes that break deterministic replay of existing workflow instances.
 Workflow versioning in Dapr supports two complementary strategies:
 
 - Named workflow versions: Register multiple versions of a workflow under distinct names, allowing new workflow instances to run on the latest version while existing instances continue replaying against their original version. This provides a clean break between workflow implementations, ideal for major refactors.
 - Patching: For smaller, incremental changes, patching lets you introduce conditional code branches within a workflow using `ctx.IsPatched("patch_name")`. New executions take the updated code path, while replaying instances follow the original path they were started on. This avoids duplicating entire workflow definitions for minor adjustments.
 
-SDK support is already available in Go, Python, .NET, and Java. Learn more in the [workflow versioning documentation](https://docs.dapr.io/developing-applications/building-blocks/workflow/workflow-features-concepts/#versioning).
+SDK support is already available in Go, Python, .NET, and Java. Learn more in the [workflow versioning documentation](https://v1-17.docs.dapr.io/developing-applications/building-blocks/workflow/workflow-versioning/).
 
 ### Workflow State Retention Policy
 
-Dapr Workflows now supports a history retention policy to help control how much workflow state history is kept in your state store.
+Dapr Workflows now supports a [history retention policy](https://v1-17.docs.dapr.io/developing-applications/building-blocks/workflow/workflow-history-retention-policy/) to help control how much workflow state history is kept in your state store.
 
 By default, workflow execution history is retained **indefinitely**, which is great for auditing and troubleshooting—but can also lead to significant growth in actor state storage for high-volume workloads or workflows that emit lots of state changes.
 
@@ -70,7 +70,7 @@ Operational tip: a common pattern is to keep `Completed` workflows for a shorter
 
 ### Placement Service Improvements
 
-In v1.17, the Placement service is more robust during deployments, scaling events, and sidecar churn, helping Actors and Workflows converge faster and avoid inconsistent routing decisions.
+In v1.17, the [Placement service](https://v1-17.docs.dapr.io/concepts/dapr-services/placement/) is more robust during deployments, scaling events, and sidecar churn, helping Actors and Workflows converge faster and avoid inconsistent routing decisions.
 
 - Placement now disseminates placement-table updates using a stricter three-stage sequence (lock → update → unlock) across members in a namespace. This eliminates scenarios where some sidecars could temporarily operate on stale placement data, especially when many instances are joining/leaving at once.
 - More reliable dissemination under churn: Better handling of rapid connect/disconnect events helps prevent stalls and improves convergence during rolling updates and autoscaling.
@@ -79,16 +79,16 @@ In v1.17, the Placement service is more robust during deployments, scaling event
 
 ### CLI Operational Improvements
 
-The Dapr CLI in v1.17 adds smoother operational workflows for Workflows and Scheduler, plus better defaults for local development.
+The Dapr CLI in v1.17 adds smoother operational workflows for [Workflows](https://v1-17.docs.dapr.io/reference/cli/dapr-workflow/) and [Scheduler](https://v1-17.docs.dapr.io/reference/cli/dapr-scheduler/), plus better defaults for local development.
 
 - Better standalone defaults for remote Actors/Workflows: dapr run now automatically sets `DAPR_HOST_IP=127.0.0.1` when it isn’t already set, improving “works out of the box” behavior in self-hosted mode on MacOS.
-- New dapr workflow management commands: Run and manage workflow instances from the CLI, including common lifecycle and troubleshooting operations (for example: `list`, `history`, `suspend`/`resume`, `terminate`, `rerun`, `raise-event`, `purge`).
+- New dapr [workflow management commands](https://v1-17.docs.dapr.io/developing-applications/building-blocks/workflow/howto-manage-workflow/): Run and manage workflow instances from the CLI, including common lifecycle and troubleshooting operations (for example: `list`, `history`, `suspend`/`resume`, `terminate`, `rerun`, `raise-event`, `purge`).
 
 ```bash
 $ dapr workflow <..>
 ```
 
-- New dapr scheduler management commands: Inspect and maintain Scheduler entries, including listing and deleting jobs/reminders, plus export/import to move Scheduler data between environments.
+- New dapr [scheduler management commands](https://docs.dapr.io/concepts/dapr-services/scheduler/): Inspect and maintain Scheduler entries, including listing and deleting jobs/reminders, plus export/import to move Scheduler data between environments.
 
 ```bash
 $ dapr scheduler <..>
@@ -102,7 +102,7 @@ $ dapr scheduler <..>
 
 In Dapr v1.17 made greater use of the performance test suite and added visualizations so you can inspect and compare performance results yourself.
 
-Added a [performance charts directory](https://github.com/dapr/dapr/tree/master/tests/perf/report/charts) under `tests/perf/report/charts`. It contains chart outputs (ex: duration breakdown, throughput, tail latency, resource usage, etc) generated from our performance runs, organized by API and Dapr version. From there, you can open the API and Dapr version that matches your usage and compare runs or versions relevant to your APIs and workloads.
+Added a [performance charts directory](https://github.com/dapr/dapr/tree/master/tests/perf/report/charts) under `tests/perf/report/charts`. It contains chart outputs (ex: duration breakdown, throughput, tail latency, resource usage, etc) generated from our performance runs, organized by API and Dapr version. From there, you can open the API and Dapr version that matches your usage and compare runs or versions relevant to your APIs and workloads. Each API folder for the v1.17 folder contains a highlights section where common scenario performance results are highlighted at the top of each README.
 
 The performance suite runs in CI regularly. Visual charts are created from code, based on runs in Azure. This helps visually highlight regressions or improvements  and provides a single place to see current and historical performance.
 
@@ -126,20 +126,23 @@ Actors show lower latency for activation and timer with state. Because workflows
 - [Performance charts](https://github.com/dapr/dapr/tree/master/tests/perf/report/charts) – run your own comparisons and browse charts by API and version
 - [Performance test suite](https://github.com/dapr/dapr/tree/master/tests/perf) – run the Dapr performance tests in your own environment
 
-### Bulk Pubsub Stable
+### Bulk Pubsub API is now Stable
 
-After several releases of availability via the Alpha APIs, first introduced in Dapr v1.10.0, Bulk Publish and Bulk Subscribe are now stable in Dapr v1.17.
+After several releases of availability via the Alpha APIs, first introduced in Dapr v1.10.0, [Bulk Publish and Bulk Subscribe](https://v1-17.docs.dapr.io/developing-applications/building-blocks/pubsub/pubsub-bulk/) are now stable in Dapr v1.17.
 
-The long-awaited stabilization brings production-ready, consistent APIs for Bulk PubSub, allowing you to publish and receive multiple messages in a single operation via the stable APIs:
+The stabilization brings production-ready, consistent APIs for Bulk PubSub, allowing you to publish and receive multiple messages in a single operation via the stable APIs:
 
 * Publish endpoint: for HTTP, `/v1.0/publish/bulk/<pubsub-name>/<topic>` was promoted from `/v1.0-alpha1/publish/bulk/<pubsub-name>/<topic>`. For gRPC, `BulkPublishEvent` was promoted from `BulkPublishEventAlpha1`.
 * Application callback: `OnBulkTopicEvent` was promoted from `OnBulkTopicEventAlpha1`.
 
-Application code should be updated to implement the stable endpoints/callbacks when using Bulk PubSub. SDKs were updated accordingly to support and use the stable APIs on both Publish and Subscribe sides. Please check SDK release notes and examples for details.
+Application code should be updated to implement the stable endpoints/callbacks when using Bulk PubSub. All SDKs are updated accordingly to support and use the stable APIs on both Publish and Subscribe sides. Please check SDK release notes and examples for details.
 
-Backwards compatibility: If your application still implements the old `OnBulkTopicEventAlpha1` callback, Dapr logs a deprecation warning and automatically falls back to the Alpha APIs (for now), giving you time to migrate to using the stable API. Alpha paths remain functional, but are deprecated in favor of the stable APIs.
+Backwards compatibility: If your application still implements the previous `OnBulkTopicEventAlpha1` callback, Dapr logs a deprecation warning and automatically falls back to the Alpha APIs (for now), giving you time to migrate to using the stable API. Alpha paths remain functional, but are deprecated in favor of the stable APIs.
 
 This stabilization follows the [Dapr API Lifecycle expectations](https://github.com/dapr/proposals/blob/main/guides/api-design.md), backed by extensive testing ensuring production readiness.
+
+**Links:**
+- [Publish and subscribe to bulk messages](https://v1-17.docs.dapr.io/developing-applications/building-blocks/pubsub/pubsub-bulk/)
 
 ### Workflow Tracing
 
@@ -149,17 +152,19 @@ Previously, traces could become disconnected when workflows were scheduled or or
 
 ### Conversation API Improvements
 
-The Conversation API received several enhancements in this release to improve reliability, flexibility, and observability.
-Tool/function calling is now fully supported and tested across all components, with additional improvements specific to Ollama.
-Prompt caching has been introduced to improve efficiency—complementing the existing response cache with configurable TTL support.
-Timeouts can now be configured via resiliency policies, and new response formatting options make it easier for downstream consumers to process outputs.
-Responses also include extended metadata, such as usage metrics and model details, enabling improved observability and cost tracking for AI-powered applications.
+The [Conversation API](https://v1-17.docs.dapr.io/developing-applications/building-blocks/conversation/conversation-overview/) received several enhancements in this release to improve reliability, flexibility, and observability.
+
+- Tool/function calling is now fully supported and tested across all components, with additional improvements specific to Ollama.
+- Prompt caching has been introduced to improve efficiency—complementing the existing response cache with configurable TTL support.
+- Timeouts can now be configured via resiliency policies, and new response formatting options make it easier for downstream consumers to process outputs.
+- Responses also include extended metadata, such as usage metrics and model details, enabling improved observability and cost tracking for AI-powered applications.
 
 ### Component Improvements
 
 Various component improvements were included in this release, focused on enhanced authentication, resiliency, and feature completeness:
 - Apache Pulsar PubSub: new subscription options via metadata, message compression support, and OAuth2 client secret support from file path
 - AWS Components + MySQL updated to latest client SDK version with compatibility guaranteed
+- SQLServer state component v2 with support for workflows
 - SFTP Binding improved concurrency handling for mutex-protected operations
 - Redis Streams PubSub honors configured resiliency policies
 - Kafka Components:
@@ -177,7 +182,8 @@ Various component improvements were included in this release, focused on enhance
     - Extended response metadata to include usage metrics + model used
 
 #### New Components in this release
-[V2 SqlServer State Store]()
+- [SqlServer State Store v2](https://v1-17.docs.dapr.io/reference/components-reference/supported-state-stores/setup-sqlserver-v2/)
+- [RavenDB State Store](https://v1-17.docs.dapr.io/reference/components-reference/supported-state-stores/setup-ravendb/)
 
 ## SDK Improvements
 ### Go SDK
@@ -188,7 +194,7 @@ Various component improvements were included in this release, focused on enhance
 
 ### .NET SDK
 
-The v1.17 release of the Dapr .NET SDK features a complete overhaul of the `Dapr.Workflow` package removing all dependencies on DurableTask and updating to support all Dapr runtime functionality: task execution identifiers, multi-app workflows (workflows & activities), and both patch- and name-based workflow versioning.
+The v1.17 release of the [Dapr .NET SDK](https://docs.dapr.io/developing-applications/sdks/dotnet/) features a complete overhaul of the `Dapr.Workflow` package removing all dependencies on DurableTask and updating to support all Dapr runtime functionality: task execution identifiers, multi-app workflows (workflows & activities), and both patch- and name-based workflow versioning.
 
 This release includes official support for .NET 10 in addition to the already supported .NET 8 and 9.
 
@@ -592,7 +598,24 @@ A big thank you to the following .NET SDK contributors that made this release po
 - **DOCS** Huaweicloud missing from Secret Store table [4809](https://github.com/dapr/docs/issues/4809)
 - **DOCS** Add documentation for Pulsar PubSub message compression [4990](https://github.com/dapr/docs/pull/4990)
 - **DOCS** Document Dapr.Workflow .NET SDK changes for 1.17 release [4991](https://github.com/dapr/docs/pull/4991)
-
+- **DOCS** Added docs for RavenDB as State Store [4738](https://github.com/dapr/docs/pull/4738)
+- **DOCS** doc: add openbao.md [4917](https://github.com/dapr/docs/pull/4917)
+- **DOCS** [1.16] Update perf test docs to point to the new source of truth [4961](https://github.com/dapr/docs/pull/4961)
+- **DOCS** docs: update bedrock metadata [4980](https://github.com/dapr/docs/pull/4980)
+- **DOCS** .NET SDK - Updated guidance around specifying both HTTP and gRPC sidecar ports for SDK [4993](https://github.com/dapr/docs/pull/4993)
+- **DOCS** Added docs for workflow versioning [5003](https://github.com/dapr/docs/pull/5003)
+- **DOCS** Add support for custom annotations in dapr sidecar service [5005](https://github.com/dapr/docs/pull/5005)
+- **DOCS** [1.17] Workflow/CLI/Reminder Documentation [5017](https://github.com/dapr/docs/pull/5017)
+- **DOCS** Added low-level workflow protocol documentation [5024](https://github.com/dapr/docs/pull/5024)
+- **DOCS** docs(convo): add new fields and make corrections on caching [5027](https://github.com/dapr/docs/pull/5027)
+- **DOCS** Add new documentation to enable Pulsar PubSub message compression [5028](https://github.com/dapr/docs/pull/5028)
+- **DOCS** feat: Introduce sqlserver state store v2 [5032](https://github.com/dapr/docs/pull/5032)
+- **DOCS** style: update agents api [5034](https://github.com/dapr/docs/pull/5034)
+- **DOCS** Feature workflows remote activity reminder [5036](https://github.com/dapr/docs/pull/5036)
+- **DOCS** Feature workflows remote activity reminder 1.17 [5039](https://github.com/dapr/docs/pull/5039)
+- **DOCS** [1.17] Docs redis honor resiliency [5044](https://github.com/dapr/docs/pull/5044)
+- **DOCS** docs: configuration otel headers secretref [5047](https://github.com/dapr/docs/pull/5047)
+- **DOCS** Added ravendb to the docs [5050](https://github.com/dapr/docs/pull/5050)
 
 ### Quickstarts
 - **CHORE** JS SDK version 3.6.1 [1265](https://github.com/dapr/quickstarts/pull/1265)
@@ -722,4 +745,8 @@ None.
 
 ## Deprecation Notices
 
-None.
+Alpha Bulk PubSub APIs are being deprecated in favor of the stable Bulk PubSub APIs. The alpha Bulk Publish and Bulk Subscribe APIs (`/v1.0-alpha1/publish/bulk/<pubsub-name>/<topic>` and `BulkPublishEventAlpha1`) are now deprecated. The app callback `OnBulkTopicEventAlpha1` is also now deprecated.
+
+The alpha APIs remain functional in Dapr v1.17 - Dapr will log a deprecation warning and automatically fallback to them if your application still uses them. This gives users time to migrate to the stable APIs (`/v1.0/publish/bulk/<pubsub-name>/<topic>` and `BulkPublishEvent`) and `OnBulkTopicEvent` for the app callback.
+
+See the section above titled `Bulk PubSub API is now Stable` for full details on the promoted APIs, migration steps, backwards compatibility behavior, and documentation links.

@@ -6,6 +6,8 @@ author: Dapr project maintainers
 type: blog
 ---
 
+![Dapr 1.17 release highlights](dapr-release-1.17-v1.png)
+
 We're excited to announce the release of Dapr 1.17! This release introduces workflow versioning, giving you the tools to safely evolve long-running workflow code without breaking in-flight instances. Combined with new state retention policies, up to 41% higher workflow throughput, and end-to-end tracing, Dapr Workflows are now ready for the most demanding production workloads. This release also stabilizes the Bulk PubSub API, improves Placement service resilience, and adds new CLI commands for managing Workflows and Scheduler.
 
 Thanks to all the new and existing contributors who helped make this release happen.
@@ -21,8 +23,6 @@ Go to the [upgrading Dapr](#upgrading-to-dapr-1.17) section for steps to upgrade
 Thanks to everyone who made this release possible!
 
 @acroca, @adam6878, @AdarshRavichandran, @addjuarez, @aharonYK, @akotsarelation, @alekhrycaiko, @alicejgibbons, @ankurinfoblox, @antontroshin, @artur-ciocanu, @artursouza, @atrauzzi, @BlackRider97, @by-nelson, @CasperGN, @cicoyle, @citymaus, @ConstantinChirila, @cr3ativ3cod3r, @daanschutte, @DeepanshuA, @Eileen-Yu, @elena-kolevska, @famarting, @FarmerChillax, @filintod, @Flern, @fyzanshaik, @fyzanshaik-atlan, @halspang, @HusseinYasser, @imneov, @ItalyPaleAle, @javier-aliaga, @JeffreyJPZ, @jjcollinge, @jmfloreszazo, @johansja, @joshm998, @JoshVanL, @jslatten, @kapilthareja, @kaspernissen, @kayaj1009, @kgal-akl, @lijujoseph4, @lindner, @lony2003, @lrascao, @majiayu000, @marcduiker, @MasayaAoyama, @mcruzdev, @MichaelHindley, @middt, @mikeee, @mohitpalsingh, @msfussell, @MyMirelHub, @nelson-parente, @ngruson, @nikitasarawgi, @nmalocic, @oglok, @olitomlinson, @passuied, @paulorfjesus, @philliphoff, @pravinpushkar, @RaymundoZa, @robertojrojas, @RyanLettieri, @sadath-12, @salaboy, @seal90, @sicoyle, @siri-varma, @SpiffyEight77, @StarJourneyMingsing, @StoopidBoi-6128, @sunnynagavo, @TheForbiddenAi, @titanventura, @tmacam, @tomflenner, @WhitWaldo, @wlfgang, @yaron2, @ytimocin, @ZeBobo5, @ZeynelKoca, @zglp
-
-+++++ Include contributions and acknowledgements to individuals/organisations involved in the release effort e.g. comprehensive testing. This is not automated +++++
 
 ## Highlights
 These are the v1.17 release highlights:

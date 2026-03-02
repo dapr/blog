@@ -642,7 +642,7 @@ Download the latest release from [here](https://github.com/dapr/cli/releases) an
 Once you have installed the CLI, run:
 
 ```bash
-dapr init --runtime-version=1.17
+dapr init --runtime-version=1.17.0
 ```
 
 Wait for the update to finish,  ensure you are using the latest version of Dapr(1.17) with:

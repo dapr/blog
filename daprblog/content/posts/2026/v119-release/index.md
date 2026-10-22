@@ -42,7 +42,7 @@ Go to the [upgrading Dapr](#upgrading-to-dapr-119) section for the steps to upgr
 
 Thanks to everyone who made this release possible!
 
-@acroca, @adam6878, @Advait2912, @anneheartrecord, @anxkhn, @arturotrenard, @baltasarblanco, @CasperGN, @cicoyle, @DamienCassou, @famarting, @gargsajal9, @GHX5T-SOL, @icmp0x8, @ihopenre-eng, @javier-aliaga, @jjcollinge, @jongep86, @JoshVanL, @jslatten, @kayvonkhosrowpour, @kshitizj03, @LiBaoxuan-Neil, @LilDojd, @LindseyZ1205, @lrascao, @m3nax, @magic-peach, @manduinca, @marcduiker, @matheusandre1, @mikeee, @MrMint, @MsfPablo, @mtaghavi2005, @Mukuwul, @MyMirelHub, @nelson-parente, @olitomlinson, @pablochacin, @passuied, @Psingle20, @pujitha24, @Rishabh-git10, @SaiPisey2, @SarthakB11, @seherv, @sicoyle, @siri-varma, @somaz94, @stywzn, @tezizzm, @vip892766gma, @WhitWaldo, @yaron2, @Yash121l
+@acroca, @adam6878, @Advait2912, @anneheartrecord, @anxkhn, @arturotrenard, @baltasarblanco, @CasperGN, @cicoyle, @DamienCassou, @famarting, @gargsajal9, @GHX5T-SOL, @icmp0x8, @ihopenre-eng, @javier-aliaga, @jjcollinge, @jongep86, @JoshVanL, @jslatten, @kayvonkhosrowpour, @kshitizj03, @LiBaoxuan-Neil, @LilDojd, @LindseyZ1205, @lrascao, @m3nax, @magic-peach, @manduinca, @marcduiker, @matheusandre1, @mikeee, @MrMint, @MsfPablo, @mtaghavi2005, @Mukuwul, @MyMirelHub, @nelson-parente, @olitomlinson, @pablochacin, @passuied, @Psingle20, @pujitha24, @RakeshCodeLab, @Rishabh-git10, @SaiPisey2, @SarthakB11, @seherv, @sicoyle, @siri-varma, @somaz94, @stywzn, @tezizzm, @vip892766gma, @WhitWaldo, @yaron2, @Yash121l
 
 ## Highlights
 
@@ -54,7 +54,7 @@ Before 1.19, a workflow worker received the full history of an instance on every
 
 A [worker](https://docs.dapr.io/developing-applications/building-blocks/workflow/workflow-stateful-client/) can now advertise the `WORKER_CAPABILITY_STATEFUL_HISTORY` capability on its work-item stream. The worker then keeps the history of each instance in a cache. When the worker already has the history from an earlier turn on the same stream, the sidecar sends only the new events, and the worker builds the full history from its cache and the new events. On a reconnect, the sidecar sends the full history. If the worker has evicted the instance from its cache, it fetches the full history from the sidecar. Either case adds latency, but it does not change the result.
 
-On an idle work-item stream, the sidecar now sends a health ping every 30 seconds to a worker that advertises the `WORKER_CAPABILITY_HEALTH_PING` capability. Load balancers such as AWS ALB and nginx close an idle stream after 60 seconds, and before 1.19 that cost the worker a reconnect and a full history resend. The 1.19 Python, Java and .NET SDKs and Go SDK 1.16 advertise the capability. Set `DAPR_WORKFLOW_HEALTH_PING_INTERVAL` on daprd to change the interval.
+On an idle work-item stream, the sidecar now sends a health ping every 30 seconds to a worker that advertises the `WORKER_CAPABILITY_HEALTH_PING` capability. Load balancers such as AWS ALB and nginx close an idle stream after 60 seconds, and before 1.19 that cost the worker a reconnect and a full history resend. The 1.19 Python, Java and .NET SDKs, Go SDK 1.16 and JavaScript SDK 3.19 advertise the capability. Set `DAPR_WORKFLOW_HEALTH_PING_INTERVAL` on daprd to change the interval.
 
 The SDKs that support stateful history turn it on by default:
 
@@ -105,7 +105,7 @@ The `WorkflowAccessPolicy` of the target app decides which operations a caller c
 #### Workflow access policy `requires`, detached workflows, duplicate instance IDs and child retries
 
 - A [`WorkflowAccessPolicy`](https://docs.dapr.io/operations/security/workflow-access-policy/) rule can now have a `requires` block. The operation is then allowed only when the [propagated workflow history](https://docs.dapr.io/developing-applications/building-blocks/workflow/workflow-history-propagation/) of the caller contains the listed events. A rule can require proof that the caller saw a specific upstream event, instead of allowing the caller unconditionally. For example, a billing app can allow its `charge` activity only for callers whose history holds an `event.raised` named `order.validated` from the orders app, so a caller cannot skip the validation step. `requires` is an ordered list of up to 20 entries, each with `appID`, `eventType` (`activity.started`, `activity.completed`, `workflow.started`, `workflow.completed` or `event.raised`) and `name`. It applies to scheduling only: activity rules, or workflow rules whose only operation is `schedule`.
-- A workflow can now start a [detached workflow](https://docs.dapr.io/developing-applications/building-blocks/workflow/workflow-detached/). A detached workflow is an independent instance, with no link to its parent and no result back to it. Use it when a workflow needs to start work that should outlive it, such as a clean-up or report job, without waiting for the result. Before 1.19, the workaround was a client call inside an activity. The .NET SDK supports detached workflows in 1.19, and in durabletask-go (used by Go SDK 1.16) the method is `WorkflowContext.ScheduleNewDetachedWorkflow`.
+- A workflow can now start a [detached workflow](https://docs.dapr.io/developing-applications/building-blocks/workflow/workflow-detached/). A detached workflow is an independent instance, with no link to its parent and no result back to it. Use it when a workflow needs to start work that should outlive it, such as a clean-up or report job, without waiting for the result. Before 1.19, the workaround was a client call inside an activity. The .NET and JavaScript SDKs support detached workflows in 1.19, and in durabletask-go (used by Go SDK 1.16) the method is `WorkflowContext.ScheduleNewDetachedWorkflow`.
 - [Scheduling through an SDK workflow client](https://docs.dapr.io/developing-applications/building-blocks/workflow/howto-manage-workflow/) fails with the gRPC `AlreadyExists` status code when the instance ID belongs to an active (not completed) instance. The sidecar has done this since 1.18.2. The error message does not change, so an SDK can detect the conflict without parsing the message, and a client can start a workflow with a fixed instance ID as an idempotent call and treat `AlreadyExists` as already running. A completed instance ID is reused by default. It also returns `AlreadyExists` when the client sets `WithEnforceUniqueInstanceID`, or when the old instance's child workflows have not finished. The Dapr runtime workflow API (HTTP and gRPC `StartWorkflowBeta1`) keeps its error response.
 - A child workflow that runs as a retry attempt now records the instance ID of the first attempt in the parent's history. Each retry of a child workflow is a separate instance with its own ID, so tooling that reads a parent's history can now group the attempts of one call without walking the retry timers between them.
 
@@ -113,8 +113,8 @@ The `WorkflowAccessPolicy` of the target app decides which operations a caller c
 
 The SDK workflow clients pick up the new runtime capabilities:
 
-- The Go, Java and Python workflow clients can list workflow instances, read the history of an instance and rerun a workflow from an event.
-- The Java and Python workflow clients can run client operations on workflows in other apps.
+- The Go, Java, Python and JavaScript workflow clients can list workflow instances, read the history of an instance and rerun a workflow from an event.
+- The Java and Python workflow clients can run client operations on workflows in other apps. The JavaScript SDK can route activities and child workflows to other apps.
 
 See the [SDK improvements](#sdk-improvements) for the complete list per language, including detached workflows in .NET, the Java `WorkflowInstanceAlreadyExistsException`, and the client health ping, and the [breaking changes](#breaking-changes) for the SDK behavior changes that affect workflow code.
 
@@ -165,7 +165,7 @@ The components are:
 - [`binarystore.oci.objectstorage`](https://docs.dapr.io/reference/components-reference/supported-binarystores/binarystore-oci-objectstorage/)
 - [`binarystore.in-memory`](https://docs.dapr.io/reference/components-reference/supported-binarystores/binarystore-in-memory/), for tests
 
-SDK support in 1.19 is .NET only, through the `Dapr.BinaryStore.Abstractions`, `Dapr.BinaryStore.Runtime` and `Dapr.BinaryStore.Generators` packages. The Go, Python, Java and JavaScript SDKs do not support it in 1.19, so call the HTTP or gRPC API directly. See the [Binary Store docs](https://docs.dapr.io/developing-applications/building-blocks/binarystore/) and the [.NET SDK docs](https://docs.dapr.io/developing-applications/sdks/dotnet/dotnet-binarystore/).
+The .NET SDK supports it through the `Dapr.BinaryStore` package, and the JavaScript SDK through `@dapr/dapr`, with streaming uploads and downloads. The Go, Python and Java SDKs do not support it in 1.19, so call the HTTP or gRPC API directly. See the [Binary Store docs](https://docs.dapr.io/developing-applications/building-blocks/binarystore/), the [.NET SDK docs](https://docs.dapr.io/developing-applications/sdks/dotnet/dotnet-binarystore/) and the [JavaScript SDK docs](https://docs.dapr.io/developing-applications/sdks/js/js-binarystore/).
 
 ### Search and vector APIs (alpha)
 
@@ -186,7 +186,7 @@ The two APIs share their filter language, write behavior, error handling and obs
 
 In 1.19, Meilisearch is the only production engine, and the `search.in-memory` and `vector.in-memory` components are available for tests. The [`search.meilisearch`](https://docs.dapr.io/reference/components-reference/supported-search/meilisearch/) component supports full-text search, filtering, sorting, highlighting, offset-based pagination and native queries. Filters and sorts can only use attributes that you declare as filterable or sortable when you create the index. The [`vector.meilisearch`](https://docs.dapr.io/reference/components-reference/supported-vector/meilisearch/) component stores user-provided embeddings and supports cosine similarity only. Search indexes and vector collections share a Meilisearch instance, so the vector API works only on collections that have the `default` user-provided embedder.
 
-The APIs are available over HTTP (`/v1.0-alpha1/search` and `/v1.0-alpha1/vector`) and gRPC. The SDKs don't support them yet, so call the API directly. See the [search API reference](https://docs.dapr.io/reference/api/search_api/), the [vector API reference](https://docs.dapr.io/reference/api/vector_api/), and the how-to guides for [searching](https://docs.dapr.io/developing-applications/building-blocks/search/howto-search/) and [storing and querying vectors](https://docs.dapr.io/developing-applications/building-blocks/vector/howto-vector/).
+The APIs are available over HTTP (`/v1.0-alpha1/search` and `/v1.0-alpha1/vector`) and gRPC. The .NET SDK supports them through the [`Dapr.Search`](https://www.nuget.org/packages/Dapr.Search) and [`Dapr.Vector`](https://www.nuget.org/packages/Dapr.Vector) packages, and the JavaScript SDK through `@dapr/dapr`. The Go, Python and Java SDKs do not support them in 1.19, so call the API directly. See the [search API reference](https://docs.dapr.io/reference/api/search_api/), the [vector API reference](https://docs.dapr.io/reference/api/vector_api/), and the how-to guides for [searching](https://docs.dapr.io/developing-applications/building-blocks/search/howto-search/) and [storing and querying vectors](https://docs.dapr.io/developing-applications/building-blocks/vector/howto-vector/).
 
 ### Dapr MCP server (alpha, released separately)
 
@@ -298,12 +298,18 @@ The workflow worker supports stateful history and turns it on by default. See th
 
 ### .NET SDK
 
-- Workflows: detached workflows and a health ping on the client stream.
-- Workflows: the worker supports stateful history, on by default. See the [stateful workflow worker stream](#stateful-workflow-worker-stream-history-deltas) for the opt-out.
-- Binary Store (alpha): the new `Dapr.BinaryStore.*` packages give .NET apps a client for the Binary Store building block, and an example project shows how to use it.
-- Workflows: data references through the Binary Store, in the new `Dapr.Workflow.BinaryStore` project.
-- The SDK supports .NET 11 (preview).
-- Actors.Next: state caching follows an updated algorithm, and two registration fixes cover duplicate subscription descriptors and apps with several hosted services.
+The 1.19 release of the [.NET SDK](https://docs.dapr.io/developing-applications/sdks/dotnet/) continues the move to focused packages for each building block. Each new client includes source generators for strongly typed clients.
+
+- New building block clients (alpha): `Dapr.BinaryStore` for streaming binary uploads and downloads, `Dapr.Search` with source-generated typed indexes, and `Dapr.Vector` with source-generated typed collections. Each comes with an example.
+- Workflows: opt-in offloading of large payloads to the Binary Store, in the new `Dapr.Workflow.BinaryStore` project. In a benchmark in the repository with a 2 MB document, data references roughly halved the total workflow completion time and cut managed allocations by 66% compared with inline payloads, with history caching on.
+- Workflows: the worker supports stateful history, on by default, with constant-time LRU eviction of the cache. See the [stateful workflow worker stream](#stateful-workflow-worker-stream-history-deltas) for the opt-out.
+- Workflows: detached workflows, a health ping on the client stream, workflows derived from generic base classes, an interface for `WorkflowState` that makes mocking easier, and fixes to tracing, versioning and connection reliability.
+- `Dapr.Actors.Next`, the new actor programming model next to `Dapr.Actors`, gets get and list actor timer APIs, missing-state caching and fixes to concurrency, reentrancy, cancellation, stream recovery and registration. It has generated proxies and registration, constructor injection, state schema migration, built-in state machines and deterministic testing. In .NET 10 in-process benchmarks of client-side overhead (not end-to-end actor execution), proxy creation was about 38x faster and SDK-only invocation 10x faster than with `Dapr.Actors`, with 99% and 97% fewer allocated bytes.
+- `Dapr.Actors`: state changes are marked clean only after the save succeeds, so a failed or cancelled save no longer loses writes on retry, and a cancelled invocation keeps the actor's turn-based concurrency.
+- `Dapr.Messaging` gives Native AOT-compatible, strongly typed pub/sub with generated message handlers, streaming subscriptions, HTTP and gRPC push delivery, bulk messaging, content-based routing and dead-letter topics.
+- State: helpers for Dapr's transactional outbox, including an `OutboxTransactionBuilder` that pairs state changes with published events.
+- Jobs: a gRPC transport next to HTTP, time-zone aware scheduling, and listing and purging jobs.
+- General: .NET 11 (preview) support, trace context propagation on gRPC calls, and improved gRPC method discovery with API-version failover.
 - Already released in 1.18.x: the .NET SDK ships from its main branch, so some of its 1.19 work was released in 1.18.x patches. The `Dapr.Actors.Next` package family and its reminder failure policies came in 1.18.5. Jobs with a timezone, a gRPC transport, purge and list, and per-actor-type configuration overrides for Actors.Next came in 1.18.6. The Dapr.Messaging implementation came in 1.18.8. Actor reentrancy fixes and faster state writes came in 1.18.9 and 1.18.10. They are not new in 1.19.
 
 ### Python SDK
@@ -339,11 +345,20 @@ The workflow worker supports stateful history and turns it on by default. See th
 
 ### JavaScript SDK
 
-There is no JavaScript SDK release for 1.19 yet (no release candidate and no 3.19 tag). These changes ship in the next JavaScript SDK release.
+The v3.19 release of the [JavaScript SDK](https://docs.dapr.io/developing-applications/sdks/js/) rewrites its workflow support and adds clients for the new alpha building blocks.
 
-- A new workflow engine. The SDK no longer depends on the shared DurableTask client library, so it does not support stateful history in this release.
-- Workflow retry policies.
-- A replay-safe logger for workflow code.
+- Workflows: a new workflow engine. The SDK no longer depends on `@dapr/durabletask-js`, so it does not support stateful history in this release. See the [breaking changes](#breaking-changes).
+- Workflows: configurable retry policies for activities and child workflows, patch-based versioning through `isPatched`, cross-app routing of activities and child workflows, and detached workflows.
+- Workflows: list instances, read the execution history, rerun a workflow from a specific history event, and get typed access to propagated workflow history, with queries by workflow name, app ID and instance ID.
+- Workflows: replay-safe logging, OpenTelemetry tracing with trace-context propagation, a worker readiness signal, a health ping on the worker stream, and better worker recovery. Work items are no longer dropped above a fixed concurrency limit, and blocked activities no longer starve workflow work items.
+- Workflows: Binary Store-backed payload references, with opt-in offloading of large payloads.
+- Binary Store, Search and Vector (alpha): clients over HTTP and gRPC, including streaming uploads and downloads for the Binary Store.
+- Conversation: Alpha2 support over HTTP and gRPC, with tool calling, structured responses, token limits and usage metadata.
+- Pub/sub: alpha gRPC streaming subscriptions, which need no application callback server. Bulk publishing now uses the stable APIs and stays compatible with older runtimes.
+- Jobs: the stable Jobs API with Alpha1 compatibility for older runtimes, job callbacks, and a fluent cron-expression builder.
+- Actors: get a reminder, list reminders by actor type (optionally filtered by actor ID), and bulk unregister reminders.
+- State and cryptography: bulk state delete, and encryption and decryption over HTTP.
+- General: pluggable serialization through `IDaprSerializer`, with JSON as the default, and OpenTelemetry baggage propagation on outgoing HTTP and gRPC calls.
 
 ## Upgrading to Dapr 1.19
 
@@ -499,6 +514,8 @@ Workflow workers built with the 1.19 Python, Java or .NET SDK, or with Go SDK 1.
 
 - New workflow engine. The SDK replaced its workflow engine and wire-protocol handling. `WorkflowContext`, `DaprWorkflowClient` and `WorkflowState` keep their public method names, but re-test workflow code after you upgrade.
 - `grpcOptions` on `DaprWorkflowClient`. Only message-size options still take effect. Keepalive, credential, compression and other grpc-js settings are ignored without an error.
+- Pub/sub handler failures request a retry. When a subscription handler throws or its promise rejects, over HTTP or gRPC, the SDK now answers `RETRY` instead of `SUCCESS`. This also applies to individual entries of a bulk subscription. Before, a failed message was acknowledged and lost. Now the broker delivers it again, so make handlers idempotent and set up a dead-letter topic for messages that keep failing. A handler that completes normally still answers `SUCCESS`.
+- `continueAsNew` keeps unprocessed events by default. A workflow that calls `continueAsNew` now carries the events it has not processed yet into the new generation, as the .NET SDK does. Before, those events were dropped. Check workflows that relied on that.
 
 ### Dapr CLI
 
@@ -516,3 +533,4 @@ Workflow workers built with the 1.19 Python, Java or .NET SDK, or with Go SDK 1.
 - Python SDK: `reuse_id_policy` on `schedule_new_workflow`. Deprecated since 1.18.3. The parameter has no effect and emits a `DeprecationWarning`, because an instance ID can always be reused once the existing instance is in a terminal state. Remove the argument. It is planned for removal in 1.21.
 - Python SDK: `http://` and `https://` prefixes on the gRPC endpoint. A gRPC endpoint with a legacy scheme, for example `https://grpc.example.com:443` in `DAPR_GRPC_ENDPOINT`, now emits a `DeprecationWarning` that names the equivalent form, here `grpc.example.com:443?tls=true`. Use `host:port?tls=true` or `host:port?tls=false` instead. Before 1.19 the SDK emitted a `UserWarning`, so a warnings filter on `UserWarning` no longer matches. Python hides a `DeprecationWarning` in many cases, so run with `-W default` to see it. Endpoint parsing and TLS behavior are unchanged, and the endpoints keep working. No removal date is set.
 - .NET SDK: `Dapr.Actors` is in maintenance mode. `Dapr.Actors` now receives security fixes only, and new actor development happens in `Dapr.Actors.Next`. `Dapr.Actors` is not deprecated: existing code keeps working, and no deprecation or removal date is set.
+- .NET SDK: .NET 8 and .NET 9 support ends in 1.20. The next release of the .NET SDK drops support for .NET 8 and 9, because Microsoft ends their support in November 2026. Plan a move to .NET 10.

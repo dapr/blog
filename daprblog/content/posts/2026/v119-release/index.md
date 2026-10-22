@@ -27,12 +27,7 @@ The main changes in this release:
 - [Security fixes](#security-fixes).
 - [Scheduler and metrics behavior changes](#scheduler-and-metrics-behavior-changes).
 
-Read the [breaking changes](#breaking-changes) and [deprecation notices](#deprecation-notices) before you upgrade. 1.19 contains behavior changes that can affect an upgrade, mostly in the SDKs. The ones to check first:
-
-- Helm users must apply the 1.19 CRDs before `helm upgrade`, otherwise the API server drops the new `requires` field of `WorkflowAccessPolicy`.
-- The Scheduler now needs `get`, `list` and `watch` on `pods` in the Dapr namespace, even if you do not turn on Scheduler-served placement.
-- Do not roll back from 1.19 directly to 1.17.6 or earlier. Go to 1.18.x, or through 1.17.7 first.
-- The Python SDK extensions are now extras of the core `dapr` package, and the Java SDK requires Spring Boot 4.0.
+Read the [breaking changes](#breaking-changes) and [deprecation notices](#deprecation-notices) before you upgrade.
 
 If you're new to Dapr, visit the [getting started](https://docs.dapr.io/getting-started/) page and familiarize yourself with Dapr. The docs have been updated with all the new features and changes of this release. To get started with the new capabilities, go to the [concepts](https://docs.dapr.io/concepts/) and [developing applications](https://docs.dapr.io/developing-applications/) sections.
 
